@@ -1,0 +1,1055 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta name="robots" content="noindex,nofollow">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Fingertips Nail Bar — Hertford | Est. 1987, Thirty-Nine Years of Nails</title>
+<meta name="description" content="Fingertips Nail Bar, 14 St Andrew St, Hertford. A Hertford institution since 1987 — manicures, pedicures, gel and nail art, rated 5.0 across 43 reviews. Call 01992 554847.">
+<style>
+  /* ---------- Tokens ---------- */
+  :root {
+    --cream: #f8f1e7;
+    --cream-2: #f0e4d3;
+    --ink: #2a161f;
+    --ink-2: #35202a;
+    --ink-soft: #6b5560;
+    --berry: #8e2843;
+    --berry-deep: #6b1d32;
+    --gold: #ab8342;
+    --blush: #e9cfc3;
+    --line-dark: rgba(42, 22, 31, 0.16);
+    --line-light: rgba(248, 241, 231, 0.18);
+
+    --font-display: "Didot", "Bodoni 72", "Playfair Display", "Georgia", serif;
+    --font-body: "Avenir Next", "Avenir", "Seravek", "Segoe UI", system-ui, sans-serif;
+
+    --text-base: clamp(1rem, 0.95rem + 0.3vw, 1.1rem);
+    --text-hero: clamp(3.4rem, 1rem + 12.5vw, 9.5rem);
+    --text-h2: clamp(2.2rem, 1.3rem + 4.5vw, 4.6rem);
+
+    --space-section: clamp(4.5rem, 3rem + 6vw, 9rem);
+    --gutter: clamp(1.25rem, 4.5vw, 3rem);
+
+    --duration: 700ms;
+    --ease: cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--cream);
+    color: var(--ink);
+    font-family: var(--font-body);
+    font-size: var(--text-base);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  @media (max-width: 799px) { body { padding-bottom: 4.2rem; } }
+
+  /* Soft paper grain */
+  body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 60;
+    pointer-events: none;
+    opacity: 0.05;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='240' height='240' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  h1, h2, h3, .display {
+    font-family: var(--font-display);
+    font-weight: 400;
+    line-height: 1.02;
+    letter-spacing: 0.005em;
+  }
+
+  a { color: inherit; }
+  img, svg { max-width: 100%; display: block; }
+
+  .wrap { max-width: 72rem; margin-inline: auto; padding-inline: var(--gutter); }
+
+  /* ---------- Reveal system ---------- */
+  .rv {
+    opacity: 0;
+    transform: translateY(26px);
+    transition: opacity var(--duration) var(--ease), transform var(--duration) var(--ease);
+    transition-delay: var(--d, 0ms);
+  }
+  .rv.in { opacity: 1; transform: none; }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .rv { opacity: 1; transform: none; transition: none; }
+    .marquee-track { animation: none !important; }
+    .roundel { animation: none !important; }
+  }
+
+  /* ---------- Demo ribbon ---------- */
+  .demo-note {
+    background: var(--ink);
+    color: var(--cream);
+    text-align: center;
+    font-size: 0.72rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    padding: 0.45rem var(--gutter);
+  }
+  .demo-note b { color: var(--blush); font-weight: 600; }
+
+  /* ---------- Nav ---------- */
+  header.site {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: color-mix(in srgb, var(--cream) 90%, transparent);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--line-dark);
+  }
+  .nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding-block: 0.8rem;
+  }
+  .brand {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: 1.5rem;
+    letter-spacing: 0.01em;
+    text-decoration: none;
+    color: var(--ink);
+  }
+  .brand .dot { color: var(--berry); font-style: normal; }
+  .nav-links { display: none; gap: 1.9rem; list-style: none; }
+  .nav-links a {
+    text-decoration: none;
+    font-size: 0.76rem;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--ink-soft);
+    transition: color 200ms var(--ease);
+  }
+  .nav-links a:hover, .nav-links a:focus-visible { color: var(--berry); }
+  @media (min-width: 800px) { .nav-links { display: flex; } }
+
+  .btn {
+    display: inline-block;
+    font-family: var(--font-body);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-size: 0.82rem;
+    text-decoration: none;
+    padding: 0.75rem 1.6rem;
+    background: var(--berry);
+    color: var(--cream);
+    border: 1px solid var(--berry);
+    border-radius: 999px;
+    transition: transform 200ms var(--ease), background 200ms var(--ease), box-shadow 200ms var(--ease);
+  }
+  .btn:hover, .btn:focus-visible {
+    background: var(--berry-deep);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px rgba(142, 40, 67, 0.25);
+  }
+  .btn.ghost { background: transparent; color: var(--ink); border-color: var(--ink); }
+  .btn.ghost:hover, .btn.ghost:focus-visible { background: var(--ink); color: var(--cream); box-shadow: none; }
+  .btn.big { font-size: 0.95rem; padding: 1rem 2.3rem; }
+  .btn.on-dark.ghost { color: var(--cream); border-color: var(--cream); }
+  .btn.on-dark.ghost:hover, .btn.on-dark.ghost:focus-visible { background: var(--cream); color: var(--ink); }
+  @media (max-width: 560px) {
+    .nav .btn { padding: 0.6rem 1.1rem; font-size: 0.75rem; white-space: nowrap; }
+  }
+
+  /* ---------- Hero ---------- */
+  .hero {
+    position: relative;
+    min-height: 88svh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-block: clamp(3.5rem, 8vh, 6rem) 3rem;
+    background:
+      radial-gradient(ellipse 85% 65% at 85% 0%, rgba(233, 207, 195, 0.55), transparent 65%),
+      radial-gradient(ellipse 70% 55% at 0% 100%, rgba(171, 131, 66, 0.14), transparent 70%),
+      var(--cream);
+    overflow: hidden;
+  }
+  
+  /* Full-bleed photographic hero plate, light-palette variant: the scrim is a
+     cream veil rather than a dark one, so the site's existing dark-on-light
+     type keeps its contrast instead of being inverted. */
+  .hero-media { position: absolute; inset: 0; z-index: 0; overflow: hidden; }
+  .hero-media img { width:100%; height:100%; object-fit:cover; object-position:70% 45%;
+    filter: saturate(.82) brightness(1.06); transform: scale(1.05); }
+  .hero-media::after { content:""; position:absolute; inset:0; background:
+    linear-gradient(to right, rgba(250,244,238,.93) 0%, rgba(250,244,238,.80) 44%, rgba(250,244,238,.42) 80%, rgba(250,244,238,.62) 100%),
+    linear-gradient(to bottom, rgba(250,244,238,.55) 0%, transparent 38%); }
+  .hero .wrap { position: relative; z-index: 1; }
+  .hero-kicker {
+    text-transform: uppercase;
+    letter-spacing: 0.34em;
+    font-size: clamp(0.72rem, 2.4vw, 0.9rem);
+    font-weight: 600;
+    color: var(--berry);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .hero-kicker::before {
+    content: "";
+    height: 1px;
+    width: clamp(1.5rem, 6vw, 4rem);
+    background: var(--gold);
+  }
+  .hero h1 {
+    font-size: var(--text-hero);
+    font-style: italic;
+    margin-block: 0.6rem 0;
+    color: var(--ink);
+  }
+  .hero h1 .tip { color: var(--berry); }
+  .hero-sub {
+    font-family: var(--font-display);
+    font-size: clamp(1.15rem, 1rem + 1.3vw, 1.7rem);
+    color: var(--ink-soft);
+    max-width: 30ch;
+    margin-top: 1.1rem;
+    line-height: 1.35;
+  }
+  .hero-ctas { display: flex; flex-wrap: wrap; gap: 0.9rem; margin-top: 2.2rem; }
+  .hero-cred {
+    margin-top: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem 2.4rem;
+    list-style: none;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--ink-soft);
+  }
+  .hero-cred b { color: var(--berry); font-weight: 700; }
+
+  /* Rotating heritage roundel */
+  .roundel-box {
+    position: absolute;
+    pointer-events: none;
+    right: clamp(-2rem, 2vw, 5rem);
+    top: clamp(4rem, 12vh, 8rem);
+    width: clamp(150px, 22vw, 240px);
+    opacity: 0.9;
+  }
+  .roundel { animation: spin 40s linear infinite; transform-origin: center; will-change: transform; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  @media (max-width: 700px) { .roundel-box { opacity: 0.32; top: auto; bottom: 6rem; } }
+
+  /* ---------- Marquee ---------- */
+  .marquee {
+    background: var(--berry);
+    border-block: 1px solid var(--berry-deep);
+    overflow: hidden;
+    padding-block: 0.7rem;
+    color: var(--cream);
+  }
+  .marquee-track {
+    display: flex;
+    gap: 3rem;
+    width: max-content;
+    animation: slide 30s linear infinite;
+    will-change: transform;
+  }
+  @keyframes slide { to { transform: translateX(-50%); } }
+  .marquee span {
+    font-family: var(--font-display);
+    font-style: italic;
+    letter-spacing: 0.08em;
+    font-size: 1rem;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+  }
+  .marquee span::after { content: "✦"; color: var(--blush); font-style: normal; }
+
+  /* ---------- Sections ---------- */
+  section { padding-block: var(--space-section); }
+  .sec-head { margin-bottom: clamp(2rem, 5vw, 3.5rem); }
+  .sec-kicker {
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: var(--berry);
+  }
+  .sec-head h2 { font-size: var(--text-h2); margin-top: 0.5rem; }
+  .sec-head h2 em { font-style: italic; color: var(--berry); }
+  .note {
+    margin-top: 2rem;
+    font-size: 0.82rem;
+    font-style: italic;
+    color: var(--ink-soft);
+    max-width: 62ch;
+  }
+
+  /* ---------- Heritage ---------- */
+  .heritage { background: var(--ink); color: var(--cream); }
+  .heritage-grid {
+    display: grid;
+    gap: clamp(2rem, 5vw, 4rem);
+    grid-template-columns: 1fr;
+    align-items: center;
+  }
+  @media (min-width: 850px) { .heritage-grid { grid-template-columns: 0.9fr 1.1fr; } }
+  .big-39 {
+    font-family: var(--font-display);
+    font-size: clamp(9rem, 30vw, 22rem);
+    line-height: 0.8;
+    color: transparent;
+    -webkit-text-stroke: 2px var(--gold);
+    position: relative;
+  }
+  .big-39 small {
+    position: absolute;
+    left: 0.4rem;
+    bottom: -2.2rem;
+    font-family: var(--font-body);
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--blush);
+    -webkit-text-stroke: 0;
+  }
+  .heritage h2 { font-size: var(--text-h2); color: var(--cream); }
+  .heritage h2 em { color: var(--blush); font-style: italic; }
+  .heritage p.lede { margin-top: 1.4rem; color: rgba(248, 241, 231, 0.8); max-width: 52ch; }
+  .era-row {
+    margin-top: 2.6rem;
+    display: grid;
+    gap: 1px;
+    grid-template-columns: repeat(3, 1fr);
+    background: var(--line-light);
+    border: 1px solid var(--line-light);
+  }
+  .era {
+    background: var(--ink-2);
+    padding: 1.3rem 1.1rem 1.4rem;
+  }
+  .era b {
+    display: block;
+    font-family: var(--font-display);
+    font-size: clamp(1.6rem, 4vw, 2.4rem);
+    color: var(--gold);
+    font-weight: 400;
+  }
+  .era span { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.12em; color: rgba(248, 241, 231, 0.65); }
+  @media (max-width: 620px) { .era-row { grid-template-columns: 1fr; } }
+
+  /* ---------- Services ---------- */
+  .services { background: var(--cream-2); border-block: 1px solid var(--line-dark); }
+  .svc-list { list-style: none; max-width: 46rem; }
+  .svc-list li {
+    display: flex;
+    align-items: baseline;
+    gap: 0.8rem;
+    padding-block: 1.05rem;
+    border-bottom: 1px dotted rgba(42, 22, 31, 0.3);
+  }
+  .svc-list .name {
+    font-family: var(--font-display);
+    font-size: clamp(1.3rem, 3vw, 1.7rem);
+  }
+  .svc-list .name small {
+    display: block;
+    font-family: var(--font-body);
+    font-size: 0.78rem;
+    color: var(--ink-soft);
+    font-style: italic;
+    margin-top: 0.15rem;
+  }
+  .svc-list .dots { flex: 1; border-bottom: 2px dotted rgba(42, 22, 31, 0.22); transform: translateY(-6px); min-width: 1.5rem; }
+  .svc-list .mark {
+    font-size: 0.68rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--berry);
+    white-space: nowrap;
+  }
+  .svc-cta { margin-top: 2.4rem; display: flex; flex-wrap: wrap; align-items: center; gap: 1.2rem; }
+
+  /* ---------- Reviews ---------- */
+  .rating-line {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.9rem 1.4rem;
+    margin-bottom: 2.4rem;
+  }
+  .rating-line .score { font-family: var(--font-display); font-size: clamp(3rem, 7vw, 4.6rem); color: var(--berry); line-height: 1; }
+  .rating-line .stars { color: var(--gold); letter-spacing: 0.22em; font-size: 1.15rem; }
+  .platforms { display: flex; flex-wrap: wrap; gap: 0.6rem; }
+  .chip {
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    border: 1px solid var(--line-dark);
+    border-radius: 999px;
+    padding: 0.35rem 0.9rem;
+    color: var(--ink-soft);
+    background: rgba(255, 255, 255, 0.4);
+  }
+  .chip b { color: var(--berry); }
+  .quote-grid { display: grid; gap: 1.2rem; grid-template-columns: 1fr; }
+  @media (min-width: 800px) { .quote-grid { grid-template-columns: repeat(2, 1fr); } }
+  blockquote.review {
+    background: rgba(255, 255, 255, 0.55);
+    border: 1px solid var(--line-dark);
+    border-top: 3px solid var(--berry);
+    padding: 1.6rem 1.5rem;
+    transition: transform 250ms var(--ease), box-shadow 250ms var(--ease);
+  }
+  blockquote.review:hover { transform: translateY(-4px); box-shadow: 0 14px 30px rgba(42, 22, 31, 0.08); }
+  blockquote.review p { font-family: var(--font-display); font-style: italic; font-size: clamp(1.1rem, 2.4vw, 1.3rem); line-height: 1.4; }
+  blockquote.review p::before { content: "\201C"; color: var(--gold); font-size: 1.5em; line-height: 0; vertical-align: -0.32em; margin-right: 0.1rem; }
+  blockquote.review footer {
+    margin-top: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-size: 0.68rem;
+    font-weight: 700;
+    color: var(--ink-soft);
+  }
+  blockquote.review footer b { color: var(--berry); }
+
+  /* ---------- Gallery ---------- */
+  .gallery { background: var(--ink); color: var(--cream); }
+  .gallery .sec-kicker { color: var(--blush); }
+  .shots { display: grid; gap: 0.9rem; grid-template-columns: repeat(2, 1fr); }
+  @media (min-width: 800px) { .shots { grid-template-columns: repeat(4, 1fr); } }
+  .shot {
+    aspect-ratio: 1;
+    background: var(--ink-2);
+    border: 1px solid var(--line-light);
+    display: grid;
+    place-items: center;
+    position: relative;
+    overflow: hidden;
+    transition: border-color 250ms var(--ease);
+  }
+  .shot:hover { border-color: var(--gold); }
+  .shot svg { width: 36%; opacity: 0.5; transition: transform 350ms var(--ease), opacity 350ms var(--ease); }
+  .shot:hover svg { transform: scale(1.1); opacity: 0.85; }
+  .shot .label {
+    position: absolute;
+    bottom: 0.65rem;
+    left: 0;
+    right: 0;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-size: 0.58rem;
+    font-weight: 700;
+    color: rgba(248, 241, 231, 0.55);
+  }
+  .gallery .note { color: rgba(248, 241, 231, 0.6); }
+
+  /* ---------- Visit ---------- */
+  .visit-grid { display: grid; gap: clamp(2rem, 5vw, 4rem); grid-template-columns: 1fr; }
+  @media (min-width: 850px) { .visit-grid { grid-template-columns: 1.05fr 0.95fr; } }
+  address { font-style: normal; }
+  address .big { font-family: var(--font-display); font-size: clamp(1.7rem, 3.4vw, 2.5rem); line-height: 1.15; }
+  address p { color: var(--ink-soft); margin-top: 0.9rem; max-width: 42ch; }
+  a.tel {
+    display: inline-block;
+    margin-top: 1.4rem;
+    font-family: var(--font-display);
+    font-size: clamp(1.6rem, 4vw, 2.1rem);
+    letter-spacing: 0.03em;
+    color: var(--berry);
+    text-decoration: none;
+    border-bottom: 2px solid var(--gold);
+    padding-bottom: 0.1rem;
+  }
+  a.tel:hover, a.tel:focus-visible { color: var(--berry-deep); }
+  .hours { width: 100%; border-collapse: collapse; margin-top: 0.5rem; }
+  .hours caption {
+    text-align: left;
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    color: var(--berry);
+    font-size: 0.72rem;
+    font-weight: 700;
+    margin-bottom: 0.7rem;
+  }
+  .hours th, .hours td { padding: 0.55rem 0; border-bottom: 1px dotted rgba(42, 22, 31, 0.25); text-align: left; font-size: 0.95rem; }
+  .hours th { font-weight: 400; color: var(--ink-soft); }
+  .hours td { text-align: right; font-family: var(--font-display); font-size: 1.05rem; letter-spacing: 0.02em; }
+  .hours tr.late td { color: var(--berry); }
+  .hours tr.late td small { font-family: var(--font-body); font-size: 0.62rem; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 700; margin-right: 0.4rem; vertical-align: 0.15em; }
+  .hours tr.closed td { color: var(--ink-soft); font-style: italic; }
+  .map-ph {
+    margin-top: 2rem;
+    border: 1px solid var(--line-dark);
+    background: rgba(255, 255, 255, 0.45);
+    aspect-ratio: 16 / 8;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    padding: 1rem;
+  }
+  .map-ph .pin { width: 38px; margin: 0 auto 0.6rem; }
+  .map-ph p { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.14em; font-weight: 700; color: var(--ink-soft); }
+
+  /* ---------- Footer ---------- */
+  footer.site {
+    background: var(--ink);
+    color: rgba(248, 241, 231, 0.75);
+    padding: 2.6rem 0 3rem;
+    font-size: 0.85rem;
+  }
+  .foot-row { display: flex; flex-wrap: wrap; gap: 1rem 2rem; justify-content: space-between; align-items: center; }
+  .socials { display: flex; gap: 1.6rem; list-style: none; }
+  .socials a { text-decoration: none; text-transform: uppercase; letter-spacing: 0.16em; font-size: 0.72rem; font-weight: 700; color: var(--blush); }
+  .socials a:hover { color: var(--gold); }
+  .foot-demo { margin-top: 1.7rem; font-style: italic; font-size: 0.78rem; opacity: 0.75; max-width: 72ch; }
+
+  /* ---------- Mobile call bar ---------- */
+  .call-bar {
+    display: none;
+    position: fixed;
+    left: 0; right: 0; bottom: 0;
+    z-index: 55;
+    background: var(--berry);
+    color: var(--cream);
+    text-align: center;
+    text-decoration: none;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    padding: 1.05rem 1rem calc(1.05rem + env(safe-area-inset-bottom));
+    box-shadow: 0 -8px 24px rgba(42, 22, 31, 0.25);
+  }
+  .call-bar b { color: var(--blush); }
+  @media (max-width: 799px) { .call-bar { display: block; } }
+
+  /* enquiry-form palette aliases — maps this site's own tokens
+     onto the shared form stylesheet below */
+  .fx {
+    --fx-bg: var(--cream-2); --fx-ink: var(--ink); --fx-dim: var(--ink-soft);
+    --fx-accent: var(--berry); --fx-on-accent: var(--cream); --fx-line: rgba(42, 22, 31, 0.30);
+    --fx-field-bg: var(--cream); --fx-error: #b3123c; --fx-radius: 6px;
+    --fx-display: var(--font-display); --fx-gutter: var(--gutter);
+  }
+
+/* ---------- Enquiry form (demo-only, sends nothing) ---------- */
+/* Palette is aliased onto --fx-* per demo just above, so this block is
+   identical in all five and each form still looks native to its own site. */
+.fx { background: var(--fx-bg); color: var(--fx-ink); padding: var(--space-section) 0; }
+.fx .fx-wrap { width: min(100% - 2 * var(--fx-gutter), 60rem); margin-inline: auto; }
+.fx-head { max-width: 46ch; }
+.fx-kicker {
+  font-family: var(--fx-display); text-transform: uppercase; letter-spacing: 0.18em;
+  font-size: 0.78rem; color: var(--fx-accent); margin: 0 0 0.6rem;
+}
+.fx-head h2 { font-size: var(--text-h2); line-height: 1.02; margin: 0 0 0.9rem; }
+.fx-head p { color: var(--fx-dim); margin: 0; max-width: 52ch; }
+.fx-form { margin-top: clamp(2rem, 4vw, 3rem); display: grid; gap: 1.1rem; }
+/* A class rule setting `display` beats the UA's [hidden]{display:none}, so the
+   form stayed on screen after a successful submit even though form.hidden was
+   true. Caught by looking at the rendered page — every DOM assertion read the
+   .hidden PROPERTY, which was correctly true the whole time. */
+.fx-form[hidden] { display: none; }
+.fx-row { display: grid; gap: 1.1rem; }
+@media (min-width: 40rem) { .fx-row { grid-template-columns: 1fr 1fr; } }
+.fx-field { display: grid; gap: 0.4rem; }
+.fx-field label { font-weight: 700; font-size: 0.95rem; }
+.fx-field .fx-hint { font-size: 0.85rem; color: var(--fx-dim); }
+.fx-field input, .fx-field select, .fx-field textarea {
+  font: inherit; font-size: 1rem; color: var(--fx-ink);
+  background: var(--fx-field-bg); border: 1px solid var(--fx-line);
+  border-radius: var(--fx-radius); padding: 0.85rem 0.95rem; width: 100%;
+  transition: border-color var(--duration, 300ms) var(--ease, ease),
+              box-shadow var(--duration, 300ms) var(--ease, ease);
+}
+.fx-field textarea { min-height: 8.5rem; resize: vertical; }
+.fx-field select { appearance: none; cursor: pointer; }
+.fx-field input:hover, .fx-field select:hover, .fx-field textarea:hover { border-color: var(--fx-accent); }
+.fx-field input:focus-visible, .fx-field select:focus-visible, .fx-field textarea:focus-visible {
+  outline: none; border-color: var(--fx-accent);
+  box-shadow: 0 0 0 3px color-mix(in oklab, var(--fx-accent) 35%, transparent);
+}
+.fx-field[data-invalid="true"] input,
+.fx-field[data-invalid="true"] select,
+.fx-field[data-invalid="true"] textarea { border-color: var(--fx-error); }
+.fx-err { font-size: 0.85rem; color: var(--fx-error); min-height: 1.1rem; font-weight: 700; }
+.fx-field[data-invalid="true"] .fx-err::before { content: "\2717\00a0"; }
+.fx-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 1.4rem; margin-top: 0.4rem; }
+.fx-submit {
+  font-family: var(--fx-display); font-size: 1rem; letter-spacing: 0.06em;
+  text-transform: uppercase; cursor: pointer;
+  background: var(--fx-accent); color: var(--fx-on-accent);
+  border: 1px solid var(--fx-accent); border-radius: var(--fx-radius);
+  padding: 0.95rem 2.1rem;
+  transition: transform var(--duration, 300ms) var(--ease, ease),
+              filter var(--duration, 300ms) var(--ease, ease);
+}
+.fx-submit:hover { filter: brightness(1.12); transform: translateY(-2px); }
+.fx-submit:active { transform: translateY(0); }
+.fx-submit:focus-visible { outline: 3px solid var(--fx-accent); outline-offset: 3px; }
+.fx-note { font-size: 0.85rem; color: var(--fx-dim); margin: 0; }
+.fx-summary {
+  border: 1px solid var(--fx-error); border-radius: var(--fx-radius);
+  padding: 0.85rem 1rem; color: var(--fx-error); font-size: 0.92rem;
+}
+.fx-summary[hidden] { display: none; }
+/* Success: not a thank-you. A preview of the enquiry that WOULD have arrived. */
+.fx-sent { border: 1px solid var(--fx-line); border-radius: var(--fx-radius); overflow: hidden; }
+.fx-sent[hidden] { display: none; }
+.fx-sent:focus-visible { outline: 3px solid var(--fx-accent); outline-offset: 3px; }
+.fx-sent-bar {
+  background: var(--fx-accent); color: var(--fx-on-accent);
+  padding: 0.7rem 1.1rem; font-family: var(--fx-display);
+  text-transform: uppercase; letter-spacing: 0.12em; font-size: 0.8rem;
+}
+.fx-mail { background: var(--fx-field-bg); padding: clamp(1.1rem, 3vw, 1.8rem); }
+.fx-mail dl { display: grid; grid-template-columns: auto 1fr; gap: 0.45rem 1rem; margin: 0 0 1.1rem; font-size: 0.95rem; }
+.fx-mail dt { color: var(--fx-dim); font-weight: 700; }
+.fx-mail dd { margin: 0; overflow-wrap: anywhere; }
+.fx-mail .fx-body { border-top: 1px solid var(--fx-line); padding-top: 1.1rem; white-space: pre-wrap; overflow-wrap: anywhere; }
+.fx-sent-foot { padding: 1.1rem; border-top: 1px solid var(--fx-line); display: flex; flex-wrap: wrap; gap: 0.8rem 1.2rem; align-items: center; }
+.fx-sent-foot p { margin: 0; font-size: 0.88rem; color: var(--fx-dim); max-width: 54ch; }
+.fx-again {
+  font: inherit; font-size: 0.9rem; font-weight: 700; cursor: pointer;
+  background: none; color: var(--fx-ink); border: 1px solid var(--fx-line);
+  border-radius: var(--fx-radius); padding: 0.6rem 1.2rem;
+}
+.fx-again:hover { border-color: var(--fx-accent); color: var(--fx-accent); }
+.fx-again:focus-visible { outline: 3px solid var(--fx-accent); outline-offset: 3px; }
+
+@media (prefers-reduced-motion: reduce) {
+  /* The form's own motion, guarded separately from each demo's .rv reveals —
+     hover lift and focus/border transitions are still motion to someone who
+     asked for none. Colour and focus rings stay, because they carry meaning. */
+  .fx-field input, .fx-field select, .fx-field textarea, .fx-submit { transition: none; }
+  .fx-submit:hover { transform: none; }
+}
+
+
+@media (pointer: coarse) {
+  /* Touch targets, added 1 Sept 2026. Measured at 375px: this demo carried
+     tel:/mailto: links as small as 18px — and on a trade site the phone number
+     IS the conversion action. The studio site's fix (an absolutely-positioned
+     44px overlay) is deliberately NOT reused here: these links sit stacked in
+     lists, so a 44px overlay on each would overlap its neighbour and let the
+     later one in DOM order steal the tap, making tapping worse rather than
+     better. min-height grows the element itself, so nothing can overlap.
+     Scoped to (pointer: coarse) so the desktop composition is untouched. */
+  a[href^="tel:"], a[href^="mailto:"] {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+  }
+}
+</style>
+</head>
+<body>
+
+<p class="demo-note"><b>Demo concept</b> — built by Ashton James. Not the salon's live website. &nbsp;·&nbsp; <a href="../../" style="color:inherit;text-decoration:underline;text-underline-offset:2px;font-weight:700">&larr; back to Ashton Studios</a></p>
+
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="#top">Fingertips<span class="dot">.</span></a>
+    <nav aria-label="Main navigation">
+      <ul class="nav-links">
+        <li><a href="#story">Since 1987</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#visit">Visit</a></li>
+      </ul>
+    </nav>
+    <a class="btn" href="tel:+441992554847">Call the salon</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero" aria-labelledby="hero-heading">
+    <div class="hero-media" aria-hidden="true">
+      <img src="assets/hero.webp" alt="" width="2400" height="1350" fetchpriority="high" decoding="async">
+    </div>
+    <div class="roundel-box" aria-hidden="true">
+      <svg class="roundel" viewBox="0 0 200 200">
+        <defs>
+          <path id="circ" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0"/>
+        </defs>
+        <circle cx="100" cy="100" r="96" fill="none" stroke="#ab8342" stroke-width="1" opacity="0.6"/>
+        <circle cx="100" cy="100" r="58" fill="none" stroke="#8e2843" stroke-width="1" opacity="0.5"/>
+        <text style="font: 600 15.5px 'Avenir Next', system-ui, sans-serif; letter-spacing: 0.32em; text-transform: uppercase;" fill="#8e2843">
+          <textPath href="#circ">Est. 1987 &#183; Hertford &#183; Fingertips Nail Bar &#183;&#160;</textPath>
+        </text>
+        <text x="100" y="112" text-anchor="middle" style="font: italic 34px 'Didot', 'Bodoni 72', Georgia, serif;" fill="#2a161f">1987</text>
+      </svg>
+    </div>
+    <div class="wrap">
+      <p class="hero-kicker rv">Est. 1987 &middot; St Andrew Street, Hertford</p>
+      <h1 id="hero-heading" class="rv" style="--d:80ms">Finger<span class="tip">tips</span></h1>
+      <p class="hero-sub rv" style="--d:160ms">Thirty-nine years of nails on St Andrew Street. Some things you don't rush.</p>
+      <div class="hero-ctas rv" style="--d:240ms">
+        <a class="btn big" href="tel:+441992554847">Call 01992 554847</a>
+        <a class="btn ghost" href="#reviews">Read the reviews</a>
+      </div>
+      <ul class="hero-cred rv" style="--d:320ms">
+        <li><b>5.0 &#9733;</b> across 43 reviews</li>
+        <li><b>39 years</b> in Hertford</li>
+        <li><b>Open late</b> Wed &amp; Thu</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>Est. 1987</span><span>Manicures</span><span>Pedicures</span><span>Gel treatments</span>
+      <span>Nail art</span><span>5.0 across 43 reviews</span>
+      <span>Est. 1987</span><span>Manicures</span><span>Pedicures</span><span>Gel treatments</span>
+      <span>Nail art</span><span>5.0 across 43 reviews</span>
+    </div>
+  </div>
+
+  <!-- HERITAGE -->
+  <section class="heritage" id="story" aria-labelledby="story-heading">
+    <div class="wrap heritage-grid">
+      <p class="big-39 rv" aria-hidden="true">39<small>years &amp; counting</small></p>
+      <div>
+        <div class="sec-head rv">
+          <p class="sec-kicker" style="color:var(--blush)">A Hertford institution</p>
+          <h2 id="story-heading">Doing nails here since <em>1987</em></h2>
+        </div>
+        <p class="lede rv" style="--d:80ms">Before gel, before Instagram, before most of the high street changed hands twice &mdash; Fingertips was already open. Thirty-nine years later the rating still reads 5.0, and some clients have been coming for twenty of them.</p>
+        <div class="era-row">
+          <div class="era rv"><b>1987</b><span>The salon opens in Hertford</span></div>
+          <div class="era rv" style="--d:100ms"><b>20 yrs</b><span>One reviewer's personal custom</span></div>
+          <div class="era rv" style="--d:200ms"><b>5.0 &#9733;</b><span>Rating today, across 43 reviews</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services" id="services" aria-labelledby="services-heading">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <p class="sec-kicker">The menu</p>
+        <h2 id="services-heading">What we <em>do</em></h2>
+      </div>
+      <ul class="svc-list">
+        <li class="rv"><span class="name">Manicures</span><span class="dots"></span><span class="mark">Book by phone</span></li>
+        <li class="rv" style="--d:60ms"><span class="name">Pedicures</span><span class="dots"></span><span class="mark">Book by phone</span></li>
+        <li class="rv" style="--d:120ms"><span class="name">Gel treatments</span><span class="dots"></span><span class="mark">Book by phone</span></li>
+        <li class="rv" style="--d:180ms"><span class="name">Nail art<small>The thing the reviews rave about</small></span><span class="dots"></span><span class="mark">Book by phone</span></li>
+        <li class="rv" style="--d:240ms"><span class="name">CND nail sets<small>As featured on the salon's Instagram, July 2026</small></span><span class="dots"></span><span class="mark">Book by phone</span></li>
+      </ul>
+      <div class="svc-cta rv">
+        <a class="btn big" href="tel:+441992554847">Call for prices &amp; availability</a>
+      </div>
+      <p class="note rv">Services as listed on the salon's public profiles (Nail Salon Direct and Instagram), August 2026. The salon doesn't publish a price list online &mdash; the full menu and prices drop in here once confirmed with the salon.</p>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section id="reviews" aria-labelledby="reviews-heading">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <p class="sec-kicker">Word of mouth</p>
+        <h2 id="reviews-heading">Thirty-nine years of <em>regulars</em></h2>
+      </div>
+      <div class="rating-line rv">
+        <span class="score">5.0</span>
+        <span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        <span class="platforms">
+          <span class="chip"><b>5.0</b> &middot; 23 reviews &middot; Birdeye</span>
+          <span class="chip"><b>5.0</b> &middot; 20 reviews &middot; Nail Salon Direct</span>
+        </span>
+      </div>
+      <div class="quote-grid">
+        <blockquote class="review rv">
+          <p><b>Review quotes slot in here.</b> On the live site this space carries real customer reviews, word for word, with the reviewer's first name and the platform they left it on &mdash; published only once the owner has signed them off.</p>
+          <footer><b>Placeholder</b> &middot; pending sign-off</footer>
+        </blockquote>
+      </div>
+      <p class="note rv">Quotes reproduced word-for-word from the salon's public review pages on Birdeye and Nail Salon Direct, pulled 23 August 2026.</p>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="gallery" aria-labelledby="gallery-heading">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <p class="sec-kicker">The work</p>
+        <h2 id="gallery-heading">Fresh from the bar</h2>
+      </div>
+      <div class="shots">
+        <div class="shot rv"><svg viewBox="0 0 64 64" aria-hidden="true"><rect x="24" y="24" width="16" height="34" rx="7" fill="none" stroke="#e9cfc3" stroke-width="3"/><rect x="27" y="8" width="10" height="16" rx="2" fill="none" stroke="#e9cfc3" stroke-width="3"/></svg><span class="label">Your photo here</span></div>
+        <div class="shot rv" style="--d:60ms"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M22 58V30a10 10 0 0 1 20 0v28" fill="none" stroke="#e9cfc3" stroke-width="3"/><path d="M22 44h20" stroke="#8e2843" stroke-width="3"/></svg><span class="label">Your photo here</span></div>
+        <div class="shot rv" style="--d:120ms"><svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="26" r="14" fill="none" stroke="#e9cfc3" stroke-width="3"/><path d="M32 40v18M24 52l8 6 8-6" fill="none" stroke="#e9cfc3" stroke-width="3"/></svg><span class="label">Your photo here</span></div>
+        <div class="shot rv" style="--d:180ms"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M12 40c6-14 14-22 20-22s14 8 20 22" fill="none" stroke="#e9cfc3" stroke-width="3"/><circle cx="32" cy="46" r="6" fill="#8e2843"/></svg><span class="label">Your photo here</span></div>
+      </div>
+      <p class="note rv">Placeholder tiles &mdash; this grid takes real set photos straight from the salon's Instagram, <a href="https://www.instagram.com/fingertipsnailbarhertford" style="color:var(--blush)">@fingertipsnailbarhertford</a>.</p>
+    </div>
+  </section>
+
+  <!-- VISIT -->
+  <section id="visit" aria-labelledby="visit-heading">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <p class="sec-kicker">Find us</p>
+        <h2 id="visit-heading">On St Andrew Street</h2>
+      </div>
+      <div class="visit-grid">
+        <div class="rv">
+          <address>
+            <p class="big">14 St Andrew St<br>Hertford SG14 1JA</p>
+            <p>Right in the middle of Hertford's old town. The phone is the booking system &mdash; one ring and you're in the diary.</p>
+            <a class="tel" href="tel:+441992554847">01992 554847</a>
+          </address>
+          <div class="map-ph" aria-hidden="true">
+            <div>
+              <svg class="pin" viewBox="0 0 24 32"><path d="M12 0C5.4 0 0 5.4 0 12c0 9 12 20 12 20s12-11 12-20C24 5.4 18.6 0 12 0z" fill="#8e2843"/><circle cx="12" cy="12" r="5" fill="#f8f1e7"/></svg>
+              <p>Map placeholder &mdash; live Google Map embeds here</p>
+            </div>
+          </div>
+        </div>
+        <div class="rv" style="--d:120ms">
+          <table class="hours">
+            <caption>Opening hours</caption>
+            <tbody>
+              <tr><th scope="row">Monday</th><td>9:00 &ndash; 15:00</td></tr>
+              <tr><th scope="row">Tuesday</th><td>9:00 &ndash; 18:00</td></tr>
+              <tr class="late"><th scope="row">Wednesday</th><td><small>Late</small>9:00 &ndash; 22:00</td></tr>
+              <tr class="late"><th scope="row">Thursday</th><td><small>Late</small>9:00 &ndash; 22:00</td></tr>
+              <tr><th scope="row">Friday</th><td>9:00 &ndash; 18:00</td></tr>
+              <tr><th scope="row">Saturday</th><td>9:00 &ndash; 17:00</td></tr>
+              <tr class="closed"><th scope="row">Sunday</th><td>Closed</td></tr>
+            </tbody>
+          </table>
+          <p class="note">Hours as shown on the salon's public listings (Birdeye / Nail Salon Direct), August 2026. One listing shows Friday closing at 5pm &mdash; to be confirmed with the salon before launch.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ENQUIRY (demo only — sends nothing, see the script at the end of this file) -->
+  <section class="fx" id="enquire" aria-labelledby="fx-heading">
+    <div class="fx-wrap">
+      <div class="fx-head rv">
+        <p class="fx-kicker">Book or ask</p>
+        <h2 id="fx-heading">Tell us what you&rsquo;re after</h2>
+        <p>Not sure which set you want, or after a slot for a group? Send it over and the salon will come back to you.</p>
+      </div>
+
+      <p class="fx-summary" id="fx-summary" role="alert" hidden></p>
+
+      <form class="fx-form rv" novalidate>
+        <div class="fx-row">
+          <div class="fx-field">
+            <label for="fx-name">Your name</label>
+            <input id="fx-name" name="name" type="text" autocomplete="name"
+                   data-check="name" data-required="We need a name to put to the job."
+                   aria-describedby="fx-name-err">
+            <p class="fx-err" id="fx-name-err"></p>
+          </div>
+          <div class="fx-field">
+            <label for="fx-contact">Email or phone</label>
+            <input id="fx-contact" name="contact" type="text" autocomplete="email"
+                   data-check="contact" data-required="Without this they cannot reply."
+                   aria-describedby="fx-contact-hint fx-contact-err">
+            <p class="fx-hint" id="fx-contact-hint">Whichever you would rather be reached on.</p>
+            <p class="fx-err" id="fx-contact-err"></p>
+          </div>
+        </div>
+        <div class="fx-field">
+          <label for="fx-service">What do you need?</label>
+          <select id="fx-service" name="service" data-check="service"
+                  data-required="Pick the closest match." aria-describedby="fx-service-err">
+            <option value="">Choose one&hellip;</option>
+            <option>Gel manicure</option>
+            <option>Acrylic / builder gel set</option>
+            <option>Pedicure</option>
+            <option>Group or party booking</option>
+            <option>Something else</option>
+          </select>
+          <p class="fx-err" id="fx-service-err"></p>
+        </div>
+        <div class="fx-field">
+          <label for="fx-message">A few details</label>
+          <textarea id="fx-message" name="message" data-check="message"
+                    data-required="Tell them what you are after."
+                    aria-describedby="fx-message-hint fx-message-err"></textarea>
+          <p class="fx-hint" id="fx-message-hint">Length, shape, colour, the occasion &mdash; whatever you already know.</p>
+          <p class="fx-err" id="fx-message-err"></p>
+        </div>
+        <div class="fx-actions">
+          <button class="fx-submit" type="submit">Send enquiry</button>
+          <p class="fx-note"><strong>Demo form.</strong> Nothing is sent &mdash; it shows you the enquiry instead.</p>
+        </div>
+      </form>
+
+      <div class="fx-sent" id="fx-sent" tabindex="-1" role="status" hidden>
+        <p class="fx-sent-bar">Nothing was sent &mdash; this is what would have landed</p>
+        <div class="fx-mail">
+          <dl>
+            <dt>To</dt><dd>the salon&rsquo;s inbox</dd>
+            <dt>From</dt><dd id="fx-from"></dd>
+            <dt>Subject</dt><dd id="fx-subject"></dd>
+          </dl>
+          <div class="fx-body" id="fx-message-out"></div>
+        </div>
+        <div class="fx-sent-foot">
+          <button class="fx-again" id="fx-again" type="button">Try it again</button>
+          <p>This page is a demo concept, so the form is deliberately wired to nothing &mdash;
+             no message reaches Fingertips Nail Bar. On the real site this arrives in the inbox
+             within seconds of someone pressing the button.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-row">
+      <p>&copy; 2026 Fingertips Nail Bar &middot; 14 St Andrew St, Hertford SG14 1JA &middot; Est. 1987</p>
+      <ul class="socials">
+        <li><a href="https://www.facebook.com/FingertipsNailBarHertford">Facebook</a></li>
+        <li><a href="https://www.instagram.com/fingertipsnailbarhertford">Instagram</a></li>
+      </ul>
+    </div>
+    <p class="foot-demo">This page is an unpublished design demo built by Ashton James as a pitch concept for Fingertips Nail Bar. It is not the salon's live website, and the salon has not endorsed it. All details &mdash; reviews, hours, services and address &mdash; were taken from the salon's own public listings (Birdeye, Nail Salon Direct, Facebook and Instagram) in August 2026. No prices are shown because the salon does not publish a price list online.</p>
+  </div>
+</footer>
+
+<a class="call-bar" href="tel:+441992554847" aria-label="Call Fingertips Nail Bar on 01992 554847">Call the salon &mdash; <b>01992 554847</b></a>
+
+<script>
+  (function () {
+    var els = document.querySelectorAll('.rv');
+    if (!('IntersectionObserver' in window)) {
+      els.forEach(function (el) { el.classList.add('in'); });
+      return;
+    }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -5% 0px' });
+    els.forEach(function (el) { io.observe(el); });
+  })();
+</script>
+
+<script>
+/* Demo enquiry form.
+   Two hard rules, both structural rather than promised:
+     1. It cannot mail the business. There is no action, no endpoint and no
+        network call anywhere in this file — submit is always prevented.
+     2. It never pretends to have sent. Instead of a thank-you, it renders the
+        enquiry as the email that WOULD have arrived, over a banner that says
+        nothing was sent. That is honest and it also shows the owner exactly
+        what they would be getting, which a fake confirmation never does. */
+(function () {
+  var form = document.querySelector('.fx-form');
+  if (!form) return;
+  var sent = document.getElementById('fx-sent');
+  var summary = document.getElementById('fx-summary');
+  var fields = Array.prototype.slice.call(form.querySelectorAll('[data-check]'));
+  var EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+  var PHONE = /^\+?[\d\s()-]{10,}$/;
+
+  function problem(el) {
+    var value = (el.value || '').trim();
+    if (!value) return el.dataset.required || 'This one is needed.';
+    if (el.dataset.check === 'contact' && !EMAIL.test(value) && !PHONE.test(value)) {
+      return 'Use an email address or a phone number so they can reply.';
+    }
+    if (el.dataset.check === 'message' && value.length < 10) {
+      return 'A little more detail helps them quote accurately.';
+    }
+    return null;
+  }
+
+  function mark(el, message) {
+    var wrap = el.closest('.fx-field');
+    var err = wrap.querySelector('.fx-err');
+    wrap.setAttribute('data-invalid', message ? 'true' : 'false');
+    el.setAttribute('aria-invalid', message ? 'true' : 'false');
+    err.textContent = message || '';
+    return !message;
+  }
+
+  fields.forEach(function (el) {
+    // Validate on the way out of a field, then live once it has been marked —
+    // so nobody is corrected mid-keystroke, but a fix clears immediately.
+    el.addEventListener('blur', function () { mark(el, problem(el)); });
+    el.addEventListener('input', function () {
+      if (el.closest('.fx-field').getAttribute('data-invalid') !== 'true') return;
+      mark(el, problem(el));
+      // Keep the summary honest: it used to keep saying "2 fields need a
+      // moment" after both had been fixed, because it was only recomputed on
+      // submit. A count that is wrong is worse than no count.
+      if (!form.querySelector('.fx-field[data-invalid="true"]')) summary.hidden = true;
+    });
+  });
+
+  form.addEventListener('submit', function (event) {
+    event.preventDefault();
+    var bad = [];
+    fields.forEach(function (el) { if (!mark(el, problem(el))) bad.push(el); });
+
+    if (bad.length) {
+      summary.textContent = bad.length === 1
+        ? 'One field needs a moment before this can go anywhere.'
+        : bad.length + ' fields need a moment before this can go anywhere.';
+      summary.hidden = false;
+      bad[0].focus();
+      return;
+    }
+    summary.hidden = true;
+
+    var get = function (name) { return (form.elements[name].value || '').trim(); };
+    // textContent throughout — never innerHTML with anything typed in.
+    document.getElementById('fx-from').textContent = get('name') + ' <' + get('contact') + '>';
+    document.getElementById('fx-subject').textContent = 'Website enquiry \u2014 ' + get('service');
+    document.getElementById('fx-message-out').textContent = get('message');
+    form.hidden = true;
+    sent.hidden = false;
+    sent.focus();
+  });
+
+  document.getElementById('fx-again').addEventListener('click', function () {
+    form.reset();
+    fields.forEach(function (el) { mark(el, null); });
+    summary.hidden = true;
+    sent.hidden = true;
+    form.hidden = false;
+    form.querySelector('input, select, textarea').focus();
+  });
+})();
+</script>
+</body>
+</html>

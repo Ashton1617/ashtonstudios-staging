@@ -1,0 +1,972 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta name="robots" content="noindex,nofollow">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow">
+<title>ND Plumbing and Heating — Welwyn Garden City | Gas Safe Boiler Installation, Servicing &amp; Repair</title>
+<meta name="description" content="ND Plumbing and Heating, Welwyn Garden City. Gas Safe registered boiler installation, servicing, repair and replacement — recommended by 100% of 55 Facebook reviewers. Call Neil on 07738 159039.">
+<meta name="theme-color" content="#0c1f28">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  /* ---------- Tokens ---------- */
+  :root {
+    --ink: #0c1f28;          /* deep petrol — the dark of a cold boiler cupboard */
+    --ink-2: #102933;
+    --ink-3: #163542;
+    --paper: #f6f1e7;        /* warm off-white */
+    --paper-dim: #cfd9dc;
+    --flame: #f4611d;        /* burner flame orange */
+    --flame-deep: #c8480e;
+    --brass: #e0a458;        /* pipe brass */
+    --copper: #b06a3b;
+    --line: rgba(246, 241, 231, 0.14);
+    --line-dark: rgba(12, 31, 40, 0.15);
+
+    --font-display: "Barlow Condensed", "Arial Narrow", sans-serif;
+    --font-body: "Barlow", "Helvetica Neue", Arial, sans-serif;
+
+    --text-base: clamp(1rem, 0.95rem + 0.3vw, 1.125rem);
+    --text-hero: clamp(2.9rem, 1.4rem + 8vw, 7rem);
+    --text-h2: clamp(2.1rem, 1.3rem + 4vw, 4.2rem);
+
+    --space-section: clamp(4rem, 3rem + 5vw, 8.5rem);
+    --gutter: clamp(1.15rem, 4vw, 3rem);
+
+    --duration: 650ms;
+    --ease: cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--ink);
+    color: var(--paper);
+    font-family: var(--font-body);
+    font-size: var(--text-base);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+    padding-bottom: 4.4rem; /* room for the fixed call bar */
+  }
+  @media (min-width: 800px) { body { padding-bottom: 0; } }
+
+  h1, h2, h3, .display {
+    font-family: var(--font-display);
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 0.95;
+    letter-spacing: 0.01em;
+  }
+
+  a { color: inherit; }
+  svg { max-width: 100%; display: block; }
+
+  .wrap { max-width: 68rem; margin-inline: auto; padding-inline: var(--gutter); }
+
+  /* ---------- Reveal system ---------- */
+  .rv {
+    opacity: 0;
+    transform: translateY(26px);
+    transition: opacity var(--duration) var(--ease), transform var(--duration) var(--ease);
+    transition-delay: var(--d, 0ms);
+  }
+  .rv.in { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .rv { opacity: 1; transform: none; transition: none; }
+    .flame-flicker { animation: none !important; }
+  }
+
+  /* ---------- Demo ribbon ---------- */
+  .demo-note {
+    background: var(--brass);
+    color: var(--ink);
+    text-align: center;
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 0.8rem;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    padding: 0.42rem var(--gutter);
+  }
+
+  /* ---------- Header ---------- */
+  header.site {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: color-mix(in srgb, var(--ink) 90%, transparent);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--line);
+  }
+  .nav { display: flex; align-items: center; justify-content: space-between; gap: 0.8rem; padding-block: 0.7rem; }
+  .brand { display: flex; align-items: center; gap: 0.6rem; text-decoration: none; }
+  .brand .mark {
+    width: 40px; height: 40px; flex: none;
+    background: var(--flame);
+    border-radius: 8px;
+    display: grid; place-items: center;
+    font-family: var(--font-display); font-weight: 700; font-size: 1.25rem;
+    color: var(--ink); letter-spacing: 0.02em;
+  }
+  .brand .word {
+    font-family: var(--font-display); font-weight: 700; text-transform: uppercase;
+    font-size: 1.15rem; line-height: 1;
+  }
+  .brand .word small {
+    display: block; font-weight: 600; font-size: 0.62rem;
+    letter-spacing: 0.28em; color: var(--brass); margin-top: 0.18rem;
+  }
+  .nav-links { display: none; gap: 1.6rem; list-style: none; }
+  .nav-links a {
+    text-decoration: none; font-family: var(--font-display); font-weight: 600;
+    font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.14em;
+    opacity: 0.75; transition: opacity 200ms var(--ease), color 200ms var(--ease);
+  }
+  .nav-links a:hover, .nav-links a:focus-visible { opacity: 1; color: var(--brass); }
+  @media (min-width: 860px) { .nav-links { display: flex; } }
+
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: 0.55rem;
+    font-family: var(--font-display); font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.07em; text-decoration: none;
+    padding: 0.7rem 1.4rem;
+    background: var(--flame); color: var(--paper);
+    border: 1px solid var(--flame); border-radius: 6px;
+    transition: transform 200ms var(--ease), background 200ms var(--ease), border-color 200ms var(--ease);
+  }
+  .btn:hover, .btn:focus-visible { background: var(--flame-deep); border-color: var(--flame-deep); transform: translateY(-2px); }
+  .btn:active { transform: translateY(0); }
+  .btn.ghost { background: transparent; border-color: var(--paper); }
+  .btn.ghost:hover, .btn.ghost:focus-visible { background: var(--paper); color: var(--ink); }
+  .btn.big { font-size: clamp(1.05rem, 3.5vw, 1.3rem); padding: 0.95rem 1.9rem; }
+  .btn .ic { width: 1.05em; height: 1.05em; flex: none; }
+  @media (max-width: 420px) { .nav .btn { padding: 0.6rem 0.9rem; font-size: 0.88rem; } }
+
+  /* ---------- Hero ---------- */
+  .hero {
+    position: relative;
+    min-height: 88svh;
+    display: flex; flex-direction: column; justify-content: center;
+    padding-block: clamp(3.5rem, 8vw, 6rem) clamp(4.5rem, 10vw, 7rem);
+    background:
+      radial-gradient(ellipse 95% 60% at 50% 115%, rgba(244, 97, 29, 0.22), transparent 70%),
+      radial-gradient(ellipse 60% 45% at 85% -5%, rgba(224, 164, 88, 0.09), transparent 70%),
+      var(--ink);
+    overflow: hidden;
+  }
+  
+  /* Full-bleed photographic hero plate. The image IS the hero; type sits on
+     it behind a two-stop scrim tuned to this site's palette so contrast holds
+     whatever the photograph does underneath. */
+  .hero-media { position: absolute; inset: 0; z-index: 0; overflow: hidden; }
+  .hero-media img { width:100%; height:100%; object-fit:cover; object-position:60% 50%;
+    filter: saturate(.88) contrast(1.05) brightness(.58); transform: scale(1.05); }
+  .hero-media::after { content:""; position:absolute; inset:0; background:
+    linear-gradient(to right, rgba(10,14,20,.94) 0%, rgba(10,14,20,.74) 42%, rgba(10,14,20,.30) 78%, rgba(10,14,20,.55) 100%),
+    linear-gradient(to top, rgba(10,14,20,.95) 0%, transparent 44%); }
+  .hero .wrap { position: relative; z-index: 1; }
+  .hero-kicker {
+    display: inline-flex; align-items: center; gap: 0.6rem;
+    font-family: var(--font-display); font-weight: 600; text-transform: uppercase;
+    letter-spacing: 0.3em; font-size: clamp(0.72rem, 2.4vw, 0.92rem);
+    color: var(--brass);
+  }
+  .hero-kicker .flame-ic { width: 0.95em; }
+  .hero h1 { font-size: var(--text-hero); margin-block: 0.6rem 0; max-width: 14ch; }
+  .hero h1 .hl {
+    color: var(--flame);
+    background-image: linear-gradient(transparent 78%, rgba(244, 97, 29, 0.35) 78%);
+  }
+  .hero-sub {
+    font-size: clamp(1.02rem, 1rem + 0.9vw, 1.35rem);
+    color: var(--paper-dim);
+    max-width: 42ch;
+    margin-top: 1.2rem;
+  }
+  .hero-ctas { display: flex; flex-wrap: wrap; gap: 0.8rem; margin-top: 2rem; }
+  @media (max-width: 560px) { .hero-ctas .btn { width: 100%; } }
+  .hero-proof {
+    margin-top: 2.6rem;
+    display: flex; flex-wrap: wrap; gap: 1rem 2.4rem;
+    font-family: var(--font-display); font-weight: 600; text-transform: uppercase;
+    letter-spacing: 0.12em; font-size: 0.82rem; color: var(--paper-dim);
+    list-style: none;
+  }
+  .hero-proof strong { color: var(--brass); font-weight: 700; }
+
+  /* Copper pipe run across the hero base */
+  .pipe-run { position: absolute; left: 0; right: 0; bottom: 0; opacity: 0.55; pointer-events: none; }
+  .pipe-run svg { width: 100%; height: auto; }
+  .flame-flicker { transform-origin: 50% 100%; animation: flick 1.6s ease-in-out infinite alternate; }
+  @keyframes flick { from { transform: scaleY(1); } to { transform: scaleY(1.18) scaleX(0.94); } }
+
+  /* ---------- Proof band ---------- */
+  .proof-band { background: var(--flame); color: var(--ink); border-block: 1px solid var(--flame-deep); }
+  .proof-band .wrap {
+    display: grid; gap: 1.4rem; padding-block: clamp(1.6rem, 4vw, 2.4rem);
+    grid-template-columns: 1fr; text-align: center;
+  }
+  @media (min-width: 700px) { .proof-band .wrap { grid-template-columns: repeat(3, 1fr); } }
+  .proof-band .stat b {
+    display: block; font-family: var(--font-display); font-weight: 700;
+    font-size: clamp(2.2rem, 6vw, 3.4rem); line-height: 1;
+  }
+  .proof-band .stat span {
+    font-family: var(--font-display); font-weight: 600; text-transform: uppercase;
+    letter-spacing: 0.14em; font-size: 0.78rem;
+  }
+
+  /* ---------- Sections ---------- */
+  section { padding-block: var(--space-section); }
+  .sec-head { margin-bottom: clamp(1.8rem, 5vw, 3.2rem); }
+  .sec-kicker {
+    font-family: var(--font-display); font-weight: 600; text-transform: uppercase;
+    letter-spacing: 0.3em; font-size: 0.78rem; color: var(--flame);
+  }
+  .sec-head h2 { font-size: var(--text-h2); margin-top: 0.35rem; }
+  .sec-head .lede { color: var(--paper-dim); max-width: 52ch; margin-top: 0.9rem; }
+
+  /* ---------- Services ---------- */
+  .services { background: var(--ink-2); border-block: 1px solid var(--line); }
+  .svc-grid { display: grid; gap: 1rem; grid-template-columns: 1fr; }
+  @media (min-width: 640px) { .svc-grid { grid-template-columns: 1fr 1fr; } }
+  .svc {
+    background: var(--ink);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 1.5rem 1.4rem 1.4rem;
+    display: flex; flex-direction: column; gap: 0.7rem;
+    transition: transform 250ms var(--ease), border-color 250ms var(--ease);
+  }
+  .svc:hover { transform: translateY(-5px); border-color: var(--brass); }
+  .svc .ic { width: 44px; height: 44px; color: var(--brass); }
+  .svc h3 { font-size: 1.45rem; letter-spacing: 0.04em; }
+  .svc p { color: var(--paper-dim); font-size: 0.95rem; flex: 1; }
+  .svc a {
+    font-family: var(--font-display); font-weight: 600; text-transform: uppercase;
+    letter-spacing: 0.12em; font-size: 0.82rem; color: var(--flame);
+    text-decoration: none; border-bottom: 2px solid rgba(244, 97, 29, 0.4);
+    align-self: flex-start; padding-bottom: 0.1rem;
+    transition: border-color 200ms var(--ease);
+  }
+  .svc a:hover, .svc a:focus-visible { border-color: var(--flame); }
+  .quote-note {
+    margin-top: 2rem;
+    border: 1px dashed rgba(224, 164, 88, 0.5);
+    border-radius: 10px;
+    padding: 1.3rem 1.4rem;
+    color: var(--paper-dim);
+    font-size: 0.98rem;
+    max-width: 60ch;
+  }
+  .quote-note b { color: var(--brass); }
+
+  /* ---------- Emergency band ---------- */
+  .emergency {
+    background: var(--paper); color: var(--ink);
+    text-align: center;
+  }
+  .emergency h2 { font-size: var(--text-h2); }
+  .emergency h2 .hl { color: var(--flame-deep); }
+  .emergency p { max-width: 46ch; margin: 1rem auto 1.8rem; color: #45535a; }
+  .emergency .tel-big {
+    display: inline-block;
+    font-family: var(--font-display); font-weight: 700;
+    font-size: clamp(1.9rem, 7vw, 3.2rem);
+    letter-spacing: 0.04em;
+    color: var(--ink);
+    text-decoration: none;
+    border-bottom: 4px solid var(--flame);
+    line-height: 1.15;
+    transition: color 200ms var(--ease);
+  }
+  .emergency .tel-big:hover, .emergency .tel-big:focus-visible { color: var(--flame-deep); }
+  .emergency .sub-line {
+    margin-top: 0.9rem; font-size: 0.88rem; color: #5a6a72; font-style: italic;
+  }
+
+  /* ---------- Reviews ---------- */
+  .reviews-hero { display: grid; gap: clamp(2rem, 5vw, 4rem); grid-template-columns: 1fr; align-items: center; }
+  @media (min-width: 860px) { .reviews-hero { grid-template-columns: 0.9fr 1.1fr; } }
+  .score-block .pct {
+    font-family: var(--font-display); font-weight: 700;
+    font-size: clamp(5.5rem, 20vw, 10rem);
+    line-height: 0.9; color: var(--flame);
+  }
+  .score-block .pct-label {
+    font-family: var(--font-display); font-weight: 600; text-transform: uppercase;
+    letter-spacing: 0.16em; font-size: clamp(0.85rem, 2.5vw, 1.05rem);
+    color: var(--paper); margin-top: 0.5rem; max-width: 22ch;
+  }
+  .rec-bar { margin-top: 1.6rem; max-width: 26rem; }
+  .rec-bar .track { height: 12px; border-radius: 999px; background: var(--ink-3); overflow: hidden; }
+  .rec-bar .fill {
+    height: 100%; width: 100%; border-radius: 999px;
+    background: linear-gradient(90deg, var(--brass), var(--flame));
+    transform-origin: left center; transform: scaleX(0);
+    transition: transform 1100ms 200ms var(--ease);
+  }
+  .rv.in .rec-bar .fill, .rec-bar .fill.in { transform: scaleX(1); }
+  @media (prefers-reduced-motion: reduce) { .rec-bar .fill { transform: scaleX(1); transition: none; } }
+  .rec-bar .caption { margin-top: 0.6rem; font-size: 0.85rem; color: var(--paper-dim); font-style: italic; }
+  .review-facts { display: grid; gap: 1rem; }
+  .fact {
+    border: 1px solid var(--line); border-left: 3px solid var(--flame);
+    border-radius: 0 8px 8px 0;
+    background: var(--ink-2);
+    padding: 1.2rem 1.3rem;
+  }
+  .fact h3 { font-size: 1.25rem; letter-spacing: 0.05em; color: var(--brass); }
+  .fact p { color: var(--paper-dim); font-size: 0.96rem; margin-top: 0.4rem; }
+  .quote-slot {
+    border: 1px dashed rgba(207, 217, 220, 0.4);
+    border-radius: 8px;
+    padding: 1.2rem 1.3rem;
+    color: var(--paper-dim);
+    font-size: 0.92rem;
+    font-style: italic;
+  }
+  .quote-slot b { color: var(--brass); font-style: normal; }
+
+  /* ---------- Gallery ---------- */
+  .gallery { background: var(--ink-2); border-block: 1px solid var(--line); }
+  .shots { display: grid; gap: 0.9rem; grid-template-columns: repeat(3, 1fr); }
+  @media (max-width: 560px) { .shots { grid-template-columns: 1fr; } }
+  .shot {
+    aspect-ratio: 4 / 3;
+    background: var(--ink-3);
+    border: 1px solid var(--line); border-radius: 10px;
+    display: grid; place-items: center; position: relative; overflow: hidden;
+    transition: border-color 250ms var(--ease);
+  }
+  .shot:hover { border-color: var(--flame); }
+  .shot svg { width: 30%; opacity: 0.5; transition: transform 350ms var(--ease), opacity 350ms var(--ease); }
+  .shot:hover svg { transform: scale(1.1); opacity: 0.85; }
+  .shot .label {
+    position: absolute; bottom: 0.7rem; left: 0; right: 0; text-align: center;
+    font-family: var(--font-display); font-weight: 600; text-transform: uppercase;
+    letter-spacing: 0.13em; font-size: 0.64rem; color: var(--paper-dim);
+  }
+  .ph-note { margin-top: 1.4rem; font-size: 0.85rem; font-style: italic; color: var(--paper-dim); }
+
+  /* ---------- About / Gas Safe ---------- */
+  .about-grid { display: grid; gap: clamp(2rem, 5vw, 3.5rem); grid-template-columns: 1fr; align-items: start; }
+  @media (min-width: 820px) { .about-grid { grid-template-columns: 1.15fr 0.85fr; } }
+  .about-copy p + p { margin-top: 1rem; }
+  .about-copy p { color: var(--paper-dim); max-width: 55ch; }
+  .about-copy p strong { color: var(--paper); }
+  .cred-card {
+    background: var(--ink-2);
+    border: 1px solid var(--line); border-radius: 12px;
+    padding: 1.7rem 1.5rem;
+    display: grid; gap: 1rem;
+  }
+  .cred-card .badge { display: flex; align-items: center; gap: 0.9rem; }
+  .cred-card .badge svg { width: 46px; flex: none; }
+  .cred-card .badge .t {
+    font-family: var(--font-display); font-weight: 700; text-transform: uppercase;
+    font-size: 1.3rem; line-height: 1.05;
+  }
+  .cred-card .badge .t small {
+    display: block; font-weight: 600; font-size: 0.68rem;
+    letter-spacing: 0.2em; color: var(--brass); margin-top: 0.25rem;
+  }
+  .cred-card p { font-size: 0.88rem; color: var(--paper-dim); font-style: italic; }
+
+  /* ---------- Contact ---------- */
+  .contact {
+    text-align: center;
+    background:
+      radial-gradient(ellipse 85% 90% at 50% 125%, rgba(244, 97, 29, 0.3), transparent 70%),
+      var(--ink);
+    border-top: 1px solid var(--line);
+  }
+  .contact h2 { font-size: var(--text-h2); }
+  .contact .sub { color: var(--paper-dim); margin: 1rem auto 2.2rem; max-width: 44ch; }
+  .contact-ways {
+    display: flex; flex-wrap: wrap; justify-content: center; gap: 0.8rem;
+  }
+  @media (max-width: 560px) { .contact-ways .btn { width: 100%; } }
+  .contact .alt { margin-top: 1.8rem; font-size: 0.95rem; color: var(--paper-dim); }
+  .contact .alt a { color: var(--brass); text-decoration-color: rgba(224, 164, 88, 0.5); }
+
+  /* ---------- Footer ---------- */
+  footer.site { border-top: 1px solid var(--line); padding: 2.4rem 0 3rem; font-size: 0.85rem; color: var(--paper-dim); }
+  .foot-row { display: flex; flex-wrap: wrap; gap: 1rem 2rem; justify-content: space-between; align-items: center; }
+  .foot-row a { color: var(--brass); }
+  .foot-demo { margin-top: 1.5rem; font-style: italic; font-size: 0.8rem; opacity: 0.85; max-width: 75ch; }
+  .foot-src { margin-top: 0.7rem; font-size: 0.74rem; opacity: 0.6; max-width: 75ch; }
+
+  /* ---------- Fixed mobile call bar ---------- */
+  .call-bar {
+    position: fixed; left: 0; right: 0; bottom: 0; z-index: 60;
+    background: var(--flame);
+    border-top: 1px solid var(--flame-deep);
+    padding: 0.6rem var(--gutter) calc(0.6rem + env(safe-area-inset-bottom));
+  }
+  .call-bar a {
+    display: flex; align-items: center; justify-content: center; gap: 0.6rem;
+    font-family: var(--font-display); font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.06em; font-size: 1.15rem;
+    color: var(--paper); text-decoration: none;
+  }
+  .call-bar .ic { width: 1.1em; height: 1.1em; }
+  @media (min-width: 800px) { .call-bar { display: none; } }
+
+  /* enquiry-form palette aliases — maps this site's own tokens
+     onto the shared form stylesheet below */
+  .fx {
+    --fx-bg: var(--ink-2); --fx-ink: var(--paper); --fx-dim: var(--paper-dim);
+    --fx-accent: var(--flame); --fx-on-accent: var(--ink); --fx-line: rgba(240, 231, 211, 0.38);
+    --fx-field-bg: var(--ink); --fx-error: #ff9b6b; --fx-radius: 3px;
+    --fx-display: var(--font-display); --fx-gutter: var(--gutter);
+  }
+
+/* ---------- Enquiry form (demo-only, sends nothing) ---------- */
+/* Palette is aliased onto --fx-* per demo just above, so this block is
+   identical in all five and each form still looks native to its own site. */
+.fx { background: var(--fx-bg); color: var(--fx-ink); padding: var(--space-section) 0; }
+.fx .fx-wrap { width: min(100% - 2 * var(--fx-gutter), 60rem); margin-inline: auto; }
+.fx-head { max-width: 46ch; }
+.fx-kicker {
+  font-family: var(--fx-display); text-transform: uppercase; letter-spacing: 0.18em;
+  font-size: 0.78rem; color: var(--fx-accent); margin: 0 0 0.6rem;
+}
+.fx-head h2 { font-size: var(--text-h2); line-height: 1.02; margin: 0 0 0.9rem; }
+.fx-head p { color: var(--fx-dim); margin: 0; max-width: 52ch; }
+.fx-form { margin-top: clamp(2rem, 4vw, 3rem); display: grid; gap: 1.1rem; }
+/* A class rule setting `display` beats the UA's [hidden]{display:none}, so the
+   form stayed on screen after a successful submit even though form.hidden was
+   true. Caught by looking at the rendered page — every DOM assertion read the
+   .hidden PROPERTY, which was correctly true the whole time. */
+.fx-form[hidden] { display: none; }
+.fx-row { display: grid; gap: 1.1rem; }
+@media (min-width: 40rem) { .fx-row { grid-template-columns: 1fr 1fr; } }
+.fx-field { display: grid; gap: 0.4rem; }
+.fx-field label { font-weight: 700; font-size: 0.95rem; }
+.fx-field .fx-hint { font-size: 0.85rem; color: var(--fx-dim); }
+.fx-field input, .fx-field select, .fx-field textarea {
+  font: inherit; font-size: 1rem; color: var(--fx-ink);
+  background: var(--fx-field-bg); border: 1px solid var(--fx-line);
+  border-radius: var(--fx-radius); padding: 0.85rem 0.95rem; width: 100%;
+  transition: border-color var(--duration, 300ms) var(--ease, ease),
+              box-shadow var(--duration, 300ms) var(--ease, ease);
+}
+.fx-field textarea { min-height: 8.5rem; resize: vertical; }
+.fx-field select { appearance: none; cursor: pointer; }
+.fx-field input:hover, .fx-field select:hover, .fx-field textarea:hover { border-color: var(--fx-accent); }
+.fx-field input:focus-visible, .fx-field select:focus-visible, .fx-field textarea:focus-visible {
+  outline: none; border-color: var(--fx-accent);
+  box-shadow: 0 0 0 3px color-mix(in oklab, var(--fx-accent) 35%, transparent);
+}
+.fx-field[data-invalid="true"] input,
+.fx-field[data-invalid="true"] select,
+.fx-field[data-invalid="true"] textarea { border-color: var(--fx-error); }
+.fx-err { font-size: 0.85rem; color: var(--fx-error); min-height: 1.1rem; font-weight: 700; }
+.fx-field[data-invalid="true"] .fx-err::before { content: "\2717\00a0"; }
+.fx-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 1.4rem; margin-top: 0.4rem; }
+.fx-submit {
+  font-family: var(--fx-display); font-size: 1rem; letter-spacing: 0.06em;
+  text-transform: uppercase; cursor: pointer;
+  background: var(--fx-accent); color: var(--fx-on-accent);
+  border: 1px solid var(--fx-accent); border-radius: var(--fx-radius);
+  padding: 0.95rem 2.1rem;
+  transition: transform var(--duration, 300ms) var(--ease, ease),
+              filter var(--duration, 300ms) var(--ease, ease);
+}
+.fx-submit:hover { filter: brightness(1.12); transform: translateY(-2px); }
+.fx-submit:active { transform: translateY(0); }
+.fx-submit:focus-visible { outline: 3px solid var(--fx-accent); outline-offset: 3px; }
+.fx-note { font-size: 0.85rem; color: var(--fx-dim); margin: 0; }
+.fx-summary {
+  border: 1px solid var(--fx-error); border-radius: var(--fx-radius);
+  padding: 0.85rem 1rem; color: var(--fx-error); font-size: 0.92rem;
+}
+.fx-summary[hidden] { display: none; }
+/* Success: not a thank-you. A preview of the enquiry that WOULD have arrived. */
+.fx-sent { border: 1px solid var(--fx-line); border-radius: var(--fx-radius); overflow: hidden; }
+.fx-sent[hidden] { display: none; }
+.fx-sent:focus-visible { outline: 3px solid var(--fx-accent); outline-offset: 3px; }
+.fx-sent-bar {
+  background: var(--fx-accent); color: var(--fx-on-accent);
+  padding: 0.7rem 1.1rem; font-family: var(--fx-display);
+  text-transform: uppercase; letter-spacing: 0.12em; font-size: 0.8rem;
+}
+.fx-mail { background: var(--fx-field-bg); padding: clamp(1.1rem, 3vw, 1.8rem); }
+.fx-mail dl { display: grid; grid-template-columns: auto 1fr; gap: 0.45rem 1rem; margin: 0 0 1.1rem; font-size: 0.95rem; }
+.fx-mail dt { color: var(--fx-dim); font-weight: 700; }
+.fx-mail dd { margin: 0; overflow-wrap: anywhere; }
+.fx-mail .fx-body { border-top: 1px solid var(--fx-line); padding-top: 1.1rem; white-space: pre-wrap; overflow-wrap: anywhere; }
+.fx-sent-foot { padding: 1.1rem; border-top: 1px solid var(--fx-line); display: flex; flex-wrap: wrap; gap: 0.8rem 1.2rem; align-items: center; }
+.fx-sent-foot p { margin: 0; font-size: 0.88rem; color: var(--fx-dim); max-width: 54ch; }
+.fx-again {
+  font: inherit; font-size: 0.9rem; font-weight: 700; cursor: pointer;
+  background: none; color: var(--fx-ink); border: 1px solid var(--fx-line);
+  border-radius: var(--fx-radius); padding: 0.6rem 1.2rem;
+}
+.fx-again:hover { border-color: var(--fx-accent); color: var(--fx-accent); }
+.fx-again:focus-visible { outline: 3px solid var(--fx-accent); outline-offset: 3px; }
+
+@media (prefers-reduced-motion: reduce) {
+  /* The form's own motion, guarded separately from each demo's .rv reveals —
+     hover lift and focus/border transitions are still motion to someone who
+     asked for none. Colour and focus rings stay, because they carry meaning. */
+  .fx-field input, .fx-field select, .fx-field textarea, .fx-submit { transition: none; }
+  .fx-submit:hover { transform: none; }
+}
+
+
+@media (pointer: coarse) {
+  /* Touch targets, added 1 Sept 2026. Measured at 375px: this demo carried
+     tel:/mailto: links as small as 18px — and on a trade site the phone number
+     IS the conversion action. The studio site's fix (an absolutely-positioned
+     44px overlay) is deliberately NOT reused here: these links sit stacked in
+     lists, so a 44px overlay on each would overlap its neighbour and let the
+     later one in DOM order steal the tap, making tapping worse rather than
+     better. min-height grows the element itself, so nothing can overlap.
+     Scoped to (pointer: coarse) so the desktop composition is untouched. */
+  a[href^="tel:"], a[href^="mailto:"] {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+  }
+}
+</style>
+</head>
+<body>
+
+<p class="demo-note">Demo concept &mdash; built by Ashton James &middot; Not the live ND Plumbing and Heating site &nbsp;·&nbsp; <a href="../../" style="color:inherit;text-decoration:underline;text-underline-offset:2px;font-weight:700">&larr; back to Ashton Studios</a></p>
+
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="#top" aria-label="ND Plumbing and Heating — home">
+      <span class="mark" aria-hidden="true">ND</span>
+      <span class="word">Plumbing &amp; Heating<small>Welwyn Garden City</small></span>
+    </a>
+    <nav aria-label="Main navigation">
+      <ul class="nav-links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#about">About Neil</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <a class="btn" href="tel:+447738159039">
+      <svg class="ic" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.9 15.9 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .57 3.6 1 1 0 0 1-.25 1z"/></svg>
+      Call Neil
+    </a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero" aria-labelledby="hero-heading">
+    <div class="hero-media" aria-hidden="true">
+      <img src="assets/hero.webp" alt="" width="2400" height="1350" fetchpriority="high" decoding="async">
+    </div>
+    <div class="wrap">
+      <p class="hero-kicker rv">
+        <svg class="flame-ic" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2s5 4.5 5 9.5a5 5 0 0 1-10 0c0-1.5.5-2.8 1.2-4C8.6 9 10 9.8 10 11.5 10 8 12 5 12 2z"/></svg>
+        Gas Safe registered &middot; Welwyn Garden City
+      </p>
+      <h1 id="hero-heading" class="rv" style="--d:80ms">The boiler man <span class="hl">100%</span> of his reviewers recommend</h1>
+      <p class="hero-sub rv" style="--d:160ms">Boiler installation, servicing, repair and replacement across Welwyn Garden City &mdash; 55 Facebook reviews, and every single one recommends Neil.</p>
+      <div class="hero-ctas rv" style="--d:240ms">
+        <a class="btn big" href="tel:+447738159039">
+          <svg class="ic" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.9 15.9 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .57 3.6 1 1 0 0 1-.25 1z"/></svg>
+          Call 07738 159039
+        </a>
+        <a class="btn ghost" href="#reviews">See the reviews</a>
+      </div>
+      <ul class="hero-proof rv" style="--d:320ms">
+        <li><strong>55</strong> Facebook reviews</li>
+        <li><strong>100%</strong> recommend</li>
+        <li><strong>Gas Safe</strong> registered</li>
+      </ul>
+    </div>
+    <div class="pipe-run" aria-hidden="true">
+      <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M-10 84 H320 a14 14 0 0 0 14-14 V40 a14 14 0 0 1 14-14 H560" fill="none" stroke="#b06a3b" stroke-width="12" stroke-linecap="round"/>
+        <path d="M560 26 H840 a14 14 0 0 1 14 14 v30 a14 14 0 0 0 14 14 H1210" fill="none" stroke="#b06a3b" stroke-width="12" stroke-linecap="round"/>
+        <rect x="540" y="14" width="40" height="24" rx="5" fill="#e0a458"/>
+        <rect x="316" y="70" width="28" height="28" rx="5" fill="#e0a458"/>
+        <rect x="846" y="70" width="28" height="28" rx="5" fill="#e0a458"/>
+        <g class="flame-flicker">
+          <path d="M600 12c0-8 6-14 6-20 0 0 8 7 8 14a7 7 0 0 1-14 0z" fill="#f4611d" transform="translate(-7 8)"/>
+        </g>
+      </svg>
+    </div>
+  </section>
+
+  <!-- PROOF BAND -->
+  <div class="proof-band" role="presentation">
+    <div class="wrap">
+      <p class="stat rv"><b>55</b><span>Reviews on Facebook</span></p>
+      <p class="stat rv" style="--d:90ms"><b>100%</b><span>Recommend the work</span></p>
+      <p class="stat rv" style="--d:180ms"><b>WGC</b><span>Local &amp; Gas Safe registered</span></p>
+    </div>
+  </div>
+
+  <!-- SERVICES -->
+  <section class="services" id="services" aria-labelledby="services-heading">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <p class="sec-kicker">What Neil Does</p>
+        <h2 id="services-heading">Boilers, start to finish</h2>
+        <p class="lede">One trade, done properly. The reviews on the ND Plumbing and Heating Facebook page &mdash; with feedback running into 2026 &mdash; cover exactly these four jobs.</p>
+      </div>
+      <div class="svc-grid">
+        <article class="svc rv">
+          <svg class="ic" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><rect x="12" y="6" width="24" height="32" rx="3"/><circle cx="24" cy="17" r="5"/><path d="M24 14v3l2 2"/><path d="M17 30h14M17 34h9"/><path d="M18 38v5M30 38v5"/></svg>
+          <h3>Boiler Installation</h3>
+          <p>A new boiler, sized right for your home and fitted by the Gas Safe registered engineer who answers his own phone.</p>
+          <a href="tel:+447738159039">Call for a quote</a>
+        </article>
+        <article class="svc rv" style="--d:80ms">
+          <svg class="ic" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M24 42a17 17 0 1 1 17-17"/><path d="M24 25l8-8"/><circle cx="24" cy="25" r="3.2" fill="currentColor" stroke="none"/><path d="M41 31l4 4-5 5-4-4"/></svg>
+          <h3>Boiler Servicing</h3>
+          <p>An annual once-over that keeps the boiler efficient, safe and inside its warranty &mdash; before winter finds the weak spot.</p>
+          <a href="tel:+447738159039">Book a service</a>
+        </article>
+        <article class="svc rv" style="--d:160ms">
+          <svg class="ic" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M30 8a9 9 0 0 0-9.8 12.5L8 32.7a4.4 4.4 0 1 0 6.3 6.3l12.2-12.2A9 9 0 0 0 38.5 16l-6 6-5.5-1-1-5.5 6-6z"/></svg>
+          <h3>Boiler Repair</h3>
+          <p>Fault found, part fitted, heating back on. Straight diagnosis from someone who fixes boilers all day, every day.</p>
+          <a href="tel:+447738159039">Call about a fault</a>
+        </article>
+        <article class="svc rv" style="--d:240ms">
+          <svg class="ic" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="15" y="13" width="18" height="24" rx="2.5"/><circle cx="24" cy="21" r="3.5"/><path d="M19 31h10"/><path d="M8 6h26l-4.5-4.5M8 6l0 0"/><path d="M40 43H14l4.5 4.5"/></svg>
+          <h3>Boiler Replacement</h3>
+          <p>When a repair stops being worth it, Neil says so &mdash; then swaps the old unit out with minimal mess and no upsell.</p>
+          <a href="tel:+447738159039">Talk it through</a>
+        </article>
+      </div>
+      <p class="quote-note rv"><b>No price list &mdash; on purpose.</b> Every boiler job is different, so every job gets a straight quote for what it actually needs. No call-centre, no menu of made-up fees. Ring, describe the problem, get an honest answer.</p>
+    </div>
+  </section>
+
+  <!-- EMERGENCY / URGENCY BAND -->
+  <section class="emergency" aria-labelledby="emergency-heading">
+    <div class="wrap">
+      <h2 id="emergency-heading" class="rv">No heat? <span class="hl">No hot water?</span></h2>
+      <p class="rv" style="--d:80ms">Skip the directories and the call-centres. Ring the local engineer 55 reviewers already put their name behind.</p>
+      <p class="rv" style="--d:160ms"><a class="tel-big" href="tel:+447738159039">07738 159039</a></p>
+      <p class="sub-line rv" style="--d:240ms">One number. It's Neil who picks up.</p>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section id="reviews" aria-labelledby="reviews-heading">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <p class="sec-kicker">The Record</p>
+        <h2 id="reviews-heading">Every reviewer recommends him</h2>
+      </div>
+      <div class="reviews-hero">
+        <div class="score-block rv">
+          <p class="pct">100%</p>
+          <p class="pct-label">of 55 Facebook reviewers recommend ND Plumbing and Heating</p>
+          <div class="rec-bar">
+            <div class="track"><div class="fill"></div></div>
+            <p class="caption">55 recommend &middot; 0 don't &middot; facebook.com/ndplumbingandheatingwgc, August 2026</p>
+          </div>
+        </div>
+        <div class="review-facts">
+          <div class="fact rv">
+            <h3>Not one bad word</h3>
+            <p>Fifty-five people took the time to review ND Plumbing and Heating on Facebook. All fifty-five recommend the work &mdash; a 100% record.</p>
+          </div>
+          <div class="fact rv" style="--d:90ms">
+            <h3>Recent, not historic</h3>
+            <p>The feedback runs right into 2026, covering boiler servicing, repair and replacement jobs &mdash; this is a live reputation, not an old one.</p>
+          </div>
+          <div class="quote-slot rv" style="--d:180ms">
+            <b>Review quotes slot in here.</b> On the live site this space carries real customer reviews, word for word from the Facebook page with the reviewer's first name and date &mdash; nothing paraphrased, nothing invented.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="gallery" aria-labelledby="gallery-heading">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <p class="sec-kicker">The Work</p>
+        <h2 id="gallery-heading">Jobs done properly</h2>
+      </div>
+      <div class="shots">
+        <div class="shot rv">
+          <svg viewBox="0 0 64 64" fill="none" stroke="#f6f1e7" stroke-width="3" aria-hidden="true"><rect x="20" y="8" width="24" height="36" rx="3"/><circle cx="32" cy="20" r="5"/><path d="M26 34h12M24 44v8M40 44v8"/></svg>
+          <span class="label">Boiler install photo here</span>
+        </div>
+        <div class="shot rv" style="--d:70ms">
+          <svg viewBox="0 0 64 64" fill="none" stroke="#f6f1e7" stroke-width="3" aria-hidden="true"><path d="M6 42h40l8-12h4v18H6z"/><circle cx="18" cy="50" r="5"/><circle cx="46" cy="50" r="5"/><path d="M6 42V30h28v12"/></svg>
+          <span class="label">The van &mdash; photo here</span>
+        </div>
+        <div class="shot rv" style="--d:140ms">
+          <svg viewBox="0 0 64 64" fill="none" stroke="#f6f1e7" stroke-width="3" aria-hidden="true"><path d="M14 50 44 20M36 12l16 16-8 8-16-16z"/><circle cx="14" cy="50" r="5" fill="#f4611d" stroke="none"/></svg>
+          <span class="label">On-the-job photo here</span>
+        </div>
+      </div>
+      <p class="ph-note rv">Placeholder tiles &mdash; this strip takes real job photos straight from Neil's phone. No stock images, ever.</p>
+    </div>
+  </section>
+
+  <!-- ABOUT / GAS SAFE -->
+  <section id="about" aria-labelledby="about-heading">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <p class="sec-kicker">The Local One</p>
+        <h2 id="about-heading">Meet Neil</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-copy rv">
+          <p><strong>ND Plumbing and Heating is Neil</strong> &mdash; a Gas Safe registered engineer based in Welwyn Garden City. When you call, you get the person who does the work, not a booking desk.</p>
+          <p>That's why the Facebook page reads the way it does: 55 reviews, every one a recommendation. Small outfit, local patch, reputation on every job.</p>
+          <p>Boiler installation, servicing, repair or replacement &mdash; describe the problem and you'll get a straight answer and a straight quote.</p>
+        </div>
+        <div class="cred-card rv" style="--d:120ms">
+          <div class="badge">
+            <svg viewBox="0 0 48 56" aria-hidden="true"><path d="M24 2 44 9v16c0 14-8.5 23.5-20 27C12.5 48.5 4 39 4 25V9z" fill="none" stroke="#e0a458" stroke-width="3"/><path d="M24 14s7 6.5 7 13a7 7 0 0 1-14 0c0-2 .7-3.8 1.7-5.5.5 1.9 2.3 3 2.3 5 0-4.5 3-8 3-12.5z" fill="#f4611d"/></svg>
+            <p class="t">Gas Safe<small>Registered Engineer</small></p>
+          </div>
+          <p>Gas Safe registration as stated on the business's public profile. The registration number &mdash; checkable on the official Gas Safe register &mdash; is displayed here on the live site.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact" aria-labelledby="contact-heading">
+    <div class="wrap">
+      <h2 id="contact-heading" class="rv">Get the heating <span style="color:var(--flame)">sorted</span></h2>
+      <p class="sub rv" style="--d:80ms">One call does it. Prefer to type? Message the Facebook page &mdash; same Neil on the other end.</p>
+      <div class="contact-ways rv" style="--d:160ms">
+        <a class="btn big" href="tel:+447738159039">
+          <svg class="ic" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.9 15.9 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .57 3.6 1 1 0 0 1-.25 1z"/></svg>
+          Call 07738 159039
+        </a>
+        <a class="btn ghost big" href="https://www.facebook.com/ndplumbingandheatingwgc">Message on Facebook</a>
+      </div>
+      <p class="alt rv" style="--d:240ms">Or text the same number &middot; email <a href="mailto:Neildoctor@outlook.com">Neildoctor@outlook.com</a></p>
+    </div>
+  </section>
+
+
+  <!-- ENQUIRY (demo only — sends nothing, see the script at the end of this file) -->
+  <section class="fx" id="enquire" aria-labelledby="fx-heading">
+    <div class="fx-wrap">
+      <div class="fx-head rv">
+        <p class="fx-kicker">Get a quote</p>
+        <h2 id="fx-heading">Tell us what&rsquo;s wrong</h2>
+        <p>Describe the job and you&rsquo;ll get a straight answer on whether it&rsquo;s a call-out or a bigger piece of work.</p>
+      </div>
+
+      <p class="fx-summary" id="fx-summary" role="alert" hidden></p>
+
+      <form class="fx-form rv" novalidate>
+        <div class="fx-row">
+          <div class="fx-field">
+            <label for="fx-name">Your name</label>
+            <input id="fx-name" name="name" type="text" autocomplete="name"
+                   data-check="name" data-required="We need a name to put to the job."
+                   aria-describedby="fx-name-err">
+            <p class="fx-err" id="fx-name-err"></p>
+          </div>
+          <div class="fx-field">
+            <label for="fx-contact">Email or phone</label>
+            <input id="fx-contact" name="contact" type="text" autocomplete="email"
+                   data-check="contact" data-required="Without this they cannot reply."
+                   aria-describedby="fx-contact-hint fx-contact-err">
+            <p class="fx-hint" id="fx-contact-hint">Whichever you would rather be reached on.</p>
+            <p class="fx-err" id="fx-contact-err"></p>
+          </div>
+        </div>
+        <div class="fx-field">
+          <label for="fx-service">What do you need?</label>
+          <select id="fx-service" name="service" data-check="service"
+                  data-required="Pick the closest match." aria-describedby="fx-service-err">
+            <option value="">Choose one&hellip;</option>
+            <option>Boiler repair</option>
+            <option>Boiler replacement</option>
+            <option>Bathroom installation</option>
+            <option>Leak or emergency</option>
+            <option>Something else</option>
+          </select>
+          <p class="fx-err" id="fx-service-err"></p>
+        </div>
+        <div class="fx-field">
+          <label for="fx-message">A few details</label>
+          <textarea id="fx-message" name="message" data-check="message"
+                    data-required="Tell them what you are after."
+                    aria-describedby="fx-message-hint fx-message-err"></textarea>
+          <p class="fx-hint" id="fx-message-hint">What it is, how long it&rsquo;s been going on, and how urgent.</p>
+          <p class="fx-err" id="fx-message-err"></p>
+        </div>
+        <div class="fx-actions">
+          <button class="fx-submit" type="submit">Request a quote</button>
+          <p class="fx-note"><strong>Demo form.</strong> Nothing is sent &mdash; it shows you the enquiry instead.</p>
+        </div>
+      </form>
+
+      <div class="fx-sent" id="fx-sent" tabindex="-1" role="status" hidden>
+        <p class="fx-sent-bar">Nothing was sent &mdash; this is what would have landed</p>
+        <div class="fx-mail">
+          <dl>
+            <dt>To</dt><dd>the engineer&rsquo;s inbox</dd>
+            <dt>From</dt><dd id="fx-from"></dd>
+            <dt>Subject</dt><dd id="fx-subject"></dd>
+          </dl>
+          <div class="fx-body" id="fx-message-out"></div>
+        </div>
+        <div class="fx-sent-foot">
+          <button class="fx-again" id="fx-again" type="button">Try it again</button>
+          <p>This page is a demo concept, so the form is deliberately wired to nothing &mdash;
+             no message reaches ND Plumbing &amp; Heating. On the real site this arrives in the inbox
+             within seconds of someone pressing the button.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-row">
+      <p>&copy; 2026 ND Plumbing and Heating &middot; Welwyn Garden City &middot; Gas Safe registered</p>
+      <p><a href="https://www.facebook.com/ndplumbingandheatingwgc">Facebook</a></p>
+    </div>
+    <p class="foot-demo">This page is a demonstration mockup built by Ashton James from publicly available information, as a pitch concept for ND Plumbing and Heating. It is not the business's live website, and Ashton James is not affiliated with or endorsed by ND Plumbing and Heating. Want it live? It's yours &mdash; get in touch when Ashton calls.</p>
+    <p class="foot-src">Sources: review count and 100% recommend figure from the ND Plumbing and Heating Facebook page (facebook.com/ndplumbingandheatingwgc); phone and email from the business's Yell listing. All figures as published August 2026. No prices are shown because the business publishes none &mdash; work is quoted per job.</p>
+  </div>
+</footer>
+
+<div class="call-bar" role="complementary" aria-label="Quick call">
+  <a href="tel:+447738159039">
+    <svg class="ic" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.9 15.9 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .57 3.6 1 1 0 0 1-.25 1z"/></svg>
+    Call Neil &mdash; 07738 159039
+  </a>
+</div>
+
+<script>
+  (function () {
+    var els = document.querySelectorAll('.rv');
+    if (!('IntersectionObserver' in window)) {
+      els.forEach(function (el) {
+        el.classList.add('in');
+        var fill = el.querySelector('.rec-bar .fill');
+        if (fill) fill.classList.add('in');
+      });
+      return;
+    }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -5% 0px' });
+    els.forEach(function (el) { io.observe(el); });
+  })();
+</script>
+
+<script>
+/* Demo enquiry form.
+   Two hard rules, both structural rather than promised:
+     1. It cannot mail the business. There is no action, no endpoint and no
+        network call anywhere in this file — submit is always prevented.
+     2. It never pretends to have sent. Instead of a thank-you, it renders the
+        enquiry as the email that WOULD have arrived, over a banner that says
+        nothing was sent. That is honest and it also shows the owner exactly
+        what they would be getting, which a fake confirmation never does. */
+(function () {
+  var form = document.querySelector('.fx-form');
+  if (!form) return;
+  var sent = document.getElementById('fx-sent');
+  var summary = document.getElementById('fx-summary');
+  var fields = Array.prototype.slice.call(form.querySelectorAll('[data-check]'));
+  var EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+  var PHONE = /^\+?[\d\s()-]{10,}$/;
+
+  function problem(el) {
+    var value = (el.value || '').trim();
+    if (!value) return el.dataset.required || 'This one is needed.';
+    if (el.dataset.check === 'contact' && !EMAIL.test(value) && !PHONE.test(value)) {
+      return 'Use an email address or a phone number so they can reply.';
+    }
+    if (el.dataset.check === 'message' && value.length < 10) {
+      return 'A little more detail helps them quote accurately.';
+    }
+    return null;
+  }
+
+  function mark(el, message) {
+    var wrap = el.closest('.fx-field');
+    var err = wrap.querySelector('.fx-err');
+    wrap.setAttribute('data-invalid', message ? 'true' : 'false');
+    el.setAttribute('aria-invalid', message ? 'true' : 'false');
+    err.textContent = message || '';
+    return !message;
+  }
+
+  fields.forEach(function (el) {
+    // Validate on the way out of a field, then live once it has been marked —
+    // so nobody is corrected mid-keystroke, but a fix clears immediately.
+    el.addEventListener('blur', function () { mark(el, problem(el)); });
+    el.addEventListener('input', function () {
+      if (el.closest('.fx-field').getAttribute('data-invalid') !== 'true') return;
+      mark(el, problem(el));
+      // Keep the summary honest: it used to keep saying "2 fields need a
+      // moment" after both had been fixed, because it was only recomputed on
+      // submit. A count that is wrong is worse than no count.
+      if (!form.querySelector('.fx-field[data-invalid="true"]')) summary.hidden = true;
+    });
+  });
+
+  form.addEventListener('submit', function (event) {
+    event.preventDefault();
+    var bad = [];
+    fields.forEach(function (el) { if (!mark(el, problem(el))) bad.push(el); });
+
+    if (bad.length) {
+      summary.textContent = bad.length === 1
+        ? 'One field needs a moment before this can go anywhere.'
+        : bad.length + ' fields need a moment before this can go anywhere.';
+      summary.hidden = false;
+      bad[0].focus();
+      return;
+    }
+    summary.hidden = true;
+
+    var get = function (name) { return (form.elements[name].value || '').trim(); };
+    // textContent throughout — never innerHTML with anything typed in.
+    document.getElementById('fx-from').textContent = get('name') + ' <' + get('contact') + '>';
+    document.getElementById('fx-subject').textContent = 'Website enquiry \u2014 ' + get('service');
+    document.getElementById('fx-message-out').textContent = get('message');
+    form.hidden = true;
+    sent.hidden = false;
+    sent.focus();
+  });
+
+  document.getElementById('fx-again').addEventListener('click', function () {
+    form.reset();
+    fields.forEach(function (el) { mark(el, null); });
+    summary.hidden = true;
+    sent.hidden = true;
+    form.hidden = false;
+    form.querySelector('input, select, textarea').focus();
+  });
+})();
+</script>
+</body>
+</html>

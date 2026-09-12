@@ -1,0 +1,1067 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta name="robots" content="noindex,nofollow">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>NF Sports Massage — Welwyn Garden City | Sports Massage from the Wooden Shed</title>
+<meta name="description" content="NF Sports Massage, Welwyn Garden City. Sports massage in a charming wooden massage shed in a private garden at 58 Springfields, AL8. Thursdays and Fridays, 10am to 9pm. Message the Facebook page to book.">
+<style>
+  /* ---------- Tokens ---------- */
+  :root {
+    --linen: #f4efe3;
+    --linen-dim: #e9e1cd;
+    --ink: #26301f;
+    --ink-soft: #4c5542;
+    --pine: #2f4a33;
+    --pine-deep: #1f3323;
+    --night: #1c271b;
+    --night-2: #232f21;
+    --timber: #a06134;
+    --timber-light: #c8925a;
+    --glow: #f0c67c;
+    --line: rgba(38, 48, 31, 0.16);
+    --line-light: rgba(244, 239, 227, 0.18);
+
+    --font-display: "Avenir Next Condensed", "Helvetica Neue", "Arial Narrow", sans-serif;
+    --font-body: "Iowan Old Style", "Palatino", Georgia, serif;
+
+    --text-base: clamp(1rem, 0.95rem + 0.3vw, 1.15rem);
+    --text-hero: clamp(3rem, 1.4rem + 8vw, 7.5rem);
+    --text-h2: clamp(2rem, 1.3rem + 3.5vw, 4rem);
+
+    --space-section: clamp(4.5rem, 3rem + 6vw, 9rem);
+    --gutter: clamp(1.25rem, 4vw, 3rem);
+
+    --duration: 700ms;
+    --ease: cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--linen);
+    color: var(--ink);
+    font-family: var(--font-body);
+    font-size: var(--text-base);
+    line-height: 1.68;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  /* Paper grain over everything — quiet, textural */
+  body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 60;
+    pointer-events: none;
+    opacity: 0.045;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='260'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='260' height='260' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  h1, h2, h3, .display {
+    font-family: var(--font-display);
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 0.96;
+    letter-spacing: 0.01em;
+  }
+
+  a { color: inherit; }
+  svg { max-width: 100%; display: block; }
+  .wrap { max-width: 70rem; margin-inline: auto; padding-inline: var(--gutter); }
+
+  /* ---------- Reveal system ---------- */
+  .rv {
+    opacity: 0;
+    transform: translateY(26px);
+    transition: opacity var(--duration) var(--ease), transform var(--duration) var(--ease);
+    transition-delay: var(--d, 0ms);
+  }
+  .rv.in { opacity: 1; transform: none; }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .rv { opacity: 1; transform: none; transition: none; }
+    .sprig { animation: none !important; }
+  }
+
+  /* ---------- Demo ribbon ---------- */
+  .demo-note {
+    background: var(--timber);
+    color: var(--linen);
+    text-align: center;
+    font-size: 0.78rem;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    padding: 0.45rem var(--gutter);
+    font-family: var(--font-display);
+    font-weight: 600;
+  }
+
+  /* ---------- Nav ---------- */
+  header.site {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: color-mix(in srgb, var(--linen) 90%, transparent);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--line);
+  }
+  .nav { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding-block: 0.8rem; }
+  .brand {
+    font-family: var(--font-display);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    letter-spacing: 0.05em;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+  }
+  .brand .mark { color: var(--timber); }
+  .nav-links { display: none; gap: 1.6rem; list-style: none; }
+  .nav-links a {
+    text-decoration: none;
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.13em;
+    opacity: 0.7;
+    transition: opacity 200ms var(--ease);
+  }
+  .nav-links a:hover, .nav-links a:focus-visible { opacity: 1; }
+  @media (min-width: 820px) { .nav-links { display: flex; } }
+  @media (max-width: 560px) {
+    .brand { font-size: 1rem; }
+    .nav .btn { padding: 0.55rem 0.9rem 0.5rem; font-size: 0.85rem; white-space: nowrap; }
+  }
+
+  /* Physical push-buttons — pressure you can feel */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    font-family: var(--font-display);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    text-decoration: none;
+    padding: 0.75rem 1.5rem 0.7rem;
+    background: var(--pine);
+    color: var(--linen);
+    border: 1px solid var(--pine-deep);
+    box-shadow: 0 4px 0 var(--pine-deep);
+    transition: transform 180ms var(--ease), box-shadow 180ms var(--ease), background 180ms var(--ease);
+  }
+  .btn:hover, .btn:focus-visible { transform: translateY(-2px); box-shadow: 0 6px 0 var(--pine-deep); }
+  .btn:active { transform: translateY(2px); box-shadow: 0 1px 0 var(--pine-deep); }
+  .btn:focus-visible { outline: 2px solid var(--timber); outline-offset: 3px; }
+  .btn.ghost { background: transparent; color: var(--ink); border-color: var(--ink); box-shadow: 0 4px 0 var(--ink); }
+  .btn.ghost:hover, .btn.ghost:focus-visible { box-shadow: 0 6px 0 var(--ink); }
+  .btn.ghost:active { box-shadow: 0 1px 0 var(--ink); }
+  .btn.big { font-size: 1.12rem; padding: 1rem 2.2rem 0.95rem; }
+  .btn .msgr { width: 1.05em; height: 1.05em; flex-shrink: 0; }
+  .on-dark .btn.ghost { color: var(--linen); border-color: var(--linen); box-shadow: 0 4px 0 rgba(244,239,227,0.55); }
+
+  /* ---------- Hero ---------- */
+  .hero {
+    position: relative;
+    min-height: 88svh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-block: var(--space-section) 3.5rem;
+    background:
+      radial-gradient(ellipse 75% 55% at 85% 8%, rgba(200, 146, 90, 0.22), transparent 70%),
+      radial-gradient(ellipse 90% 60% at 10% 110%, rgba(47, 74, 51, 0.12), transparent 70%),
+      var(--linen);
+    overflow: hidden;
+  }
+  
+  /* Full-bleed photographic hero plate, light-palette variant: the scrim is a
+     cream veil rather than a dark one, so the site's existing dark-on-light
+     type keeps its contrast instead of being inverted. */
+  .hero-media { position: absolute; inset: 0; z-index: 0; overflow: hidden; }
+  .hero-media img { width:100%; height:100%; object-fit:cover; object-position:62% 50%;
+    filter: saturate(.82) brightness(1.06); transform: scale(1.05); }
+  .hero-media::after { content:""; position:absolute; inset:0; background:
+    linear-gradient(to right, rgba(247,243,236,.93) 0%, rgba(247,243,236,.80) 44%, rgba(247,243,236,.42) 80%, rgba(247,243,236,.62) 100%),
+    linear-gradient(to bottom, rgba(247,243,236,.55) 0%, transparent 38%); }
+  .hero .wrap { position: relative; z-index: 1; }
+  .hero-kicker {
+    font-family: var(--font-display);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.32em;
+    font-size: clamp(0.72rem, 2.2vw, 0.95rem);
+    color: var(--pine);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .hero-kicker::before { content: ""; height: 1px; width: clamp(1.5rem, 6vw, 4rem); background: var(--timber); }
+  .hero h1 { font-size: var(--text-hero); margin-block: 0.6rem 0; max-width: 11ch; }
+  .hero h1 .shed { color: var(--timber); }
+  .hero-sub {
+    font-style: italic;
+    font-size: clamp(1.05rem, 1rem + 1vw, 1.45rem);
+    color: var(--ink-soft);
+    max-width: 40ch;
+    margin-top: 1.3rem;
+  }
+  .hero-ctas { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 2.3rem; }
+  .hero-cred {
+    margin-top: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.1rem 2.4rem;
+    font-family: var(--font-display);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.11em;
+    font-size: 0.82rem;
+    color: var(--ink-soft);
+  }
+  .hero-cred strong { color: var(--timber); font-weight: 700; }
+
+  /* Swaying sprig, garden calm */
+  .sprig {
+    position: absolute;
+    right: clamp(-2rem, 2vw, 4rem);
+    bottom: -1.5rem;
+    width: clamp(140px, 22vw, 300px);
+    opacity: 0.9;
+    transform-origin: 85% 100%;
+    animation: sway 9s ease-in-out infinite alternate;
+    will-change: transform;
+  }
+  @keyframes sway { from { transform: rotate(-2deg); } to { transform: rotate(2.5deg); } }
+  @media (max-width: 700px) { .sprig { opacity: 0.35; } }
+
+  /* ---------- Their-own-words band ---------- */
+  .own-words {
+    background: var(--linen-dim);
+    border-block: 1px solid var(--line);
+    text-align: center;
+    padding-block: clamp(3rem, 6vw, 5rem);
+  }
+  .own-words blockquote p {
+    font-size: clamp(1.25rem, 1rem + 1.8vw, 2rem);
+    font-style: italic;
+    line-height: 1.45;
+    max-width: 30ch;
+    margin-inline: auto;
+  }
+  .own-words blockquote p .warm { color: var(--timber); }
+  .own-words figcaption {
+    margin-top: 1.2rem;
+    font-family: var(--font-display);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-size: 0.75rem;
+    color: var(--ink-soft);
+  }
+
+  /* ---------- Sections ---------- */
+  section { padding-block: var(--space-section); }
+  .sec-head { margin-bottom: clamp(2rem, 5vw, 3.2rem); }
+  .sec-kicker {
+    font-family: var(--font-display);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    font-size: 0.78rem;
+    color: var(--timber);
+  }
+  .sec-head h2 { font-size: var(--text-h2); margin-top: 0.4rem; }
+
+  /* ---------- The shed (night scene) ---------- */
+  .shed-sec { background: var(--night); color: var(--linen); overflow: hidden; }
+  .shed-grid { display: grid; gap: clamp(2rem, 5vw, 4rem); grid-template-columns: 1fr; align-items: center; }
+  @media (min-width: 900px) { .shed-grid { grid-template-columns: 1.15fr 0.85fr; } }
+  .shed-scene { border: 1px solid var(--line-light); background: var(--night-2); }
+  .shed-copy p + p { margin-top: 1rem; }
+  .shed-copy .lead { font-size: 1.2rem; font-style: italic; color: var(--linen-dim); }
+  .scene-cap {
+    margin-top: 0.8rem;
+    font-family: var(--font-display);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.13em;
+    font-size: 0.68rem;
+    color: rgba(244, 239, 227, 0.55);
+  }
+  .shed-facts { margin-top: 1.8rem; list-style: none; display: grid; gap: 0.7rem; }
+  .shed-facts li { display: flex; gap: 0.7rem; align-items: baseline; font-size: 0.98rem; }
+  .shed-facts li::before { content: "—"; color: var(--timber-light); font-family: var(--font-display); }
+
+  /* ---------- Treatments: the pressure ladder ---------- */
+  .menu-note { margin-top: 2rem; font-size: 0.85rem; font-style: italic; color: var(--ink-soft); max-width: 60ch; }
+  .ladder { list-style: none; display: grid; gap: 1rem; }
+  .ladder li { display: grid; grid-template-columns: 7.5rem 1fr auto; gap: 1rem; align-items: center; }
+  @media (max-width: 560px) { .ladder li { grid-template-columns: 5.4rem 1fr auto; gap: 0.7rem; } }
+  .ladder .mins {
+    font-family: var(--font-display);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-size: 1.05rem;
+  }
+  .ladder .mins small { display: block; font-size: 0.68rem; letter-spacing: 0.14em; color: var(--ink-soft); font-weight: 600; }
+  .ladder .bar {
+    height: 1.6rem;
+    background:
+      repeating-linear-gradient(90deg, rgba(244,239,227,0.14) 0 2px, transparent 2px 26px),
+      linear-gradient(180deg, var(--timber-light), var(--timber));
+    border: 1px solid rgba(38, 48, 31, 0.35);
+    transform-origin: left center;
+    transform: scaleX(var(--len, 1));
+  }
+  .ladder li.deep .bar { background: repeating-linear-gradient(90deg, rgba(244,239,227,0.12) 0 2px, transparent 2px 26px), linear-gradient(180deg, var(--pine), var(--pine-deep)); }
+  .ladder .price {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1.35rem;
+    letter-spacing: 0.03em;
+    min-width: 3.2rem;
+    text-align: right;
+  }
+  .also {
+    margin-top: 3rem;
+    padding-top: 1.6rem;
+    border-top: 1px solid var(--line);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem 0.55rem;
+    align-items: center;
+  }
+  .also .lbl {
+    font-family: var(--font-display);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    font-size: 0.75rem;
+    color: var(--pine);
+    margin-right: 0.5rem;
+  }
+  .chip {
+    font-family: var(--font-display);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    font-size: 0.72rem;
+    padding: 0.32rem 0.7rem 0.28rem;
+    border: 1px solid var(--line);
+    background: var(--linen-dim);
+  }
+
+  /* ---------- Hours ---------- */
+  .hours-sec { background: var(--linen-dim); border-block: 1px solid var(--line); }
+  .week { display: grid; gap: 0.6rem; grid-template-columns: repeat(7, 1fr); }
+  @media (max-width: 700px) { .week { grid-template-columns: repeat(4, 1fr); } }
+  .day {
+    border: 1px solid var(--line);
+    padding: 0.9rem 0.5rem 0.8rem;
+    text-align: center;
+    font-family: var(--font-display);
+    color: var(--ink-soft);
+  }
+  .day .n { font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; font-size: 0.8rem; display: block; }
+  .day .t { font-size: 0.72rem; letter-spacing: 0.06em; display: block; margin-top: 0.35rem; }
+  .day.open {
+    background: var(--pine);
+    color: var(--linen);
+    border-color: var(--pine-deep);
+    box-shadow: 0 4px 0 var(--pine-deep);
+  }
+  .day.open .t { color: var(--glow); font-weight: 600; }
+  .hours-note { margin-top: 1.6rem; font-size: 0.85rem; font-style: italic; color: var(--ink-soft); }
+
+  /* ---------- Reviews ---------- */
+  .rating-line { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.8rem; margin-bottom: 2.2rem; }
+  .rating-line .score { font-family: var(--font-display); font-weight: 700; font-size: clamp(2.4rem, 6vw, 3.8rem); color: var(--pine); }
+  .rating-line .stars { color: var(--timber); letter-spacing: 0.2em; font-size: 1.05rem; }
+  .rating-line .count { color: var(--ink-soft); font-style: italic; }
+  .quote-grid { display: grid; gap: 1.2rem; grid-template-columns: 1fr; }
+  @media (min-width: 800px) { .quote-grid { grid-template-columns: repeat(3, 1fr); } }
+  blockquote.review {
+    background: #fbf8f0;
+    border: 1px solid var(--line);
+    border-top: 3px solid var(--timber);
+    padding: 1.5rem 1.4rem;
+    transition: transform 250ms var(--ease), border-color 250ms var(--ease);
+  }
+  blockquote.review:hover { transform: translateY(-5px); border-top-color: var(--pine); }
+  blockquote.review p { font-style: italic; font-size: 1.02rem; }
+  blockquote.review p::before { content: "\201C"; color: var(--timber); font-size: 1.7em; line-height: 0; vertical-align: -0.32em; margin-right: 0.15rem; font-family: var(--font-display); }
+  blockquote.review footer {
+    margin-top: 1rem;
+    font-family: var(--font-display);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.13em;
+    font-size: 0.72rem;
+    color: var(--ink-soft);
+  }
+  blockquote.review footer b { color: var(--pine); font-weight: 700; }
+  .review-note { margin-top: 1.8rem; font-size: 0.85rem; font-style: italic; color: var(--ink-soft); max-width: 62ch; }
+
+  /* ---------- Ltd trust strip ---------- */
+  .ltd {
+    background: var(--night);
+    color: var(--linen);
+    padding-block: clamp(2.2rem, 5vw, 3.2rem);
+    border-block: 1px solid var(--pine-deep);
+  }
+  .ltd .row { display: flex; flex-wrap: wrap; gap: 1rem 2.5rem; align-items: center; justify-content: space-between; }
+  .ltd .stamp {
+    font-family: var(--font-display);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    font-size: clamp(1rem, 2.4vw, 1.4rem);
+    border: 2px solid var(--timber-light);
+    color: var(--timber-light);
+    padding: 0.55rem 1.1rem 0.5rem;
+  }
+  .ltd p { font-size: 0.92rem; color: var(--linen-dim); max-width: 46ch; }
+  .ltd p b { color: var(--linen); font-weight: 600; }
+
+  /* ---------- Book CTA ---------- */
+  .book {
+    text-align: center;
+    background:
+      radial-gradient(ellipse 70% 80% at 50% 115%, rgba(200, 146, 90, 0.28), transparent 70%),
+      var(--linen);
+  }
+  .book h2 { font-size: var(--text-h2); }
+  .book .sub { font-style: italic; color: var(--ink-soft); margin: 1.1rem auto 2.2rem; max-width: 44ch; }
+  .book .alt { margin-top: 1.7rem; font-size: 0.95rem; color: var(--ink-soft); }
+  .book .alt a { color: var(--pine); text-decoration-color: rgba(47, 74, 51, 0.45); }
+
+  /* ---------- Find the shed ---------- */
+  .find-sec { background: var(--linen-dim); border-top: 1px solid var(--line); }
+  .find-grid { display: grid; gap: clamp(2rem, 5vw, 4rem); grid-template-columns: 1fr; }
+  @media (min-width: 850px) { .find-grid { grid-template-columns: 1fr 1fr; } }
+  address { font-style: normal; }
+  address .big { font-family: var(--font-display); font-weight: 700; font-size: clamp(1.5rem, 3vw, 2.1rem); text-transform: uppercase; line-height: 1.12; }
+  address p { color: var(--ink-soft); margin-top: 0.8rem; max-width: 42ch; }
+  .map-ph {
+    border: 1px solid var(--line);
+    background: var(--linen);
+    aspect-ratio: 16 / 9;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    padding: 1rem;
+  }
+  .map-ph .pin { width: 38px; margin: 0 auto 0.6rem; }
+  .map-ph p { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.14em; font-family: var(--font-display); font-weight: 600; color: var(--ink-soft); }
+
+  /* ---------- Footer ---------- */
+  footer.site {
+    background: var(--night);
+    color: var(--linen-dim);
+    padding: 2.6rem 0 3rem;
+    font-size: 0.85rem;
+  }
+  .foot-row { display: flex; flex-wrap: wrap; gap: 1rem 2rem; justify-content: space-between; align-items: center; }
+  .socials { display: flex; gap: 1.4rem; list-style: none; }
+  .socials a { text-decoration: none; text-transform: uppercase; font-family: var(--font-display); font-weight: 600; letter-spacing: 0.13em; font-size: 0.76rem; opacity: 0.85; transition: color 200ms var(--ease); }
+  .socials a:hover, .socials a:focus-visible { opacity: 1; color: var(--timber-light); }
+  .foot-demo { margin-top: 1.7rem; font-style: italic; font-size: 0.79rem; opacity: 0.75; max-width: 75ch; }
+
+  /* enquiry-form palette aliases — maps this site's own tokens
+     onto the shared form stylesheet below */
+  .fx {
+    --fx-bg: var(--night); --fx-ink: var(--linen); --fx-dim: var(--linen-dim);
+    --fx-accent: var(--pine); --fx-on-accent: var(--linen); --fx-line: rgba(244, 240, 232, 0.36);
+    --fx-field-bg: var(--night-2); --fx-error: #e8a05f; --fx-radius: 4px;
+    --fx-display: var(--font-display); --fx-gutter: var(--gutter);
+  }
+
+/* ---------- Enquiry form (demo-only, sends nothing) ---------- */
+/* Palette is aliased onto --fx-* per demo just above, so this block is
+   identical in all five and each form still looks native to its own site. */
+.fx { background: var(--fx-bg); color: var(--fx-ink); padding: var(--space-section) 0; }
+.fx .fx-wrap { width: min(100% - 2 * var(--fx-gutter), 60rem); margin-inline: auto; }
+.fx-head { max-width: 46ch; }
+.fx-kicker {
+  font-family: var(--fx-display); text-transform: uppercase; letter-spacing: 0.18em;
+  font-size: 0.78rem; color: var(--fx-accent); margin: 0 0 0.6rem;
+}
+.fx-head h2 { font-size: var(--text-h2); line-height: 1.02; margin: 0 0 0.9rem; }
+.fx-head p { color: var(--fx-dim); margin: 0; max-width: 52ch; }
+.fx-form { margin-top: clamp(2rem, 4vw, 3rem); display: grid; gap: 1.1rem; }
+/* A class rule setting `display` beats the UA's [hidden]{display:none}, so the
+   form stayed on screen after a successful submit even though form.hidden was
+   true. Caught by looking at the rendered page — every DOM assertion read the
+   .hidden PROPERTY, which was correctly true the whole time. */
+.fx-form[hidden] { display: none; }
+.fx-row { display: grid; gap: 1.1rem; }
+@media (min-width: 40rem) { .fx-row { grid-template-columns: 1fr 1fr; } }
+.fx-field { display: grid; gap: 0.4rem; }
+.fx-field label { font-weight: 700; font-size: 0.95rem; }
+.fx-field .fx-hint { font-size: 0.85rem; color: var(--fx-dim); }
+.fx-field input, .fx-field select, .fx-field textarea {
+  font: inherit; font-size: 1rem; color: var(--fx-ink);
+  background: var(--fx-field-bg); border: 1px solid var(--fx-line);
+  border-radius: var(--fx-radius); padding: 0.85rem 0.95rem; width: 100%;
+  transition: border-color var(--duration, 300ms) var(--ease, ease),
+              box-shadow var(--duration, 300ms) var(--ease, ease);
+}
+.fx-field textarea { min-height: 8.5rem; resize: vertical; }
+.fx-field select { appearance: none; cursor: pointer; }
+.fx-field input:hover, .fx-field select:hover, .fx-field textarea:hover { border-color: var(--fx-accent); }
+.fx-field input:focus-visible, .fx-field select:focus-visible, .fx-field textarea:focus-visible {
+  outline: none; border-color: var(--fx-accent);
+  box-shadow: 0 0 0 3px color-mix(in oklab, var(--fx-accent) 35%, transparent);
+}
+.fx-field[data-invalid="true"] input,
+.fx-field[data-invalid="true"] select,
+.fx-field[data-invalid="true"] textarea { border-color: var(--fx-error); }
+.fx-err { font-size: 0.85rem; color: var(--fx-error); min-height: 1.1rem; font-weight: 700; }
+.fx-field[data-invalid="true"] .fx-err::before { content: "\2717\00a0"; }
+.fx-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 1.4rem; margin-top: 0.4rem; }
+.fx-submit {
+  font-family: var(--fx-display); font-size: 1rem; letter-spacing: 0.06em;
+  text-transform: uppercase; cursor: pointer;
+  background: var(--fx-accent); color: var(--fx-on-accent);
+  border: 1px solid var(--fx-accent); border-radius: var(--fx-radius);
+  padding: 0.95rem 2.1rem;
+  transition: transform var(--duration, 300ms) var(--ease, ease),
+              filter var(--duration, 300ms) var(--ease, ease);
+}
+.fx-submit:hover { filter: brightness(1.12); transform: translateY(-2px); }
+.fx-submit:active { transform: translateY(0); }
+.fx-submit:focus-visible { outline: 3px solid var(--fx-accent); outline-offset: 3px; }
+.fx-note { font-size: 0.85rem; color: var(--fx-dim); margin: 0; }
+.fx-summary {
+  border: 1px solid var(--fx-error); border-radius: var(--fx-radius);
+  padding: 0.85rem 1rem; color: var(--fx-error); font-size: 0.92rem;
+}
+.fx-summary[hidden] { display: none; }
+/* Success: not a thank-you. A preview of the enquiry that WOULD have arrived. */
+.fx-sent { border: 1px solid var(--fx-line); border-radius: var(--fx-radius); overflow: hidden; }
+.fx-sent[hidden] { display: none; }
+.fx-sent:focus-visible { outline: 3px solid var(--fx-accent); outline-offset: 3px; }
+.fx-sent-bar {
+  background: var(--fx-accent); color: var(--fx-on-accent);
+  padding: 0.7rem 1.1rem; font-family: var(--fx-display);
+  text-transform: uppercase; letter-spacing: 0.12em; font-size: 0.8rem;
+}
+.fx-mail { background: var(--fx-field-bg); padding: clamp(1.1rem, 3vw, 1.8rem); }
+.fx-mail dl { display: grid; grid-template-columns: auto 1fr; gap: 0.45rem 1rem; margin: 0 0 1.1rem; font-size: 0.95rem; }
+.fx-mail dt { color: var(--fx-dim); font-weight: 700; }
+.fx-mail dd { margin: 0; overflow-wrap: anywhere; }
+.fx-mail .fx-body { border-top: 1px solid var(--fx-line); padding-top: 1.1rem; white-space: pre-wrap; overflow-wrap: anywhere; }
+.fx-sent-foot { padding: 1.1rem; border-top: 1px solid var(--fx-line); display: flex; flex-wrap: wrap; gap: 0.8rem 1.2rem; align-items: center; }
+.fx-sent-foot p { margin: 0; font-size: 0.88rem; color: var(--fx-dim); max-width: 54ch; }
+.fx-again {
+  font: inherit; font-size: 0.9rem; font-weight: 700; cursor: pointer;
+  background: none; color: var(--fx-ink); border: 1px solid var(--fx-line);
+  border-radius: var(--fx-radius); padding: 0.6rem 1.2rem;
+}
+.fx-again:hover { border-color: var(--fx-accent); color: var(--fx-accent); }
+.fx-again:focus-visible { outline: 3px solid var(--fx-accent); outline-offset: 3px; }
+
+@media (prefers-reduced-motion: reduce) {
+  /* The form's own motion, guarded separately from each demo's .rv reveals —
+     hover lift and focus/border transitions are still motion to someone who
+     asked for none. Colour and focus rings stay, because they carry meaning. */
+  .fx-field input, .fx-field select, .fx-field textarea, .fx-submit { transition: none; }
+  .fx-submit:hover { transform: none; }
+}
+
+
+@media (pointer: coarse) {
+  /* Touch targets, added 1 Sept 2026. Measured at 375px: this demo carried
+     tel:/mailto: links as small as 18px — and on a trade site the phone number
+     IS the conversion action. The studio site's fix (an absolutely-positioned
+     44px overlay) is deliberately NOT reused here: these links sit stacked in
+     lists, so a 44px overlay on each would overlap its neighbour and let the
+     later one in DOM order steal the tap, making tapping worse rather than
+     better. min-height grows the element itself, so nothing can overlap.
+     Scoped to (pointer: coarse) so the desktop composition is untouched. */
+  a[href^="tel:"], a[href^="mailto:"] {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+  }
+}
+</style>
+</head>
+<body>
+
+<p class="demo-note">Demo website concept — built by Ashton James. Not the practice's live site. &nbsp;·&nbsp; <a href="../../" style="color:inherit;text-decoration:underline;text-underline-offset:2px;font-weight:700">&larr; back to Ashton Studios</a></p>
+
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="#top">NF <span class="mark">Sports Massage</span></a>
+    <nav aria-label="Main navigation">
+      <ul class="nav-links">
+        <li><a href="#treatments">Treatments</a></li>
+        <li><a href="#hours">Hours</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#find">Find the Shed</a></li>
+      </ul>
+    </nav>
+    <a class="btn" href="https://m.me/NFsportsmassage40">Message to Book</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero" aria-labelledby="hero-heading">
+    <div class="hero-media" aria-hidden="true">
+      <img src="assets/hero.webp" alt="" width="2400" height="1350" fetchpriority="high" decoding="async">
+    </div>
+    <div class="wrap">
+      <p class="hero-kicker rv">Natalie &middot; Welwyn Garden City</p>
+      <h1 id="hero-heading" class="rv" style="--d:80ms">Sports massage, from the <span class="shed">wooden shed</span></h1>
+      <p class="hero-sub rv" style="--d:160ms">A proper treatment room at the bottom of a private garden in Welwyn Garden City &mdash; warm wood, soft light, one client at a time.</p>
+      <div class="hero-ctas rv" style="--d:240ms">
+        <a class="btn big" href="https://m.me/NFsportsmassage40">
+          <svg class="msgr" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.5 2 2 6.1 2 11.2c0 2.9 1.4 5.4 3.7 7.1V22l3.4-1.9c.9.3 1.9.4 2.9.4 5.5 0 10-4.1 10-9.2S17.5 2 12 2zm1.1 12.4-2.6-2.7-5 2.7 5.5-5.8 2.6 2.7 4.9-2.7-5.4 5.8z" fill="currentColor"/></svg>
+          Message on Facebook
+        </a>
+        <a class="btn ghost" href="#treatments">See the Menu</a>
+      </div>
+      <p class="hero-cred rv" style="--d:320ms">
+        <span><strong>5.0&nbsp;&#9733;</strong> on Treatwell, 5 verified reviews</span>
+        <span><strong>Ltd</strong> registered company</span>
+        <span><strong>Thu &amp; Fri</strong> 10am &ndash; 9pm</span>
+      </p>
+    </div>
+    <svg class="sprig" viewBox="0 0 200 260" aria-hidden="true">
+      <g fill="none" stroke="#2f4a33" stroke-width="3" stroke-linecap="round">
+        <path d="M170 255C150 190 120 130 60 70"/>
+        <path d="M172 250C168 200 160 150 140 100"/>
+      </g>
+      <g fill="#2f4a33" opacity="0.85">
+        <ellipse cx="58" cy="62" rx="16" ry="9" transform="rotate(-40 58 62)"/>
+        <ellipse cx="84" cy="88" rx="15" ry="8" transform="rotate(-35 84 88)"/>
+        <ellipse cx="108" cy="118" rx="14" ry="8" transform="rotate(-45 108 118)"/>
+        <ellipse cx="130" cy="152" rx="13" ry="7" transform="rotate(-38 130 152)"/>
+        <ellipse cx="148" cy="188" rx="12" ry="7" transform="rotate(-48 148 188)"/>
+      </g>
+      <g fill="#a06134" opacity="0.9">
+        <ellipse cx="138" cy="95" rx="12" ry="7" transform="rotate(30 138 95)"/>
+        <ellipse cx="150" cy="130" rx="11" ry="6" transform="rotate(25 150 130)"/>
+        <ellipse cx="160" cy="168" rx="10" ry="6" transform="rotate(35 160 168)"/>
+      </g>
+    </svg>
+  </section>
+
+  <!-- THEIR OWN WORDS -->
+  <figure class="own-words">
+    <blockquote class="rv">
+      <p>&ldquo;Our charming <span class="warm">wooden massage shed</span> provides a serene, intimate space&rdquo; &mdash; tucked in a private garden, surrounded by nature.</p>
+    </blockquote>
+    <figcaption class="rv" style="--d:100ms">The practice&rsquo;s own Treatwell listing &middot; August 2026</figcaption>
+  </figure>
+
+  <!-- THE SHED -->
+  <section class="shed-sec on-dark" id="shed" aria-labelledby="shed-heading">
+    <div class="wrap">
+      <div class="shed-grid">
+        <div class="rv">
+          <svg class="shed-scene" viewBox="0 0 900 520" role="img" aria-label="Illustration of the wooden massage shed at dusk, lit from inside, in a private garden">
+            <rect width="900" height="520" fill="#1a2419"/>
+            <circle cx="760" cy="80" r="34" fill="#f4efe3" opacity="0.75"/>
+            <circle cx="748" cy="72" r="30" fill="#1a2419"/>
+            <g fill="#f4efe3" opacity="0.5">
+              <circle cx="120" cy="60" r="2"/><circle cx="240" cy="110" r="1.6"/><circle cx="420" cy="50" r="2"/>
+              <circle cx="560" cy="95" r="1.5"/><circle cx="660" cy="40" r="1.8"/><circle cx="840" cy="140" r="1.6"/>
+            </g>
+            <path d="M0 400c120-30 260-46 450-46s330 16 450 46v120H0z" fill="#22301f"/>
+            <path d="M0 440c150-24 300-36 450-36s300 12 450 36v80H0z" fill="#2a3a26"/>
+            <!-- back foliage -->
+            <g fill="#243523">
+              <ellipse cx="95" cy="330" rx="95" ry="120"/>
+              <ellipse cx="205" cy="360" rx="70" ry="90"/>
+              <ellipse cx="820" cy="330" rx="95" ry="125"/>
+              <ellipse cx="715" cy="365" rx="60" ry="80"/>
+            </g>
+            <!-- shed -->
+            <g>
+              <ellipse cx="452" cy="452" rx="215" ry="16" fill="#141c13"/>
+              <rect x="300" y="240" width="304" height="205" fill="#8a5330"/>
+              <g stroke="#6e4023" stroke-width="3">
+                <path d="M300 268h304M300 296h304M300 324h304M300 352h304M300 380h304M300 408h304"/>
+              </g>
+              <path d="M282 244 452 148l170 96z" fill="#5d3620"/>
+              <path d="M282 244 452 152l170 92" fill="none" stroke="#472a18" stroke-width="6"/>
+              <!-- door -->
+              <rect x="330" y="308" width="74" height="137" fill="#5d3620"/>
+              <rect x="337" y="315" width="60" height="123" fill="none" stroke="#472a18" stroke-width="3"/>
+              <circle cx="392" cy="380" r="4" fill="#c8925a"/>
+              <!-- lit window -->
+              <rect x="452" y="300" width="112" height="86" fill="#f0c67c"/>
+              <rect x="452" y="300" width="112" height="86" fill="none" stroke="#472a18" stroke-width="5"/>
+              <path d="M508 300v86M452 343h112" stroke="#472a18" stroke-width="4"/>
+              <ellipse cx="508" cy="352" rx="150" ry="86" fill="#f0c67c" opacity="0.1"/>
+              <!-- lantern by the door -->
+              <path d="M318 300v-22" stroke="#472a18" stroke-width="3"/>
+              <circle cx="318" cy="306" r="7" fill="#f0c67c"/>
+              <circle cx="318" cy="306" r="14" fill="#f0c67c" opacity="0.18"/>
+            </g>
+            <!-- stepping stones -->
+            <g fill="#3a4c33">
+              <ellipse cx="380" cy="470" rx="26" ry="8"/>
+              <ellipse cx="330" cy="490" rx="24" ry="8"/>
+              <ellipse cx="272" cy="506" rx="26" ry="8"/>
+            </g>
+            <!-- front planting -->
+            <g fill="#2f4a33">
+              <ellipse cx="640" cy="440" rx="52" ry="40"/>
+              <ellipse cx="700" cy="455" rx="40" ry="30"/>
+              <ellipse cx="245" cy="450" rx="46" ry="36"/>
+            </g>
+            <g stroke="#3f5c40" stroke-width="4" stroke-linecap="round" fill="none">
+              <path d="M180 470c-4-30 6-52 2-74M196 472c2-24-4-40 4-62M760 460c-4-26 8-44 4-66"/>
+            </g>
+          </svg>
+          <p class="scene-cap">Illustrated, not photographed &mdash; real shed photos come from Natalie when the site goes live.</p>
+        </div>
+        <div class="shed-copy rv" style="--d:120ms">
+          <div class="sec-head">
+            <p class="sec-kicker">The Treatment Room</p>
+            <h2 id="shed-heading">A shed like no other</h2>
+          </div>
+          <p class="lead">Most clinics feel like clinics. This one is a warm timber room at the bottom of a quiet garden on Springfields.</p>
+          <p>No waiting room, no reception queue, no piped whale song. You walk down the garden, the lantern&rsquo;s on, and for the next hour the only appointment that exists is yours.</p>
+          <ul class="shed-facts">
+            <li>Private garden studio at 58 Springfields, AL8</li>
+            <li>Warm wood finishes, soft lighting, proper treatment table &mdash; as described on the practice&rsquo;s own Treatwell listing</li>
+            <li>One client at a time, by appointment only</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TREATMENTS -->
+  <section id="treatments" aria-labelledby="treatments-heading">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <p class="sec-kicker">Sports Massage</p>
+        <h2 id="treatments-heading">Pick your depth</h2>
+      </div>
+      <ul class="ladder">
+        <li class="rv"><span class="mins">30<small>minutes</small></span><span class="bar" style="--len:0.42" aria-hidden="true"></span><span class="price">&pound;30</span></li>
+        <li class="rv" style="--d:70ms"><span class="mins">45<small>minutes</small></span><span class="bar" style="--len:0.56" aria-hidden="true"></span><span class="price">&pound;45</span></li>
+        <li class="rv deep" style="--d:140ms"><span class="mins">60<small>minutes</small></span><span class="bar" style="--len:0.7" aria-hidden="true"></span><span class="price">&pound;60</span></li>
+        <li class="rv" style="--d:210ms"><span class="mins">75<small>minutes</small></span><span class="bar" style="--len:0.85" aria-hidden="true"></span><span class="price">&pound;75</span></li>
+        <li class="rv deep" style="--d:280ms"><span class="mins">90<small>minutes</small></span><span class="bar" style="--len:1" aria-hidden="true"></span><span class="price">&pound;90</span></li>
+      </ul>
+      <p class="menu-note rv">Durations and prices exactly as listed on the practice&rsquo;s Treatwell page, pulled 23 August 2026.</p>
+      <div class="also rv">
+        <span class="lbl">Also at the shed</span>
+        <span class="chip">Classic massage</span>
+        <span class="chip">Therapeutic massage</span>
+        <span class="chip">Lycon waxing</span>
+        <span class="chip">Men&rsquo;s waxing</span>
+        <span class="chip">Eyebrow waxing</span>
+        <span class="chip">Manicures &amp; pedicures</span>
+        <span class="chip">Full menu on Treatwell</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOURS -->
+  <section class="hours-sec" id="hours" aria-labelledby="hours-heading">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <p class="sec-kicker">Opening Hours</p>
+        <h2 id="hours-heading">Two days. Long hours.</h2>
+      </div>
+      <div class="week rv" style="--d:80ms">
+        <div class="day"><span class="n">Mon</span><span class="t">Closed</span></div>
+        <div class="day"><span class="n">Tue</span><span class="t">Closed</span></div>
+        <div class="day"><span class="n">Wed</span><span class="t">Closed</span></div>
+        <div class="day open"><span class="n">Thu</span><span class="t">10:00 &ndash; 21:00</span></div>
+        <div class="day open"><span class="n">Fri</span><span class="t">10:00 &ndash; 21:00</span></div>
+        <div class="day"><span class="n">Sat</span><span class="t">Closed</span></div>
+        <div class="day"><span class="n">Sun</span><span class="t">Closed</span></div>
+      </div>
+      <p class="hours-note rv" style="--d:160ms">Thursday and Friday until 9pm &mdash; evening slots after work are the point. Live availability on the Treatwell booking calendar, August 2026.</p>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section id="reviews" aria-labelledby="reviews-heading">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <p class="sec-kicker">On Treatwell</p>
+        <h2 id="reviews-heading">Five stars, five for five</h2>
+      </div>
+      <p class="rating-line rv">
+        <span class="score">5.0</span>
+        <span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        <span class="count">from 5 verified reviews on Treatwell</span>
+      </p>
+      <div class="quote-grid">
+        <blockquote class="review rv">
+          <p><b>Review quotes slot in here.</b> On the live site this space carries real customer reviews, word for word, with the reviewer's first name and the platform they left it on &mdash; published only once the owner has signed them off.</p>
+          <footer><b>Placeholder</b> &middot; pending sign-off</footer>
+        </blockquote>
+      </div>
+      <p class="review-note rv">Quotes verbatim from the practice&rsquo;s public Treatwell reviews, pulled 23 August 2026. Every one of the five is five stars.</p>
+    </div>
+  </section>
+
+  <!-- LTD STRIP -->
+  <div class="ltd">
+    <div class="wrap row">
+      <span class="stamp rv">Registered Ltd Company</span>
+      <p class="rv" style="--d:100ms"><b>NF SPORTS MASSAGE LTD</b> &middot; Company no. 16327646 &middot; Active &middot; Registered office 58 Springfields, Welwyn Garden City AL8 6XN. Source: Companies House, August 2026.</p>
+    </div>
+  </div>
+
+  <!-- BOOK CTA -->
+  <section class="book" aria-labelledby="book-heading">
+    <div class="wrap">
+      <h2 id="book-heading" class="rv">Book the <span style="color:var(--timber)">shed</span></h2>
+      <p class="sub rv" style="--d:80ms">Send the page a message with the day and duration you&rsquo;re after &mdash; Natalie replies directly. No apps, no accounts, no phone tag.</p>
+      <p class="rv" style="--d:160ms">
+        <a class="btn big" href="https://m.me/NFsportsmassage40">
+          <svg class="msgr" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.5 2 2 6.1 2 11.2c0 2.9 1.4 5.4 3.7 7.1V22l3.4-1.9c.9.3 1.9.4 2.9.4 5.5 0 10-4.1 10-9.2S17.5 2 12 2zm1.1 12.4-2.6-2.7-5 2.7 5.5-5.8 2.6 2.7 4.9-2.7-5.4 5.8z" fill="currentColor"/></svg>
+          Message on Facebook
+        </a>
+      </p>
+      <p class="alt rv" style="--d:240ms">Prefer a calendar? <a href="https://www.treatwell.co.uk/place/nfsportsmassage">Book a slot on Treatwell</a></p>
+    </div>
+  </section>
+
+  <!-- FIND THE SHED -->
+  <section class="find-sec" id="find" aria-labelledby="find-heading">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <p class="sec-kicker">The Garden</p>
+        <h2 id="find-heading">Find the shed</h2>
+      </div>
+      <div class="find-grid">
+        <address class="rv">
+          <p class="big">58 Springfields<br>Welwyn Garden City<br>AL8 6XN</p>
+          <p>A private garden studio &mdash; the treatment room is the wooden shed in the garden, not a shopfront. Message the page and Natalie will point you to the right gate.</p>
+        </address>
+        <div class="map-ph rv" style="--d:120ms" aria-hidden="true">
+          <div>
+            <svg class="pin" viewBox="0 0 24 32"><path d="M12 0C5.4 0 0 5.4 0 12c0 9 12 20 12 20s12-11 12-20C24 5.4 18.6 0 12 0z" fill="#2f4a33"/><circle cx="12" cy="12" r="5" fill="#f4efe3"/></svg>
+            <p>Map placeholder &mdash; live Google Map embeds here</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ENQUIRY (demo only — sends nothing, see the script at the end of this file) -->
+  <section class="fx" id="enquire" aria-labelledby="fx-heading">
+    <div class="fx-wrap">
+      <div class="fx-head rv">
+        <p class="fx-kicker">Book a session</p>
+        <h2 id="fx-heading">What are we working on?</h2>
+        <p>A short note about the injury or the goal means the first session starts with treatment rather than paperwork.</p>
+      </div>
+
+      <p class="fx-summary" id="fx-summary" role="alert" hidden></p>
+
+      <form class="fx-form rv" novalidate>
+        <div class="fx-row">
+          <div class="fx-field">
+            <label for="fx-name">Your name</label>
+            <input id="fx-name" name="name" type="text" autocomplete="name"
+                   data-check="name" data-required="We need a name to put to the job."
+                   aria-describedby="fx-name-err">
+            <p class="fx-err" id="fx-name-err"></p>
+          </div>
+          <div class="fx-field">
+            <label for="fx-contact">Email or phone</label>
+            <input id="fx-contact" name="contact" type="text" autocomplete="email"
+                   data-check="contact" data-required="Without this they cannot reply."
+                   aria-describedby="fx-contact-hint fx-contact-err">
+            <p class="fx-hint" id="fx-contact-hint">Whichever you would rather be reached on.</p>
+            <p class="fx-err" id="fx-contact-err"></p>
+          </div>
+        </div>
+        <div class="fx-field">
+          <label for="fx-service">What do you need?</label>
+          <select id="fx-service" name="service" data-check="service"
+                  data-required="Pick the closest match." aria-describedby="fx-service-err">
+            <option value="">Choose one&hellip;</option>
+            <option>Sports massage</option>
+            <option>Deep tissue</option>
+            <option>Injury rehab</option>
+            <option>Pre or post event</option>
+            <option>Something else</option>
+          </select>
+          <p class="fx-err" id="fx-service-err"></p>
+        </div>
+        <div class="fx-field">
+          <label for="fx-message">A few details</label>
+          <textarea id="fx-message" name="message" data-check="message"
+                    data-required="Tell them what you are after."
+                    aria-describedby="fx-message-hint fx-message-err"></textarea>
+          <p class="fx-hint" id="fx-message-hint">Where it hurts, how long for, and what you need to get back to.</p>
+          <p class="fx-err" id="fx-message-err"></p>
+        </div>
+        <div class="fx-actions">
+          <button class="fx-submit" type="submit">Request a session</button>
+          <p class="fx-note"><strong>Demo form.</strong> Nothing is sent &mdash; it shows you the enquiry instead.</p>
+        </div>
+      </form>
+
+      <div class="fx-sent" id="fx-sent" tabindex="-1" role="status" hidden>
+        <p class="fx-sent-bar">Nothing was sent &mdash; this is what would have landed</p>
+        <div class="fx-mail">
+          <dl>
+            <dt>To</dt><dd>the therapist&rsquo;s inbox</dd>
+            <dt>From</dt><dd id="fx-from"></dd>
+            <dt>Subject</dt><dd id="fx-subject"></dd>
+          </dl>
+          <div class="fx-body" id="fx-message-out"></div>
+        </div>
+        <div class="fx-sent-foot">
+          <button class="fx-again" id="fx-again" type="button">Try it again</button>
+          <p>This page is a demo concept, so the form is deliberately wired to nothing &mdash;
+             no message reaches NF Sports Massage. On the real site this arrives in the inbox
+             within seconds of someone pressing the button.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-row">
+      <p>&copy; 2026 NF Sports Massage Ltd &middot; 58 Springfields, Welwyn Garden City AL8 6XN &middot; Company no. 16327646</p>
+      <ul class="socials">
+        <li><a href="https://www.facebook.com/NFsportsmassage40">Facebook</a></li>
+        <li><a href="https://www.treatwell.co.uk/place/nfsportsmassage">Treatwell</a></li>
+      </ul>
+    </div>
+    <p class="foot-demo">This page is a website demo built by Ashton James as a pitch concept for NF Sports Massage. It is not the practice&rsquo;s live website and is not published or endorsed by the practice. All services, prices, hours, review quotes and the shed description were taken verbatim from the practice&rsquo;s public Treatwell listing (pulled 23 August 2026) and its public Facebook Page; company details from Companies House, August 2026. The shed illustration is original artwork &mdash; no photographs were copied.</p>
+  </div>
+</footer>
+
+<script>
+  (function () {
+    var els = document.querySelectorAll('.rv');
+    if (!('IntersectionObserver' in window)) {
+      els.forEach(function (el) { el.classList.add('in'); });
+      return;
+    }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -5% 0px' });
+    els.forEach(function (el) { io.observe(el); });
+  })();
+</script>
+
+<script>
+/* Demo enquiry form.
+   Two hard rules, both structural rather than promised:
+     1. It cannot mail the business. There is no action, no endpoint and no
+        network call anywhere in this file — submit is always prevented.
+     2. It never pretends to have sent. Instead of a thank-you, it renders the
+        enquiry as the email that WOULD have arrived, over a banner that says
+        nothing was sent. That is honest and it also shows the owner exactly
+        what they would be getting, which a fake confirmation never does. */
+(function () {
+  var form = document.querySelector('.fx-form');
+  if (!form) return;
+  var sent = document.getElementById('fx-sent');
+  var summary = document.getElementById('fx-summary');
+  var fields = Array.prototype.slice.call(form.querySelectorAll('[data-check]'));
+  var EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+  var PHONE = /^\+?[\d\s()-]{10,}$/;
+
+  function problem(el) {
+    var value = (el.value || '').trim();
+    if (!value) return el.dataset.required || 'This one is needed.';
+    if (el.dataset.check === 'contact' && !EMAIL.test(value) && !PHONE.test(value)) {
+      return 'Use an email address or a phone number so they can reply.';
+    }
+    if (el.dataset.check === 'message' && value.length < 10) {
+      return 'A little more detail helps them quote accurately.';
+    }
+    return null;
+  }
+
+  function mark(el, message) {
+    var wrap = el.closest('.fx-field');
+    var err = wrap.querySelector('.fx-err');
+    wrap.setAttribute('data-invalid', message ? 'true' : 'false');
+    el.setAttribute('aria-invalid', message ? 'true' : 'false');
+    err.textContent = message || '';
+    return !message;
+  }
+
+  fields.forEach(function (el) {
+    // Validate on the way out of a field, then live once it has been marked —
+    // so nobody is corrected mid-keystroke, but a fix clears immediately.
+    el.addEventListener('blur', function () { mark(el, problem(el)); });
+    el.addEventListener('input', function () {
+      if (el.closest('.fx-field').getAttribute('data-invalid') !== 'true') return;
+      mark(el, problem(el));
+      // Keep the summary honest: it used to keep saying "2 fields need a
+      // moment" after both had been fixed, because it was only recomputed on
+      // submit. A count that is wrong is worse than no count.
+      if (!form.querySelector('.fx-field[data-invalid="true"]')) summary.hidden = true;
+    });
+  });
+
+  form.addEventListener('submit', function (event) {
+    event.preventDefault();
+    var bad = [];
+    fields.forEach(function (el) { if (!mark(el, problem(el))) bad.push(el); });
+
+    if (bad.length) {
+      summary.textContent = bad.length === 1
+        ? 'One field needs a moment before this can go anywhere.'
+        : bad.length + ' fields need a moment before this can go anywhere.';
+      summary.hidden = false;
+      bad[0].focus();
+      return;
+    }
+    summary.hidden = true;
+
+    var get = function (name) { return (form.elements[name].value || '').trim(); };
+    // textContent throughout — never innerHTML with anything typed in.
+    document.getElementById('fx-from').textContent = get('name') + ' <' + get('contact') + '>';
+    document.getElementById('fx-subject').textContent = 'Website enquiry \u2014 ' + get('service');
+    document.getElementById('fx-message-out').textContent = get('message');
+    form.hidden = true;
+    sent.hidden = false;
+    sent.focus();
+  });
+
+  document.getElementById('fx-again').addEventListener('click', function () {
+    form.reset();
+    fields.forEach(function (el) { mark(el, null); });
+    summary.hidden = true;
+    sent.hidden = true;
+    form.hidden = false;
+    form.querySelector('input, select, textarea').focus();
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,1137 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta name="robots" content="noindex,nofollow">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Goodfellas Barbershop — St Albans | Traditional Barbershop, Modern Attitude</title>
+<meta name="description" content="Goodfellas Barbershop, 197 Hatfield Road, St Albans. A traditional barbershop with a modern attitude since 2005 — and a free beer with every haircut. Book on Booksy.">
+<!-- noindex: this is a CONCEPT redesign for a real, named business. Without
+     this tag Google would index a page titled "Goodfellas Barbershop — St
+     Albans", carrying their real address, and it would compete with the
+     shop's own site in search. The other four demos already carried it;
+     this one was missed. Added 1 Sept 2026 before go-live. -->
+<meta name="robots" content="noindex, nofollow">
+<style>
+  /* ---------- Tokens ---------- */
+  :root {
+    --ink: #100e0c;
+    --ink-2: #1a1714;
+    --ink-3: #262119;
+    --paper: #f0e7d3;
+    --paper-dim: #d9cfb8;
+    --red: #a01a1a;
+    --red-deep: #6e1111;
+    --gold: #c9a24b;
+    --line: rgba(240, 231, 211, 0.16);
+
+    --font-display: "Impact", "Haettenschweiler", "Arial Narrow Bold", "Arial Narrow", sans-serif;
+    --font-body: "Iowan Old Style", "Palatino", Georgia, serif;
+
+    --text-base: clamp(1rem, 0.95rem + 0.3vw, 1.125rem);
+    --text-hero: clamp(4.2rem, 1.5rem + 13vw, 11.5rem);
+    --text-h2: clamp(2.4rem, 1.4rem + 4.5vw, 5rem);
+
+    --space-section: clamp(4.5rem, 3rem + 6vw, 9rem);
+    --gutter: clamp(1.25rem, 4vw, 3rem);
+
+    --duration: 700ms;
+    --ease: cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--ink);
+    color: var(--paper);
+    font-family: var(--font-body);
+    font-size: var(--text-base);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  /* Film grain over everything */
+  body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 60;
+    pointer-events: none;
+    opacity: 0.07;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='240' height='240' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  h1, h2, h3, .display {
+    font-family: var(--font-display);
+    font-weight: 400;
+    text-transform: uppercase;
+    line-height: 0.94;
+    letter-spacing: 0.015em;
+  }
+
+  a { color: inherit; }
+  img, svg { max-width: 100%; display: block; }
+
+  .wrap { max-width: 72rem; margin-inline: auto; padding-inline: var(--gutter); }
+
+  /* ---------- Reveal system ---------- */
+  .rv {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity var(--duration) var(--ease), transform var(--duration) var(--ease);
+    transition-delay: var(--d, 0ms);
+  }
+  .rv.in { opacity: 1; transform: none; }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .rv { opacity: 1; transform: none; transition: none; }
+    .marquee-track { animation: none !important; }
+    .pole-stripes { animation: none !important; }
+  }
+
+  /* ---------- Demo ribbon ---------- */
+  .demo-note {
+    background: var(--gold);
+    color: var(--ink);
+    text-align: center;
+    font-size: 0.78rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 0.4rem var(--gutter);
+    font-family: var(--font-display);
+  }
+
+  /* ---------- Nav ---------- */
+  header.site {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: color-mix(in srgb, var(--ink) 88%, transparent);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--line);
+  }
+  .nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding-block: 0.85rem;
+  }
+  .brand {
+    font-family: var(--font-display);
+    text-transform: uppercase;
+    font-size: 1.35rem;
+    letter-spacing: 0.06em;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+  }
+  .brand .tick { color: var(--red); }
+  .nav-links { display: none; gap: 1.75rem; list-style: none; }
+  .nav-links a {
+    text-decoration: none;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    opacity: 0.75;
+    transition: opacity 200ms var(--ease);
+  }
+  .nav-links a:hover, .nav-links a:focus-visible { opacity: 1; }
+  @media (min-width: 800px) { .nav-links { display: flex; } }
+  @media (max-width: 560px) {
+    .brand { font-size: 1.05rem; }
+    .brand .word { display: none; }
+    .nav .btn { padding: 0.55rem 1rem; font-size: 0.9rem; white-space: nowrap; }
+  }
+
+  .btn {
+    display: inline-block;
+    font-family: var(--font-display);
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    text-decoration: none;
+    padding: 0.7rem 1.5rem;
+    background: var(--red);
+    color: var(--paper);
+    border: 1px solid var(--red);
+    transition: transform 200ms var(--ease), background 200ms var(--ease);
+  }
+  .btn:hover, .btn:focus-visible { background: var(--red-deep); transform: translateY(-2px); }
+  .btn.ghost { background: transparent; border-color: var(--paper); }
+  .btn.ghost:hover, .btn.ghost:focus-visible { background: var(--paper); color: var(--ink); }
+  .btn.big { font-size: 1.15rem; padding: 1rem 2.4rem; }
+
+  /* ---------- Craft: editorial image pair ---------- */
+  .craft {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: clamp(1.5rem, 4vw, 4rem);
+    align-items: center;
+    padding: var(--space-section) var(--gutter);
+    background: var(--ink);
+  }
+  .craft-copy { max-width: 34rem; }
+  .craft-title {
+    font-family: var(--font-display);
+    font-size: var(--text-h2);
+    line-height: 0.94; letter-spacing: -0.02em;
+    margin-block: 0.6rem 1.2rem;
+    color: var(--paper);
+  }
+  .craft-copy p { color: var(--paper-dim); margin-bottom: 1.8rem; max-width: 42ch; }
+  .craft-media { overflow: hidden; border-radius: 4px; background: #100c0a; }
+  .craft-media img {
+    width: 100%; height: 100%; object-fit: cover; display: block;
+    transition: transform 1.4s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .craft-media:hover img { transform: scale(1.045); }
+  .craft-media.wide { grid-column: 1 / -1; aspect-ratio: 21 / 8; margin-top: clamp(1.5rem, 4vw, 3.5rem); }
+  .craft-media:not(.wide) { aspect-ratio: 4 / 5; }
+  @media (max-width: 820px) {
+    .craft { grid-template-columns: minmax(0, 1fr); }
+    .craft-media.wide { aspect-ratio: 16 / 9; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .craft-media img { transition: none; }
+    .craft-media:hover img { transform: none; }
+  }
+
+  /* ---------- Hero ---------- */
+  .hero {
+    position: relative;
+    min-height: 92svh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-block: var(--space-section) 3rem;
+    background:
+      radial-gradient(ellipse 90% 60% at 50% 110%, rgba(160, 26, 26, 0.28), transparent 70%),
+      radial-gradient(ellipse 70% 50% at 80% -10%, rgba(201, 162, 75, 0.08), transparent 70%),
+      var(--ink);
+    overflow: hidden;
+  }
+  /* Full-bleed cinematic plate behind the headline. The image is the hero —
+     type sits ON it, not beside it (Apple's product-photography register).
+     Two stacked gradients keep every word above 4.5:1 regardless of what the
+     photograph is doing underneath. */
+  .hero-media { position: absolute; inset: 0; z-index: 0; overflow: hidden; }
+  .hero-media img {
+    width: 100%; height: 100%; object-fit: cover; object-position: 62% 50%;
+    /* settle the photo's own contrast so it reads as a ground, not a picture */
+    filter: saturate(0.86) contrast(1.06) brightness(0.62);
+    transform: scale(1.06);
+  }
+  .hero-media::after {
+    content: ""; position: absolute; inset: 0;
+    background:
+      linear-gradient(to right, rgba(10,8,7,.94) 0%, rgba(10,8,7,.72) 42%, rgba(10,8,7,.28) 78%, rgba(10,8,7,.55) 100%),
+      linear-gradient(to top, rgba(10,8,7,.95) 0%, transparent 42%);
+  }
+  .hero .wrap { position: relative; z-index: 1; }
+  .hero-kicker {
+    font-family: var(--font-display);
+    text-transform: uppercase;
+    letter-spacing: 0.35em;
+    font-size: clamp(0.75rem, 2.5vw, 1rem);
+    color: var(--gold);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .hero-kicker::before, .hero-kicker::after {
+    content: "";
+    height: 1px;
+    width: clamp(1.5rem, 6vw, 4rem);
+    background: var(--gold);
+    opacity: 0.6;
+  }
+  .hero h1 {
+    font-size: var(--text-hero);
+    margin-block: 0.5rem 0;
+    color: var(--paper);
+    /* size-specific tracking + leading: display type reads too loose as it
+       grows, so it tightens rather than inheriting a single global value */
+    letter-spacing: -0.035em;
+    line-height: 0.86;
+    text-wrap: balance;
+  }
+  .hero h1 .red { color: var(--red); display: inline-block; }
+  .hero-sub {
+    font-style: italic;
+    font-size: clamp(1.05rem, 1rem + 1vw, 1.5rem);
+    color: var(--paper-dim);
+    max-width: 34ch;
+    margin-top: 1.2rem;
+  }
+  .hero-ctas { display: flex; flex-wrap: wrap; gap: 0.9rem; margin-top: 2.2rem; }
+  .hero-cred {
+    margin-top: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.2rem 2.5rem;
+    font-family: var(--font-display);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-size: 0.82rem;
+    color: var(--paper-dim);
+  }
+  .hero-cred strong { color: var(--gold); font-weight: 400; }
+
+  /* Barber pole */
+  .pole {
+    position: absolute;
+    right: clamp(0.5rem, 4vw, 5rem);
+    top: 50%;
+    transform: translateY(-50%);
+    width: clamp(42px, 6vw, 72px);
+    height: clamp(220px, 42vh, 380px);
+    border-radius: 999px;
+    border: 3px solid var(--gold);
+    overflow: hidden;
+    opacity: 0.85;
+    box-shadow: 0 0 60px rgba(160, 26, 26, 0.35);
+  }
+  .pole-stripes {
+    position: absolute;
+    inset: -100% 0;
+    background: repeating-linear-gradient(
+      -35deg,
+      var(--red) 0 22px,
+      var(--paper) 22px 44px,
+      var(--ink-3) 44px 66px
+    );
+    animation: poleSpin 6s linear infinite;
+    will-change: transform;
+  }
+  @keyframes poleSpin { to { transform: translateY(66px); } }
+  @media (max-width: 700px) { .pole { opacity: 0.3; } }
+
+  /* ---------- Marquee ---------- */
+  .marquee {
+    background: var(--red);
+    border-block: 1px solid var(--red-deep);
+    overflow: hidden;
+    padding-block: 0.65rem;
+  }
+  .marquee-track {
+    display: flex;
+    gap: 3rem;
+    width: max-content;
+    animation: slide 26s linear infinite;
+    will-change: transform;
+  }
+  @keyframes slide { to { transform: translateX(-50%); } }
+  .marquee span {
+    font-family: var(--font-display);
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-size: 0.95rem;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+  }
+  .marquee span::after { content: "★"; color: var(--gold); }
+
+  /* ---------- Sections ---------- */
+  section { padding-block: var(--space-section); }
+  .sec-head { margin-bottom: clamp(2rem, 5vw, 3.5rem); }
+  .sec-kicker {
+    font-family: var(--font-display);
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    font-size: 0.8rem;
+    color: var(--red);
+  }
+  .paper-sec .sec-kicker { color: var(--red-deep); }
+  .sec-head h2 { font-size: var(--text-h2); margin-top: 0.4rem; }
+
+  /* ---------- Prices ---------- */
+  .prices { background: var(--ink-2); border-block: 1px solid var(--line); }
+  .menu-grid { display: grid; gap: clamp(2rem, 4vw, 3.5rem); grid-template-columns: 1fr; }
+  @media (min-width: 800px) { .menu-grid { grid-template-columns: 1fr 1fr; } }
+  .menu-col h3 {
+    font-size: 1.3rem;
+    letter-spacing: 0.12em;
+    color: var(--gold);
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 0.6rem;
+    margin-bottom: 1.1rem;
+  }
+  .menu { list-style: none; }
+  .menu li {
+    display: flex;
+    align-items: baseline;
+    gap: 0.6rem;
+    padding-block: 0.65rem;
+  }
+  .menu .name { flex-shrink: 1; }
+  .menu .name small { display: block; color: var(--paper-dim); font-size: 0.82rem; font-style: italic; }
+  .menu .dots {
+    flex: 1;
+    border-bottom: 2px dotted rgba(240, 231, 211, 0.28);
+    transform: translateY(-4px);
+    min-width: 1.5rem;
+  }
+  .menu .price {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    letter-spacing: 0.04em;
+    color: var(--paper);
+    white-space: nowrap;
+  }
+  .menu li.feature { background: rgba(160, 26, 26, 0.14); outline: 1px solid rgba(160, 26, 26, 0.5); padding-inline: 0.8rem; }
+  .menu li.feature .price { color: var(--gold); }
+  .price-note { margin-top: 2rem; font-size: 0.85rem; font-style: italic; color: var(--paper-dim); }
+
+  /* ---------- Beer band ---------- */
+  .beer {
+    background: var(--paper);
+    color: var(--ink);
+    text-align: center;
+    position: relative;
+  }
+  .beer h2 { font-size: var(--text-h2); }
+  .beer h2 .red { color: var(--red); }
+  .beer p { max-width: 46ch; margin: 1.2rem auto 0; font-style: italic; color: #4a4234; }
+  .beer .glass { margin: 0 auto 1.4rem; width: clamp(56px, 10vw, 84px); }
+
+  /* ---------- Barbers ---------- */
+  .barber-grid { display: grid; gap: 1.4rem; grid-template-columns: 1fr; }
+  @media (min-width: 700px) { .barber-grid { grid-template-columns: repeat(3, 1fr); } }
+  .barber {
+    background: var(--ink-2);
+    border: 1px solid var(--line);
+    padding: 1.6rem 1.4rem 1.8rem;
+    text-align: center;
+    transition: transform 250ms var(--ease), border-color 250ms var(--ease);
+  }
+  .barber:hover { transform: translateY(-6px); border-color: var(--gold); }
+  .barber .avatar {
+    width: 108px;
+    height: 108px;
+    margin: 0 auto 1.1rem;
+    border-radius: 50%;
+    border: 2px solid var(--gold);
+    background: var(--ink-3);
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+  }
+  .barber h3 { font-size: 1.5rem; letter-spacing: 0.08em; }
+  .barber .role { color: var(--red); font-family: var(--font-display); text-transform: uppercase; letter-spacing: 0.2em; font-size: 0.75rem; margin-top: 0.35rem; }
+  .barber p { font-size: 0.9rem; color: var(--paper-dim); font-style: italic; margin-top: 0.8rem; }
+  .ph-tag {
+    display: inline-block;
+    margin-top: 0.9rem;
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-family: var(--font-display);
+    color: var(--ink);
+    background: var(--gold);
+    padding: 0.2rem 0.6rem;
+  }
+
+  /* ---------- Gallery ---------- */
+  .gallery { background: var(--ink-2); border-block: 1px solid var(--line); }
+  .shots { display: grid; gap: 0.9rem; grid-template-columns: repeat(2, 1fr); }
+  @media (min-width: 800px) { .shots { grid-template-columns: repeat(3, 1fr); } }
+  .shot {
+    aspect-ratio: 1;
+    background: var(--ink-3);
+    border: 1px solid var(--line);
+    display: grid;
+    place-items: center;
+    position: relative;
+    overflow: hidden;
+    transition: border-color 250ms var(--ease);
+  }
+  .shot:hover { border-color: var(--red); }
+  .shot svg { width: 38%; opacity: 0.45; transition: transform 350ms var(--ease), opacity 350ms var(--ease); }
+  .shot:hover svg { transform: scale(1.12); opacity: 0.8; }
+  .shot .label {
+    position: absolute;
+    bottom: 0.6rem;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-family: var(--font-display);
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-size: 0.62rem;
+    color: var(--paper-dim);
+  }
+
+  /* ---------- Reviews ---------- */
+  .rating-line {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.8rem;
+    margin-bottom: 2.2rem;
+  }
+  .rating-line .score { font-family: var(--font-display); font-size: clamp(2.6rem, 6vw, 4rem); color: var(--gold); }
+  .rating-line .stars { color: var(--gold); letter-spacing: 0.2em; font-size: 1.1rem; }
+  .rating-line .count { color: var(--paper-dim); font-style: italic; }
+  .quote-grid { display: grid; gap: 1.2rem; grid-template-columns: 1fr; }
+  @media (min-width: 800px) { .quote-grid { grid-template-columns: repeat(3, 1fr); } }
+  blockquote.review {
+    background: var(--ink-2);
+    border: 1px solid var(--line);
+    border-top: 3px solid var(--red);
+    padding: 1.5rem 1.4rem;
+  }
+  blockquote.review p { font-style: italic; font-size: 1.02rem; }
+  blockquote.review p::before { content: "\201C"; color: var(--red); font-size: 1.6em; line-height: 0; vertical-align: -0.3em; margin-right: 0.15rem; font-family: var(--font-display); }
+  blockquote.review footer {
+    margin-top: 1rem;
+    font-family: var(--font-display);
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-size: 0.75rem;
+    color: var(--paper-dim);
+  }
+  blockquote.review footer b { color: var(--gold); font-weight: 400; }
+
+  /* ---------- Book CTA ---------- */
+  .book {
+    text-align: center;
+    background:
+      radial-gradient(ellipse 80% 90% at 50% 120%, rgba(160, 26, 26, 0.35), transparent 70%),
+      var(--ink);
+    border-block: 1px solid var(--line);
+  }
+  .book h2 { font-size: var(--text-h2); }
+  .book .sub { font-style: italic; color: var(--paper-dim); margin: 1rem auto 2.2rem; max-width: 44ch; }
+  .book .alt { margin-top: 1.6rem; font-size: 0.95rem; color: var(--paper-dim); }
+  .book .alt a { color: var(--gold); text-decoration-color: rgba(201, 162, 75, 0.5); }
+
+  /* ---------- Find us ---------- */
+  .find-grid { display: grid; gap: clamp(2rem, 5vw, 4rem); grid-template-columns: 1fr; }
+  @media (min-width: 850px) { .find-grid { grid-template-columns: 1.1fr 0.9fr; } }
+  address { font-style: normal; }
+  address .big { font-family: var(--font-display); font-size: clamp(1.6rem, 3vw, 2.2rem); text-transform: uppercase; line-height: 1.1; }
+  address p { color: var(--paper-dim); margin-top: 0.8rem; }
+  address a.tel {
+    display: inline-block;
+    margin-top: 1.2rem;
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    letter-spacing: 0.06em;
+    color: var(--gold);
+    text-decoration: none;
+    border-bottom: 2px solid var(--red);
+  }
+  .hours { width: 100%; border-collapse: collapse; margin-top: 0.5rem; }
+  .hours caption {
+    text-align: left;
+    font-family: var(--font-display);
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--red);
+    font-size: 0.8rem;
+    margin-bottom: 0.7rem;
+  }
+  .hours th, .hours td { padding: 0.55rem 0; border-bottom: 1px dotted rgba(240, 231, 211, 0.2); text-align: left; }
+  .hours th { font-weight: 400; color: var(--paper-dim); }
+  .hours td { text-align: right; font-family: var(--font-display); letter-spacing: 0.05em; }
+  .hours tr.closed td { color: var(--red); }
+  .map-ph {
+    margin-top: 2rem;
+    border: 1px solid var(--line);
+    background: var(--ink-2);
+    aspect-ratio: 16 / 8;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    padding: 1rem;
+  }
+  .map-ph .pin { width: 40px; margin: 0 auto 0.6rem; }
+  .map-ph p { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.14em; font-family: var(--font-display); color: var(--paper-dim); }
+
+  /* ---------- Footer ---------- */
+  footer.site {
+    border-top: 1px solid var(--line);
+    padding: 2.5rem 0 3rem;
+    font-size: 0.85rem;
+    color: var(--paper-dim);
+  }
+  .foot-row { display: flex; flex-wrap: wrap; gap: 1rem 2rem; justify-content: space-between; align-items: center; }
+  .socials { display: flex; gap: 1.4rem; list-style: none; }
+  .socials a { text-decoration: none; text-transform: uppercase; font-family: var(--font-display); letter-spacing: 0.14em; font-size: 0.78rem; opacity: 0.8; }
+  .socials a:hover { opacity: 1; color: var(--gold); }
+  .foot-demo { margin-top: 1.6rem; font-style: italic; font-size: 0.78rem; opacity: 0.7; }
+
+  /* enquiry-form palette aliases — maps this site's own tokens
+     onto the shared form stylesheet below */
+  .fx {
+    --fx-bg: var(--ink-2); --fx-ink: var(--paper); --fx-dim: var(--paper-dim);
+    --fx-accent: var(--red); --fx-on-accent: var(--paper); --fx-line: rgba(240, 231, 211, 0.38);
+    --fx-field-bg: var(--ink); --fx-error: #e8804f; --fx-radius: 2px;
+    --fx-display: var(--font-display); --fx-gutter: var(--gutter);
+  }
+
+/* ---------- Enquiry form (demo-only, sends nothing) ---------- */
+/* Palette is aliased onto --fx-* per demo just above, so this block is
+   identical in all five and each form still looks native to its own site. */
+.fx { background: var(--fx-bg); color: var(--fx-ink); padding: var(--space-section) 0; }
+.fx .fx-wrap { width: min(100% - 2 * var(--fx-gutter), 60rem); margin-inline: auto; }
+.fx-head { max-width: 46ch; }
+.fx-kicker {
+  font-family: var(--fx-display); text-transform: uppercase; letter-spacing: 0.18em;
+  font-size: 0.78rem; color: var(--fx-accent); margin: 0 0 0.6rem;
+}
+.fx-head h2 { font-size: var(--text-h2); line-height: 1.02; margin: 0 0 0.9rem; }
+.fx-head p { color: var(--fx-dim); margin: 0; max-width: 52ch; }
+.fx-form { margin-top: clamp(2rem, 4vw, 3rem); display: grid; gap: 1.1rem; }
+/* A class rule setting `display` beats the UA's [hidden]{display:none}, so the
+   form stayed on screen after a successful submit even though form.hidden was
+   true. Caught by looking at the rendered page — every DOM assertion read the
+   .hidden PROPERTY, which was correctly true the whole time. */
+.fx-form[hidden] { display: none; }
+.fx-row { display: grid; gap: 1.1rem; }
+@media (min-width: 40rem) { .fx-row { grid-template-columns: 1fr 1fr; } }
+.fx-field { display: grid; gap: 0.4rem; }
+.fx-field label { font-weight: 700; font-size: 0.95rem; }
+.fx-field .fx-hint { font-size: 0.85rem; color: var(--fx-dim); }
+.fx-field input, .fx-field select, .fx-field textarea {
+  font: inherit; font-size: 1rem; color: var(--fx-ink);
+  background: var(--fx-field-bg); border: 1px solid var(--fx-line);
+  border-radius: var(--fx-radius); padding: 0.85rem 0.95rem; width: 100%;
+  transition: border-color var(--duration, 300ms) var(--ease, ease),
+              box-shadow var(--duration, 300ms) var(--ease, ease);
+}
+.fx-field textarea { min-height: 8.5rem; resize: vertical; }
+.fx-field select { appearance: none; cursor: pointer; }
+.fx-field input:hover, .fx-field select:hover, .fx-field textarea:hover { border-color: var(--fx-accent); }
+.fx-field input:focus-visible, .fx-field select:focus-visible, .fx-field textarea:focus-visible {
+  outline: none; border-color: var(--fx-accent);
+  box-shadow: 0 0 0 3px color-mix(in oklab, var(--fx-accent) 35%, transparent);
+}
+.fx-field[data-invalid="true"] input,
+.fx-field[data-invalid="true"] select,
+.fx-field[data-invalid="true"] textarea { border-color: var(--fx-error); }
+.fx-err { font-size: 0.85rem; color: var(--fx-error); min-height: 1.1rem; font-weight: 700; }
+.fx-field[data-invalid="true"] .fx-err::before { content: "\2717\00a0"; }
+.fx-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 1.4rem; margin-top: 0.4rem; }
+.fx-submit {
+  font-family: var(--fx-display); font-size: 1rem; letter-spacing: 0.06em;
+  text-transform: uppercase; cursor: pointer;
+  background: var(--fx-accent); color: var(--fx-on-accent);
+  border: 1px solid var(--fx-accent); border-radius: var(--fx-radius);
+  padding: 0.95rem 2.1rem;
+  transition: transform var(--duration, 300ms) var(--ease, ease),
+              filter var(--duration, 300ms) var(--ease, ease);
+}
+.fx-submit:hover { filter: brightness(1.12); transform: translateY(-2px); }
+.fx-submit:active { transform: translateY(0); }
+.fx-submit:focus-visible { outline: 3px solid var(--fx-accent); outline-offset: 3px; }
+.fx-note { font-size: 0.85rem; color: var(--fx-dim); margin: 0; }
+.fx-summary {
+  border: 1px solid var(--fx-error); border-radius: var(--fx-radius);
+  padding: 0.85rem 1rem; color: var(--fx-error); font-size: 0.92rem;
+}
+.fx-summary[hidden] { display: none; }
+/* Success: not a thank-you. A preview of the enquiry that WOULD have arrived. */
+.fx-sent { border: 1px solid var(--fx-line); border-radius: var(--fx-radius); overflow: hidden; }
+.fx-sent[hidden] { display: none; }
+.fx-sent:focus-visible { outline: 3px solid var(--fx-accent); outline-offset: 3px; }
+.fx-sent-bar {
+  background: var(--fx-accent); color: var(--fx-on-accent);
+  padding: 0.7rem 1.1rem; font-family: var(--fx-display);
+  text-transform: uppercase; letter-spacing: 0.12em; font-size: 0.8rem;
+}
+.fx-mail { background: var(--fx-field-bg); padding: clamp(1.1rem, 3vw, 1.8rem); }
+.fx-mail dl { display: grid; grid-template-columns: auto 1fr; gap: 0.45rem 1rem; margin: 0 0 1.1rem; font-size: 0.95rem; }
+.fx-mail dt { color: var(--fx-dim); font-weight: 700; }
+.fx-mail dd { margin: 0; overflow-wrap: anywhere; }
+.fx-mail .fx-body { border-top: 1px solid var(--fx-line); padding-top: 1.1rem; white-space: pre-wrap; overflow-wrap: anywhere; }
+.fx-sent-foot { padding: 1.1rem; border-top: 1px solid var(--fx-line); display: flex; flex-wrap: wrap; gap: 0.8rem 1.2rem; align-items: center; }
+.fx-sent-foot p { margin: 0; font-size: 0.88rem; color: var(--fx-dim); max-width: 54ch; }
+.fx-again {
+  font: inherit; font-size: 0.9rem; font-weight: 700; cursor: pointer;
+  background: none; color: var(--fx-ink); border: 1px solid var(--fx-line);
+  border-radius: var(--fx-radius); padding: 0.6rem 1.2rem;
+}
+.fx-again:hover { border-color: var(--fx-accent); color: var(--fx-accent); }
+.fx-again:focus-visible { outline: 3px solid var(--fx-accent); outline-offset: 3px; }
+
+@media (prefers-reduced-motion: reduce) {
+  /* The form's own motion, guarded separately from each demo's .rv reveals —
+     hover lift and focus/border transitions are still motion to someone who
+     asked for none. Colour and focus rings stay, because they carry meaning. */
+  .fx-field input, .fx-field select, .fx-field textarea, .fx-submit { transition: none; }
+  .fx-submit:hover { transform: none; }
+}
+
+
+@media (pointer: coarse) {
+  /* Touch targets, added 1 Sept 2026. Measured at 375px: this demo carried
+     tel:/mailto: links as small as 18px — and on a trade site the phone number
+     IS the conversion action. The studio site's fix (an absolutely-positioned
+     44px overlay) is deliberately NOT reused here: these links sit stacked in
+     lists, so a 44px overlay on each would overlap its neighbour and let the
+     later one in DOM order steal the tap, making tapping worse rather than
+     better. min-height grows the element itself, so nothing can overlap.
+     Scoped to (pointer: coarse) so the desktop composition is untouched. */
+  a[href^="tel:"], a[href^="mailto:"] {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+  }
+}
+</style>
+</head>
+<body>
+
+<p class="demo-note">Demo redesign concept — built by Ashton James. Not the live Goodfellas site. &nbsp;·&nbsp; <a href="../../" style="color:inherit;text-decoration:underline;text-underline-offset:2px;font-weight:700">&larr; back to Ashton Studios</a></p>
+
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="#top">Goodfellas <span class="tick">★</span><span class="word"> Barbershop</span></a>
+    <nav aria-label="Main navigation">
+      <ul class="nav-links">
+        <li><a href="#prices">Prices</a></li>
+        <li><a href="#barbers">The Barbers</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#find-us">Find Us</a></li>
+      </ul>
+    </nav>
+    <a class="btn" href="https://booksy.com/en-gb/16806_goodfellas-barbershop-st-albans_barber_234686_st-albans">Book Now</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero" aria-labelledby="hero-heading">
+    <div class="hero-media" aria-hidden="true">
+      <img src="assets/hero-interior.webp" alt="" width="2400" height="1340" fetchpriority="high" decoding="async">
+    </div>
+    <div class="wrap">
+      <p class="hero-kicker rv">Est. 2005 &middot; St Albans</p>
+      <h1 id="hero-heading" class="rv" style="--d:80ms">Good<span class="red">fellas</span></h1>
+      <p class="hero-sub rv" style="--d:160ms">A traditional barbershop with a modern attitude &mdash; and a free beer with every haircut.</p>
+      <div class="hero-ctas rv" style="--d:240ms">
+        <a class="btn big" href="https://booksy.com/en-gb/16806_goodfellas-barbershop-st-albans_barber_234686_st-albans">Book on Booksy</a>
+        <a class="btn ghost" href="#prices">See the Prices</a>
+      </div>
+      <p class="hero-cred rv" style="--d:320ms">
+        <span><strong>5.0&nbsp;&#9733;</strong> 817 Booksy reviews</span>
+        <span><strong>21</strong> years on Hatfield Road</span>
+        <span><strong>Free beer</strong> with every cut</span>
+      </p>
+    </div>
+    <div class="pole" aria-hidden="true"><div class="pole-stripes"></div></div>
+  </section>
+
+  <!-- CRAFT — full-bleed editorial pair -->
+  <section class="craft" aria-labelledby="craft-heading">
+    <div class="craft-copy">
+      <p class="hero-kicker">The craft</p>
+      <h2 id="craft-heading" class="craft-title">Twenty-one years<br><span class="red">of getting it right.</span></h2>
+      <p>Skin fades, scissor work, hot-towel shaves and beard sculpting — done properly,
+      by barbers who have been doing this longer than most shops have existed.</p>
+      <a class="btn ghost" href="#barbers">Meet the barbers</a>
+    </div>
+    <figure class="craft-media">
+      <img src="assets/craft.webp" alt="Close detail of a barber cutting hair with steel scissors" width="1440" height="1800" loading="lazy" decoding="async">
+    </figure>
+    <figure class="craft-media wide">
+      <img src="assets/tools.webp" alt="Traditional barbering tools — straight razor, comb, shaving brush and brass bowl on aged leather" width="1800" height="1200" loading="lazy" decoding="async">
+    </figure>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>Free beer with every haircut</span><span>Walk tall, look sharp</span>
+      <span>Skin fades &middot; Beard trims &middot; The Works</span><span>Book on Booksy</span>
+      <span>Free beer with every haircut</span><span>Walk tall, look sharp</span>
+      <span>Skin fades &middot; Beard trims &middot; The Works</span><span>Book on Booksy</span>
+    </div>
+  </div>
+
+  <!-- PRICES -->
+  <section class="prices" id="prices" aria-labelledby="prices-heading">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <p class="sec-kicker">The Menu</p>
+        <h2 id="prices-heading">Cuts &amp; Prices</h2>
+      </div>
+      <div class="menu-grid">
+        <div class="menu-col rv">
+          <h3>The Chair</h3>
+          <ul class="menu">
+            <li><span class="name">Hair Cut &amp; Style<small>30 min</small></span><span class="dots"></span><span class="price">&pound;35</span></li>
+            <li><span class="name">Skin Fade &amp; Style<small>30 min</small></span><span class="dots"></span><span class="price">&pound;35</span></li>
+            <li><span class="name">Hair Cut, Style &amp; Beard Trim<small>45 min</small></span><span class="dots"></span><span class="price">&pound;45&ndash;47</span></li>
+            <li><span class="name">Skin Fade, Style &amp; Beard Trim<small>45&ndash;50 min</small></span><span class="dots"></span><span class="price">&pound;45&ndash;47</span></li>
+            <li class="feature"><span class="name">The Works! <small>Haircut, beard trim &amp; facial &middot; 1 hr</small></span><span class="dots"></span><span class="price">&pound;60</span></li>
+            <li><span class="name">Buzz Cut<small>15&ndash;20 min</small></span><span class="dots"></span><span class="price">&pound;20</span></li>
+            <li><span class="name">Beard Trim<small>15&ndash;20 min</small></span><span class="dots"></span><span class="price">&pound;15</span></li>
+          </ul>
+        </div>
+        <div class="menu-col rv" style="--d:120ms">
+          <h3>For Everyone</h3>
+          <ul class="menu">
+            <li><span class="name">Student Cut<small>30&ndash;40 min &middot; valid student ID</small></span><span class="dots"></span><span class="price">&pound;30</span></li>
+            <li><span class="name">Under 16's<small>25&ndash;30 min</small></span><span class="dots"></span><span class="price">&pound;28</span></li>
+            <li><span class="name">Under 10's<small>15&ndash;25 min</small></span><span class="dots"></span><span class="price">&pound;25&ndash;26</span></li>
+            <li><span class="name">Over 65's<small>20&ndash;30 min</small></span><span class="dots"></span><span class="price">&pound;28</span></li>
+          </ul>
+          <p class="price-note">Prices as listed on the shop's Booksy page, August 2026. Where two prices show, it's Senior Barber / Director. Every haircut comes with a free beer.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BEER BAND -->
+  <section class="beer" aria-labelledby="beer-heading">
+    <div class="wrap">
+      <svg class="glass rv" viewBox="0 0 64 80" aria-hidden="true">
+        <path d="M12 8h40l-5 62a6 6 0 0 1-6 6H23a6 6 0 0 1-6-6L12 8z" fill="none" stroke="#100e0c" stroke-width="3"/>
+        <path d="M15.5 26h33l-3.2 40a4 4 0 0 1-4 3.6H22.7a4 4 0 0 1-4-3.6L15.5 26z" fill="#c9a24b"/>
+        <circle cx="22" cy="16" r="4.5" fill="#f0e7d3" stroke="#100e0c" stroke-width="2"/>
+        <circle cx="34" cy="13" r="5.5" fill="#f0e7d3" stroke="#100e0c" stroke-width="2"/>
+        <circle cx="45" cy="17" r="4" fill="#f0e7d3" stroke="#100e0c" stroke-width="2"/>
+      </svg>
+      <h2 id="beer-heading" class="rv" style="--d:80ms">Free beer.<br><span class="red">Every haircut.</span></h2>
+      <p class="rv" style="--d:160ms">Since 2005 it's been the house rule: attention to detail, great customer service, and a cold one on us while you're in the chair.</p>
+    </div>
+  </section>
+
+  <!-- BARBERS -->
+  <section id="barbers" aria-labelledby="barbers-heading">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <p class="sec-kicker">The Crew</p>
+        <h2 id="barbers-heading">The Barbers</h2>
+      </div>
+      <div class="barber-grid">
+        <article class="barber rv">
+          <div class="avatar" aria-hidden="true">
+            <svg viewBox="0 0 100 100" width="70"><circle cx="50" cy="36" r="18" fill="#c9a24b"/><path d="M18 92c0-20 14-30 32-30s32 10 32 30" fill="#c9a24b"/></svg>
+          </div>
+          <h3>Ed Costa</h3>
+          <p class="role">Role to confirm</p>
+          <p>Short bio to be written with the shop.</p>
+          <span class="ph-tag">Photo placeholder</span>
+        </article>
+        <article class="barber rv" style="--d:100ms">
+          <div class="avatar" aria-hidden="true">
+            <svg viewBox="0 0 100 100" width="70"><circle cx="50" cy="36" r="18" fill="#a01a1a"/><path d="M18 92c0-20 14-30 32-30s32 10 32 30" fill="#a01a1a"/></svg>
+          </div>
+          <h3>Chris Green</h3>
+          <p class="role">Role to confirm</p>
+          <p>Short bio to be written with the shop.</p>
+          <span class="ph-tag">Photo placeholder</span>
+        </article>
+        <article class="barber rv" style="--d:200ms">
+          <div class="avatar" aria-hidden="true">
+            <svg viewBox="0 0 100 100" width="70"><circle cx="50" cy="36" r="18" fill="#f0e7d3"/><path d="M18 92c0-20 14-30 32-30s32 10 32 30" fill="#f0e7d3"/></svg>
+          </div>
+          <h3>Ivan Rosario</h3>
+          <p class="role">Role to confirm</p>
+          <p>Short bio to be written with the shop.</p>
+          <span class="ph-tag">Photo placeholder</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="gallery" aria-labelledby="gallery-heading">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <p class="sec-kicker">The Work</p>
+        <h2 id="gallery-heading">Fresh Off the Chair</h2>
+      </div>
+      <div class="shots">
+        <div class="shot rv"><svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="20" cy="46" r="8" fill="none" stroke="#f0e7d3" stroke-width="3"/><circle cx="44" cy="46" r="8" fill="none" stroke="#f0e7d3" stroke-width="3"/><path d="M24 40 52 8M40 40 12 8" stroke="#f0e7d3" stroke-width="3"/></svg><span class="label">Your photo here</span></div>
+        <div class="shot rv" style="--d:60ms"><svg viewBox="0 0 64 64" aria-hidden="true"><rect x="8" y="26" width="48" height="10" rx="3" fill="none" stroke="#f0e7d3" stroke-width="3"/><path d="M14 36v10M22 36v8M30 36v10M38 36v8M46 36v10" stroke="#f0e7d3" stroke-width="3"/></svg><span class="label">Your photo here</span></div>
+        <div class="shot rv" style="--d:120ms"><svg viewBox="0 0 64 64" aria-hidden="true"><rect x="26" y="6" width="12" height="52" rx="6" fill="none" stroke="#f0e7d3" stroke-width="3"/><path d="M26 18h12M26 30h12M26 42h12" stroke="#a01a1a" stroke-width="3"/></svg><span class="label">Your photo here</span></div>
+        <div class="shot rv"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M16 10c8 0 10 6 16 6s8-6 16-6v14c-8 0-10 6-16 6s-8-6-16-6z" fill="none" stroke="#f0e7d3" stroke-width="3"/><path d="M32 30v24" stroke="#f0e7d3" stroke-width="3"/></svg><span class="label">Your photo here</span></div>
+        <div class="shot rv" style="--d:60ms"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M14 50 50 14M42 8l14 14-8 8-14-14z" fill="none" stroke="#f0e7d3" stroke-width="3"/><circle cx="14" cy="50" r="5" fill="#a01a1a"/></svg><span class="label">Your photo here</span></div>
+        <div class="shot rv" style="--d:120ms"><svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="22" fill="none" stroke="#f0e7d3" stroke-width="3"/><path d="M32 16v16l10 8" stroke="#a01a1a" stroke-width="3" fill="none"/></svg><span class="label">Your photo here</span></div>
+      </div>
+      <p class="price-note rv">Placeholder tiles &mdash; this grid takes real cut photos straight from the shop's Instagram.</p>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section id="reviews" aria-labelledby="reviews-heading">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <p class="sec-kicker">Word on the Street</p>
+        <h2 id="reviews-heading">The Reviews Are In</h2>
+      </div>
+      <p class="rating-line rv">
+        <span class="score">5.0</span>
+        <span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        <span class="count">from 817 verified reviews on Booksy</span>
+      </p>
+      <div class="quote-grid">
+        <blockquote class="review rv">
+          <p><b>Review quotes slot in here.</b> On the live site this space carries real customer reviews, word for word, with the reviewer's first name and the platform they left it on &mdash; published only once the owner has signed them off.</p>
+          <footer><b>Placeholder</b> &middot; pending sign-off</footer>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOOK CTA -->
+  <section class="book" aria-labelledby="book-heading">
+    <div class="wrap">
+      <h2 id="book-heading" class="rv">Get in the <span style="color:var(--red)">chair</span></h2>
+      <p class="sub rv" style="--d:80ms">Pick your barber, pick your slot, done in thirty seconds. Same Booksy system the shop already runs &mdash; nothing changes for regulars.</p>
+      <p class="rv" style="--d:160ms"><a class="btn big" href="https://booksy.com/en-gb/16806_goodfellas-barbershop-st-albans_barber_234686_st-albans">Book on Booksy</a></p>
+      <p class="alt rv" style="--d:240ms">Rather call? <a href="tel:+441727895600">01727 895600</a></p>
+    </div>
+  </section>
+
+  <!-- FIND US -->
+  <section id="find-us" aria-labelledby="find-heading">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <p class="sec-kicker">The Shop</p>
+        <h2 id="find-heading">Find Us</h2>
+      </div>
+      <div class="find-grid">
+        <div class="rv">
+          <address>
+            <p class="big">197 Hatfield Road<br>St Albans AL1 4LH</p>
+            <p>Ten minutes from the city centre, parking nearby, free WiFi in the shop.</p>
+            <a class="tel" href="tel:+441727895600">01727 895600</a>
+          </address>
+          <div class="map-ph" aria-hidden="true">
+            <div>
+              <svg class="pin" viewBox="0 0 24 32"><path d="M12 0C5.4 0 0 5.4 0 12c0 9 12 20 12 20s12-11 12-20C24 5.4 18.6 0 12 0z" fill="#a01a1a"/><circle cx="12" cy="12" r="5" fill="#f0e7d3"/></svg>
+              <p>Map placeholder &mdash; live Google Map embeds here</p>
+            </div>
+          </div>
+        </div>
+        <div class="rv" style="--d:120ms">
+          <table class="hours">
+            <caption>Opening Hours</caption>
+            <tbody>
+              <tr><th scope="row">Monday</th><td>9:00 &ndash; 18:00</td></tr>
+              <tr><th scope="row">Tuesday</th><td>9:00 &ndash; 18:00</td></tr>
+              <tr><th scope="row">Wednesday</th><td>10:00 &ndash; 19:00</td></tr>
+              <tr><th scope="row">Thursday</th><td>10:00 &ndash; 19:00</td></tr>
+              <tr><th scope="row">Friday</th><td>9:00 &ndash; 18:00</td></tr>
+              <tr><th scope="row">Saturday</th><td>8:00 &ndash; 17:30</td></tr>
+              <tr class="closed"><th scope="row">Sunday</th><td>Closed</td></tr>
+            </tbody>
+          </table>
+          <p class="price-note">Hours as published on the shop's current website &mdash; to be confirmed before launch.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ENQUIRY (demo only — sends nothing, see the script at the end of this file) -->
+  <section class="fx" id="enquire" aria-labelledby="fx-heading">
+    <div class="fx-wrap">
+      <div class="fx-head rv">
+        <p class="fx-kicker">Ask the shop</p>
+        <h2 id="fx-heading">Something not on Booksy?</h2>
+        <p>Booksy handles the chair. This is for everything else &mdash; wedding parties, a barber for an event, a question about the beer.</p>
+      </div>
+
+      <p class="fx-summary" id="fx-summary" role="alert" hidden></p>
+
+      <form class="fx-form rv" novalidate>
+        <div class="fx-row">
+          <div class="fx-field">
+            <label for="fx-name">Your name</label>
+            <input id="fx-name" name="name" type="text" autocomplete="name"
+                   data-check="name" data-required="We need a name to put to the job."
+                   aria-describedby="fx-name-err">
+            <p class="fx-err" id="fx-name-err"></p>
+          </div>
+          <div class="fx-field">
+            <label for="fx-contact">Email or phone</label>
+            <input id="fx-contact" name="contact" type="text" autocomplete="email"
+                   data-check="contact" data-required="Without this they cannot reply."
+                   aria-describedby="fx-contact-hint fx-contact-err">
+            <p class="fx-hint" id="fx-contact-hint">Whichever you would rather be reached on.</p>
+            <p class="fx-err" id="fx-contact-err"></p>
+          </div>
+        </div>
+        <div class="fx-field">
+          <label for="fx-service">What do you need?</label>
+          <select id="fx-service" name="service" data-check="service"
+                  data-required="Pick the closest match." aria-describedby="fx-service-err">
+            <option value="">Choose one&hellip;</option>
+            <option>Group or wedding booking</option>
+            <option>Private event / out of hours</option>
+            <option>Question about a service</option>
+            <option>Something else</option>
+          </select>
+          <p class="fx-err" id="fx-service-err"></p>
+        </div>
+        <div class="fx-field">
+          <label for="fx-message">A few details</label>
+          <textarea id="fx-message" name="message" data-check="message"
+                    data-required="Tell them what you are after."
+                    aria-describedby="fx-message-hint fx-message-err"></textarea>
+          <p class="fx-hint" id="fx-message-hint">Dates, how many of you, anything specific.</p>
+          <p class="fx-err" id="fx-message-err"></p>
+        </div>
+        <div class="fx-actions">
+          <button class="fx-submit" type="submit">Send it over</button>
+          <p class="fx-note"><strong>Demo form.</strong> Nothing is sent &mdash; it shows you the enquiry instead.</p>
+        </div>
+      </form>
+
+      <div class="fx-sent" id="fx-sent" tabindex="-1" role="status" hidden>
+        <p class="fx-sent-bar">Nothing was sent &mdash; this is what would have landed</p>
+        <div class="fx-mail">
+          <dl>
+            <dt>To</dt><dd>the shop&rsquo;s inbox</dd>
+            <dt>From</dt><dd id="fx-from"></dd>
+            <dt>Subject</dt><dd id="fx-subject"></dd>
+          </dl>
+          <div class="fx-body" id="fx-message-out"></div>
+        </div>
+        <div class="fx-sent-foot">
+          <button class="fx-again" id="fx-again" type="button">Try it again</button>
+          <p>This page is a demo concept, so the form is deliberately wired to nothing &mdash;
+             no message reaches Goodfellas Barbershop. On the real site this arrives in the inbox
+             within seconds of someone pressing the button.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-row">
+      <p>&copy; 2026 Goodfellas Barbershop &middot; 197 Hatfield Road, St Albans AL1 4LH &middot; Est. 2005</p>
+      <ul class="socials">
+        <li><a href="https://www.facebook.com/goodfellasbarbershop2005/">Facebook</a></li>
+        <li><a href="https://www.instagram.com/goodfellasbarbershop2005/">Instagram</a></li>
+      </ul>
+    </div>
+    <p class="foot-demo">This page is a redesign demo built by Ashton James as part of an in-progress build for Goodfellas Barbershop, a client of Ashton Studios. It is not the shop's live website. All prices, reviews and hours were taken from the shop's public listings in August 2026.</p>
+  </div>
+</footer>
+
+<script>
+  (function () {
+    var els = document.querySelectorAll('.rv');
+    if (!('IntersectionObserver' in window)) {
+      els.forEach(function (el) { el.classList.add('in'); });
+      return;
+    }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -5% 0px' });
+    els.forEach(function (el) { io.observe(el); });
+  })();
+</script>
+
+<script>
+/* Demo enquiry form.
+   Two hard rules, both structural rather than promised:
+     1. It cannot mail the business. There is no action, no endpoint and no
+        network call anywhere in this file — submit is always prevented.
+     2. It never pretends to have sent. Instead of a thank-you, it renders the
+        enquiry as the email that WOULD have arrived, over a banner that says
+        nothing was sent. That is honest and it also shows the owner exactly
+        what they would be getting, which a fake confirmation never does. */
+(function () {
+  var form = document.querySelector('.fx-form');
+  if (!form) return;
+  var sent = document.getElementById('fx-sent');
+  var summary = document.getElementById('fx-summary');
+  var fields = Array.prototype.slice.call(form.querySelectorAll('[data-check]'));
+  var EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+  var PHONE = /^\+?[\d\s()-]{10,}$/;
+
+  function problem(el) {
+    var value = (el.value || '').trim();
+    if (!value) return el.dataset.required || 'This one is needed.';
+    if (el.dataset.check === 'contact' && !EMAIL.test(value) && !PHONE.test(value)) {
+      return 'Use an email address or a phone number so they can reply.';
+    }
+    if (el.dataset.check === 'message' && value.length < 10) {
+      return 'A little more detail helps them quote accurately.';
+    }
+    return null;
+  }
+
+  function mark(el, message) {
+    var wrap = el.closest('.fx-field');
+    var err = wrap.querySelector('.fx-err');
+    wrap.setAttribute('data-invalid', message ? 'true' : 'false');
+    el.setAttribute('aria-invalid', message ? 'true' : 'false');
+    err.textContent = message || '';
+    return !message;
+  }
+
+  fields.forEach(function (el) {
+    // Validate on the way out of a field, then live once it has been marked —
+    // so nobody is corrected mid-keystroke, but a fix clears immediately.
+    el.addEventListener('blur', function () { mark(el, problem(el)); });
+    el.addEventListener('input', function () {
+      if (el.closest('.fx-field').getAttribute('data-invalid') !== 'true') return;
+      mark(el, problem(el));
+      // Keep the summary honest: it used to keep saying "2 fields need a
+      // moment" after both had been fixed, because it was only recomputed on
+      // submit. A count that is wrong is worse than no count.
+      if (!form.querySelector('.fx-field[data-invalid="true"]')) summary.hidden = true;
+    });
+  });
+
+  form.addEventListener('submit', function (event) {
+    event.preventDefault();
+    var bad = [];
+    fields.forEach(function (el) { if (!mark(el, problem(el))) bad.push(el); });
+
+    if (bad.length) {
+      summary.textContent = bad.length === 1
+        ? 'One field needs a moment before this can go anywhere.'
+        : bad.length + ' fields need a moment before this can go anywhere.';
+      summary.hidden = false;
+      bad[0].focus();
+      return;
+    }
+    summary.hidden = true;
+
+    var get = function (name) { return (form.elements[name].value || '').trim(); };
+    // textContent throughout — never innerHTML with anything typed in.
+    document.getElementById('fx-from').textContent = get('name') + ' <' + get('contact') + '>';
+    document.getElementById('fx-subject').textContent = 'Website enquiry \u2014 ' + get('service');
+    document.getElementById('fx-message-out').textContent = get('message');
+    form.hidden = true;
+    sent.hidden = false;
+    sent.focus();
+  });
+
+  document.getElementById('fx-again').addEventListener('click', function () {
+    form.reset();
+    fields.forEach(function (el) { mark(el, null); });
+    summary.hidden = true;
+    sent.hidden = true;
+    form.hidden = false;
+    form.querySelector('input, select, textarea').focus();
+  });
+})();
+</script>
+</body>
+</html>

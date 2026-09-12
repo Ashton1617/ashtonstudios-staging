@@ -1,0 +1,922 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta name="robots" content="noindex,nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>TM Tree &amp; Landscaping Ltd — Tree Surgery, Landscaping &amp; Driveways in St Albans, Hertfordshire</title>
+<meta name="description" content="Tree works, stump removal, landscaping, patios, driveways, fencing and groundworks across St Albans, Harpenden, Radlett and Hertfordshire. Friendly, reliable team — free quotes.">
+<style>
+/* ---------- Tokens ---------- */
+:root{
+  --pine:#1d3a2c;
+  --pine-deep:#122619;
+  --moss:#4d7a58;
+  --moss-soft:#7fa387;
+  --bark:#4f3f2f;
+  --bark-soft:#8a715a;
+  --cream:#f3eee3;
+  --paper:#fbf8f0;
+  --amber:#d99a2b;
+  --amber-deep:#a8731a;
+  --ink:#1b241e;
+  --ink-soft:#4c584f;
+
+  --font-stack:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+
+  --text-base:clamp(1rem,.95rem + .35vw,1.125rem);
+  --text-hero:clamp(2.4rem,1.5rem + 4.6vw,4.5rem);
+  --text-h2:clamp(1.7rem,1.3rem + 2vw,2.6rem);
+
+  --space-section:clamp(4rem,3rem + 5vw,7.5rem);
+  --radius:14px;
+
+  --duration:450ms;
+  --ease:cubic-bezier(.16,1,.3,1);
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:var(--font-stack);
+  font-size:var(--text-base);
+  line-height:1.6;
+  color:var(--ink);
+  background:var(--cream);
+  overflow-x:hidden;
+}
+img,svg{max-width:100%;display:block}
+h1,h2,h3{line-height:1.1;letter-spacing:-.015em}
+a{color:var(--pine)}
+
+/* subtle grain */
+body::before{
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.45;
+  background-image:radial-gradient(rgba(27,36,30,.05) 1px,transparent 1px);
+  background-size:24px 24px;
+}
+main,header.site,footer.site,.demo-ribbon{position:relative;z-index:1}
+
+.wrap{width:min(1100px,100% - 2.5rem);margin-inline:auto}
+
+/* ---------- Demo ribbon ---------- */
+.demo-ribbon{
+  background:var(--amber);color:var(--pine-deep);
+  font-size:.82rem;font-weight:700;text-align:center;
+  padding:.45rem 1rem;letter-spacing:.01em;
+}
+
+/* ---------- Scroll reveal (compositor-only) ---------- */
+.reveal{opacity:0;transform:translateY(26px)}
+.reveal.in{opacity:1;transform:none;transition:opacity var(--duration) var(--ease),transform 650ms var(--ease)}
+.reveal:nth-child(2){transition-delay:70ms}
+.reveal:nth-child(3){transition-delay:140ms}
+.reveal:nth-child(4){transition-delay:210ms}
+
+/* ---------- Header ---------- */
+header.site{
+  position:sticky;top:0;z-index:50;
+  background:color-mix(in srgb,var(--pine-deep) 94%,transparent);
+  backdrop-filter:blur(8px);
+  border-bottom:3px solid var(--amber);
+}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:.75rem 0;gap:1rem}
+.brand{display:flex;align-items:center;gap:.6rem;text-decoration:none;color:var(--paper);font-weight:800;font-size:1.08rem;letter-spacing:.01em}
+.brand .mark{width:36px;height:36px;flex:none}
+.brand small{display:block;font-size:.66rem;font-weight:600;color:var(--moss-soft);letter-spacing:.14em;text-transform:uppercase}
+.nav-links{display:none;gap:1.5rem;list-style:none}
+.nav-links a{color:#cfdcd2;text-decoration:none;font-weight:600;font-size:.94rem;position:relative}
+.nav-links a::after{content:"";position:absolute;left:0;right:0;bottom:-5px;height:3px;border-radius:3px;background:var(--amber);transform:scaleX(0);transform-origin:left;transition:transform .25s var(--ease)}
+.nav-links a:hover::after,.nav-links a:focus-visible::after{transform:scaleX(1)}
+@media(min-width:800px){.nav-links{display:flex}}
+.nav .btn{padding:.5rem 1.1rem;font-size:.9rem}
+
+/* ---------- Buttons ---------- */
+.btn{
+  display:inline-flex;align-items:center;gap:.5rem;
+  font-family:inherit;font-weight:800;font-size:1rem;
+  text-decoration:none;cursor:pointer;border:none;
+  padding:.85rem 1.6rem;border-radius:10px;
+  transition:transform .2s var(--ease),box-shadow .2s var(--ease);
+  will-change:transform;
+}
+.btn:hover,.btn:focus-visible{transform:translateY(-3px)}
+.btn:active{transform:translateY(0) scale(.98)}
+.btn-amber{background:var(--amber);color:var(--pine-deep);box-shadow:0 4px 0 var(--amber-deep)}
+.btn-amber:hover{box-shadow:0 7px 0 var(--amber-deep)}
+.btn-line{background:transparent;color:var(--paper);box-shadow:inset 0 0 0 2.5px var(--moss-soft)}
+.btn-line.on-light{color:var(--pine);box-shadow:inset 0 0 0 2.5px var(--pine)}
+.btn svg{width:1.15em;height:1.15em;flex:none}
+
+/* ---------- Hero ---------- */
+
+/* Editorial photography band — tm-tree's hero is a green/cream split gradient,
+   so imagery lands here as a full-bleed pair rather than behind the headline. */
+.craft-band{display:grid;grid-template-columns:1.4fr 1fr;gap:clamp(1rem,2.5vw,2rem);
+  padding:clamp(3rem,6vw,6rem) var(--gutter,1.25rem);background:var(--cream)}
+.craft-band figure{margin:0;overflow:hidden;border-radius:6px;background:#0e130f}
+.craft-band img{width:100%;height:100%;object-fit:cover;display:block;
+  transition:transform 1.4s cubic-bezier(.16,1,.3,1)}
+.craft-band figure:hover img{transform:scale(1.04)}
+.craft-band .tall{aspect-ratio:4/5}
+.craft-band .wide{aspect-ratio:16/10}
+@media(max-width:820px){.craft-band{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){.craft-band img{transition:none}
+  .craft-band figure:hover img{transform:none}}
+
+.hero{
+  background:linear-gradient(180deg,var(--pine-deep) 0%,var(--pine) 78%,var(--cream) 78.05%);
+  color:var(--paper);
+  padding:clamp(3rem,2.2rem + 3.5vw,5.5rem) 0 0;
+}
+.hero-grid{display:grid;gap:2.4rem;align-items:end}
+@media(min-width:880px){.hero-grid{grid-template-columns:1.15fr .85fr;gap:1.5rem}}
+.kicker{
+  display:inline-flex;align-items:center;gap:.5rem;
+  color:var(--amber);font-weight:800;font-size:.82rem;
+  letter-spacing:.16em;text-transform:uppercase;
+}
+.kicker::before{content:"";width:34px;height:3px;background:var(--amber);border-radius:2px}
+.hero h1{font-size:var(--text-hero);font-weight:850;margin:.9rem 0 1rem;color:#fff}
+.hero h1 em{font-style:normal;color:var(--amber)}
+.hero p.lede{max-width:36rem;color:#c9d6cb;font-size:clamp(1.05rem,1rem + .4vw,1.25rem)}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:.9rem;margin:1.8rem 0 1.6rem}
+.trust{display:flex;flex-wrap:wrap;gap:.6rem 1.4rem;list-style:none;font-size:.9rem;font-weight:600;color:#c9d6cb;padding-bottom:2.6rem}
+.trust li{display:flex;align-items:center;gap:.45rem}
+.trust svg{width:18px;height:18px;flex:none}
+
+/* hero art — layered treeline */
+.hero-art{position:relative;align-self:end}
+.hero-art .hero-shot{margin:0;overflow:hidden;border-radius:10px;aspect-ratio:4/3;
+  box-shadow:0 30px 60px -20px rgba(0,0,0,.55);border:1px solid rgba(255,255,255,.08)}
+.hero-art .hero-shot img{width:100%;height:100%;object-fit:cover;display:block}
+
+.hero-art svg{width:min(440px,90vw);margin-inline:auto}
+
+/* ---------- Sections ---------- */
+section{padding-top:var(--space-section)}
+.section-head{max-width:46rem;margin-bottom:2.2rem}
+.section-head h2{font-size:var(--text-h2);font-weight:850}
+.section-head h2 em{font-style:normal;color:var(--moss)}
+.section-head p{color:var(--ink-soft);margin-top:.6rem}
+.tag{display:inline-block;font-size:.78rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--amber-deep);margin-bottom:.5rem}
+
+/* demo note */
+.demo-note{
+  display:flex;gap:.6rem;align-items:flex-start;
+  background:#efe2c4;border-left:4px solid var(--amber);border-radius:8px;
+  padding:.7rem 1rem;font-size:.86rem;font-weight:600;max-width:40rem;margin-top:1.4rem;color:var(--bark);
+}
+.demo-note svg{width:18px;height:18px;flex:none;margin-top:.15rem}
+
+/* ---------- Services ---------- */
+.svc-group{margin-bottom:2.4rem}
+.svc-group h3{
+  font-size:1.05rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--pine);display:flex;align-items:center;gap:.7rem;margin-bottom:1.1rem;
+}
+.svc-group h3::after{content:"";flex:1;height:2px;background:rgba(27,36,30,.14);border-radius:2px}
+.services{display:grid;gap:1.1rem}
+@media(min-width:640px){.services{grid-template-columns:1fr 1fr}}
+@media(min-width:980px){.services{grid-template-columns:repeat(3,1fr)}}
+.card{
+  background:var(--paper);border:2px solid rgba(27,36,30,.16);
+  border-radius:var(--radius);padding:1.5rem 1.3rem 1.4rem;
+  box-shadow:0 3px 0 rgba(27,36,30,.1);
+  transition:transform .25s var(--ease),box-shadow .25s var(--ease),border-color .25s var(--ease);
+  will-change:transform;
+}
+.card:hover{transform:translateY(-6px);border-color:var(--moss);box-shadow:0 10px 22px rgba(18,38,25,.14)}
+.card .icon{width:48px;height:48px;margin-bottom:.9rem}
+.card h4{font-size:1.14rem;margin-bottom:.4rem;font-weight:800}
+.card p{font-size:.93rem;color:var(--ink-soft)}
+.quote-pill{
+  display:inline-block;margin-top:.9rem;font-weight:800;font-size:.85rem;
+  background:var(--cream);padding:.28rem .85rem;border-radius:999px;color:var(--pine);
+  border:1.5px solid rgba(27,36,30,.18);
+}
+
+/* ---------- Steps ---------- */
+.steps{display:grid;gap:1.4rem;counter-reset:step}
+@media(min-width:760px){.steps{grid-template-columns:repeat(3,1fr)}}
+.step{position:relative;background:var(--paper);border-radius:var(--radius);padding:2.5rem 1.4rem 1.5rem;counter-increment:step;border:2px solid rgba(27,36,30,.12)}
+.step::before{
+  content:counter(step);
+  position:absolute;top:-1.15rem;left:1.2rem;
+  width:2.5rem;height:2.5rem;display:grid;place-items:center;
+  background:var(--pine);color:var(--amber);font-weight:850;font-size:1.15rem;
+  border-radius:10px;box-shadow:0 3px 0 var(--pine-deep);
+}
+.step h4{font-size:1.1rem;margin-bottom:.4rem;font-weight:800}
+.step p{font-size:.93rem;color:var(--ink-soft)}
+.step p a{font-weight:700}
+
+/* ---------- Projects ---------- */
+.projects{display:grid;gap:1rem;grid-template-columns:repeat(2,1fr)}
+@media(min-width:760px){.projects{grid-template-columns:repeat(4,1fr)}}
+.frame{
+  background:var(--paper);border-radius:12px;padding:.55rem .55rem .9rem;
+  box-shadow:0 6px 14px rgba(18,38,25,.14);
+  transition:transform .3s var(--ease);will-change:transform;
+}
+.frame:nth-child(odd){transform:rotate(-1.4deg)}
+.frame:nth-child(even){transform:rotate(1.3deg)}
+.frame:hover{transform:rotate(0) translateY(-6px) scale(1.03)}
+.frame .shot{aspect-ratio:1;border-radius:8px;display:grid;place-items:center;overflow:hidden}
+.frame .shot svg{width:76%;height:76%}
+.frame figcaption{text-align:center;font-size:.78rem;font-weight:700;color:var(--ink-soft);padding-top:.5rem}
+.sh-1 .shot{background:#dce4d4}.sh-2 .shot{background:#e8dfc9}.sh-3 .shot{background:#d8d2c2}.sh-4 .shot{background:#e2e0d0}
+
+/* ---------- Reviews ---------- */
+.review-stats{display:flex;flex-wrap:wrap;gap:1rem;margin-bottom:1.8rem}
+.stat{
+  background:var(--pine);color:var(--paper);border-radius:var(--radius);
+  padding:1rem 1.4rem;font-weight:700;display:flex;align-items:center;gap:.8rem;
+  box-shadow:0 4px 0 var(--pine-deep);
+}
+.stat svg{width:28px;height:28px;flex:none}
+.stat small{display:block;font-size:.75rem;font-weight:600;color:#b7c9bb}
+.quotes{display:grid;gap:1.2rem}
+@media(min-width:760px){.quotes{grid-template-columns:repeat(2,1fr)}}
+blockquote.quote{
+  background:var(--paper);border-radius:var(--radius);padding:1.5rem 1.4rem;position:relative;
+  font-size:.95rem;border:2px solid rgba(27,36,30,.12);
+}
+blockquote.quote::before{
+  content:"\201C";position:absolute;top:-.32em;left:.6rem;font-size:4rem;color:var(--moss-soft);font-family:Georgia,serif;line-height:1;
+}
+blockquote.quote p{position:relative}
+blockquote.quote .placeholder{font-style:italic;color:var(--ink-soft)}
+blockquote.quote footer{margin-top:.8rem;font-weight:700;font-size:.85rem;display:flex;align-items:center;gap:.5rem}
+.stars{color:var(--amber-deep);letter-spacing:.1em}
+
+/* ---------- Big CTA ---------- */
+.cta-band{margin-top:var(--space-section)}
+.cta-inner{
+  background:var(--pine-deep);color:var(--paper);
+  border-radius:22px;padding:clamp(2.4rem,2rem + 3vw,4rem) clamp(1.4rem,1rem + 3vw,3.5rem);
+  position:relative;overflow:hidden;text-align:center;
+}
+.cta-inner::before{
+  content:"";position:absolute;inset:0;opacity:.16;
+  background:radial-gradient(circle at 15% 20%,var(--moss) 0,transparent 42%),radial-gradient(circle at 88% 80%,var(--amber) 0,transparent 38%);
+}
+.cta-inner h2{font-size:clamp(1.8rem,1.4rem + 2.4vw,3rem);font-weight:850;position:relative;z-index:1}
+.cta-inner h2 em{font-style:normal;color:var(--amber)}
+.cta-inner p{margin:.8rem auto 1.6rem;max-width:34rem;color:#c9d6cb;position:relative;z-index:1}
+.cta-buttons{display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;position:relative;z-index:1}
+.cta-phone{font-size:1.05rem;font-weight:700;margin-top:1.2rem;position:relative;z-index:1}
+.cta-phone a{color:var(--amber)}
+
+/* ---------- Areas & contact ---------- */
+.info-grid{display:grid;gap:1.4rem}
+@media(min-width:820px){.info-grid{grid-template-columns:1fr 1fr}}
+.info-card{background:var(--paper);border:2px solid rgba(27,36,30,.14);border-radius:var(--radius);padding:1.8rem 1.5rem;box-shadow:0 3px 0 rgba(27,36,30,.1)}
+.info-card h3{display:flex;align-items:center;gap:.6rem;font-size:1.2rem;margin-bottom:1rem;font-weight:800}
+.info-card h3 svg{width:26px;height:26px}
+.contact-list{list-style:none}
+.contact-list li{display:flex;gap:.7rem;align-items:flex-start;padding:.5rem 0;border-bottom:1.5px dashed rgba(27,36,30,.15);font-size:.96rem}
+.contact-list li:last-child{border-bottom:none}
+.contact-list svg{width:20px;height:20px;flex:none;margin-top:.2rem}
+.chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.4rem}
+.chip{background:var(--cream);border-radius:999px;padding:.32rem .9rem;font-size:.84rem;font-weight:700;color:var(--pine);border:1.5px solid rgba(27,36,30,.16)}
+
+/* ---------- Footer ---------- */
+footer.site{margin-top:var(--space-section);background:var(--pine-deep);color:#c9d6cb;padding:2.2rem 0 2.6rem}
+footer.site .wrap{display:flex;flex-direction:column;gap:.9rem;align-items:center;text-align:center;font-size:.88rem}
+footer.site a{color:var(--amber)}
+.demo-banner{background:rgba(255,255,255,.08);border-radius:12px;padding:.7rem 1.1rem;font-size:.8rem;max-width:46rem}
+
+/* ---------- Reduced motion ---------- */
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .reveal{opacity:1;transform:none;transition:none}
+  .btn,.card,.frame{transition:none}
+}
+
+  /* enquiry-form palette aliases — maps this site's own tokens
+     onto the shared form stylesheet below */
+  .fx {
+    --fx-bg: var(--pine-deep); --fx-ink: var(--cream); --fx-dim: var(--moss-soft);
+    --fx-accent: var(--amber); --fx-on-accent: var(--pine-deep); --fx-line: rgba(255, 255, 255, 0.40);
+    --fx-field-bg: var(--pine); --fx-error: #ffb27a; --fx-radius: var(--radius, 6px);
+    --fx-display: var(--font-stack); --fx-gutter: clamp(1.25rem, 4vw, 3rem);
+  }
+
+/* ---------- Enquiry form (demo-only, sends nothing) ---------- */
+/* Palette is aliased onto --fx-* per demo just above, so this block is
+   identical in all five and each form still looks native to its own site. */
+.fx { background: var(--fx-bg); color: var(--fx-ink); padding: var(--space-section) 0; }
+.fx .fx-wrap { width: min(100% - 2 * var(--fx-gutter), 60rem); margin-inline: auto; }
+.fx-head { max-width: 46ch; }
+.fx-kicker {
+  font-family: var(--fx-display); text-transform: uppercase; letter-spacing: 0.18em;
+  font-size: 0.78rem; color: var(--fx-accent); margin: 0 0 0.6rem;
+}
+.fx-head h2 { font-size: var(--text-h2); line-height: 1.02; margin: 0 0 0.9rem; }
+.fx-head p { color: var(--fx-dim); margin: 0; max-width: 52ch; }
+.fx-form { margin-top: clamp(2rem, 4vw, 3rem); display: grid; gap: 1.1rem; }
+/* A class rule setting `display` beats the UA's [hidden]{display:none}, so the
+   form stayed on screen after a successful submit even though form.hidden was
+   true. Caught by looking at the rendered page — every DOM assertion read the
+   .hidden PROPERTY, which was correctly true the whole time. */
+.fx-form[hidden] { display: none; }
+.fx-row { display: grid; gap: 1.1rem; }
+@media (min-width: 40rem) { .fx-row { grid-template-columns: 1fr 1fr; } }
+.fx-field { display: grid; gap: 0.4rem; }
+.fx-field label { font-weight: 700; font-size: 0.95rem; }
+.fx-field .fx-hint { font-size: 0.85rem; color: var(--fx-dim); }
+.fx-field input, .fx-field select, .fx-field textarea {
+  font: inherit; font-size: 1rem; color: var(--fx-ink);
+  background: var(--fx-field-bg); border: 1px solid var(--fx-line);
+  border-radius: var(--fx-radius); padding: 0.85rem 0.95rem; width: 100%;
+  transition: border-color var(--duration, 300ms) var(--ease, ease),
+              box-shadow var(--duration, 300ms) var(--ease, ease);
+}
+.fx-field textarea { min-height: 8.5rem; resize: vertical; }
+.fx-field select { appearance: none; cursor: pointer; }
+.fx-field input:hover, .fx-field select:hover, .fx-field textarea:hover { border-color: var(--fx-accent); }
+.fx-field input:focus-visible, .fx-field select:focus-visible, .fx-field textarea:focus-visible {
+  outline: none; border-color: var(--fx-accent);
+  box-shadow: 0 0 0 3px color-mix(in oklab, var(--fx-accent) 35%, transparent);
+}
+.fx-field[data-invalid="true"] input,
+.fx-field[data-invalid="true"] select,
+.fx-field[data-invalid="true"] textarea { border-color: var(--fx-error); }
+.fx-err { font-size: 0.85rem; color: var(--fx-error); min-height: 1.1rem; font-weight: 700; }
+.fx-field[data-invalid="true"] .fx-err::before { content: "\2717\00a0"; }
+.fx-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 1.4rem; margin-top: 0.4rem; }
+.fx-submit {
+  font-family: var(--fx-display); font-size: 1rem; letter-spacing: 0.06em;
+  text-transform: uppercase; cursor: pointer;
+  background: var(--fx-accent); color: var(--fx-on-accent);
+  border: 1px solid var(--fx-accent); border-radius: var(--fx-radius);
+  padding: 0.95rem 2.1rem;
+  transition: transform var(--duration, 300ms) var(--ease, ease),
+              filter var(--duration, 300ms) var(--ease, ease);
+}
+.fx-submit:hover { filter: brightness(1.12); transform: translateY(-2px); }
+.fx-submit:active { transform: translateY(0); }
+.fx-submit:focus-visible { outline: 3px solid var(--fx-accent); outline-offset: 3px; }
+.fx-note { font-size: 0.85rem; color: var(--fx-dim); margin: 0; }
+.fx-summary {
+  border: 1px solid var(--fx-error); border-radius: var(--fx-radius);
+  padding: 0.85rem 1rem; color: var(--fx-error); font-size: 0.92rem;
+}
+.fx-summary[hidden] { display: none; }
+/* Success: not a thank-you. A preview of the enquiry that WOULD have arrived. */
+.fx-sent { border: 1px solid var(--fx-line); border-radius: var(--fx-radius); overflow: hidden; }
+.fx-sent[hidden] { display: none; }
+.fx-sent:focus-visible { outline: 3px solid var(--fx-accent); outline-offset: 3px; }
+.fx-sent-bar {
+  background: var(--fx-accent); color: var(--fx-on-accent);
+  padding: 0.7rem 1.1rem; font-family: var(--fx-display);
+  text-transform: uppercase; letter-spacing: 0.12em; font-size: 0.8rem;
+}
+.fx-mail { background: var(--fx-field-bg); padding: clamp(1.1rem, 3vw, 1.8rem); }
+.fx-mail dl { display: grid; grid-template-columns: auto 1fr; gap: 0.45rem 1rem; margin: 0 0 1.1rem; font-size: 0.95rem; }
+.fx-mail dt { color: var(--fx-dim); font-weight: 700; }
+.fx-mail dd { margin: 0; overflow-wrap: anywhere; }
+.fx-mail .fx-body { border-top: 1px solid var(--fx-line); padding-top: 1.1rem; white-space: pre-wrap; overflow-wrap: anywhere; }
+.fx-sent-foot { padding: 1.1rem; border-top: 1px solid var(--fx-line); display: flex; flex-wrap: wrap; gap: 0.8rem 1.2rem; align-items: center; }
+.fx-sent-foot p { margin: 0; font-size: 0.88rem; color: var(--fx-dim); max-width: 54ch; }
+.fx-again {
+  font: inherit; font-size: 0.9rem; font-weight: 700; cursor: pointer;
+  background: none; color: var(--fx-ink); border: 1px solid var(--fx-line);
+  border-radius: var(--fx-radius); padding: 0.6rem 1.2rem;
+}
+.fx-again:hover { border-color: var(--fx-accent); color: var(--fx-accent); }
+.fx-again:focus-visible { outline: 3px solid var(--fx-accent); outline-offset: 3px; }
+
+@media (prefers-reduced-motion: reduce) {
+  /* The form's own motion, guarded separately from each demo's .rv reveals —
+     hover lift and focus/border transitions are still motion to someone who
+     asked for none. Colour and focus rings stay, because they carry meaning. */
+  .fx-field input, .fx-field select, .fx-field textarea, .fx-submit { transition: none; }
+  .fx-submit:hover { transform: none; }
+}
+
+
+@media (pointer: coarse) {
+  /* Touch targets, added 1 Sept 2026. Measured at 375px: this demo carried
+     tel:/mailto: links as small as 18px — and on a trade site the phone number
+     IS the conversion action. The studio site's fix (an absolutely-positioned
+     44px overlay) is deliberately NOT reused here: these links sit stacked in
+     lists, so a 44px overlay on each would overlap its neighbour and let the
+     later one in DOM order steal the tap, making tapping worse rather than
+     better. min-height grows the element itself, so nothing can overlap.
+     Scoped to (pointer: coarse) so the desktop composition is untouched. */
+  a[href^="tel:"], a[href^="mailto:"] {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="demo-ribbon">Demonstration concept prepared by Ashton James — this is <strong>not</strong> the official website of TM Tree &amp; Landscaping Ltd. &nbsp;·&nbsp; <a href="../../" style="color:inherit;text-decoration:underline;text-underline-offset:2px;font-weight:700">&larr; back to Ashton Studios</a></div>
+
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="#top" aria-label="TM Tree and Landscaping home">
+      <svg class="mark" viewBox="0 0 64 64" aria-hidden="true"><path d="M32 4 14 30h8L10 46h16v10h12V46h16L42 30h8Z" fill="#d99a2b"/><rect x="28" y="50" width="8" height="10" rx="2" fill="#8a715a"/></svg>
+      <span>TM Tree &amp; Landscaping<small>St Albans · Hertfordshire</small></span>
+    </a>
+    <nav aria-label="Main navigation">
+      <ul class="nav-links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#quote">Free quotes</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn-amber" href="tel:+447702756132">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg>
+      Call
+    </a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" aria-labelledby="hero-heading">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="kicker">Tree surgery · Landscaping · Groundworks</span>
+        <h1 id="hero-heading">From overgrown to <em>outstanding</em></h1>
+        <p class="lede">Full garden transformation across St Albans, Harpenden, Radlett and the rest of Hertfordshire. A friendly, reliable team with combined experience in horticulture, groundworks and construction — from tree works and stump removal to patios, driveways and fencing.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-amber" href="tel:+447702756132">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg>
+            07702 756132
+          </a>
+          <a class="btn btn-line" href="mailto:info@tmtreeandlandscaping.co.uk">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+            Email for a free quote
+          </a>
+        </div>
+        <ul class="trust" aria-label="Why customers trust us">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="#d99a2b" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> 100% recommend on Facebook</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="#d99a2b" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Registered UK limited company</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="#d99a2b" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Trees, gardens &amp; hard landscaping under one roof</li>
+        </ul>
+      </div>
+
+      <div class="hero-art" aria-hidden="true">
+        <figure class="hero-shot">
+          <img src="assets/hero.webp" alt="" width="2400" height="1350" fetchpriority="high" decoding="async">
+        </figure>
+      </div></div>
+  </section>
+
+  <!-- EDITORIAL PHOTOGRAPHY BAND -->
+  <section class="craft-band" aria-label="Our work">
+    <figure class="wide"><img src="assets/hero.webp" alt="Mature English oak in morning mist, sunlight through the canopy" width="2400" height="1350" loading="lazy" decoding="async"></figure>
+    <figure class="tall"><img src="assets/craft.webp" alt="Professional tree surgery equipment resting against fresh cut timber" width="1440" height="1800" loading="lazy" decoding="async"></figure>
+  </section>
+
+  <!-- ============ SERVICES ============ -->
+  <section id="services" aria-labelledby="services-heading">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="tag">What we do</span>
+        <h2 id="services-heading">One team for the <em>whole garden</em></h2>
+        <p>Most jobs need more than one trade — a tree down, then the stump out, then the new patio in. TM Tree &amp; Landscaping handles the lot, start to finish.</p>
+      </div>
+
+      <div class="svc-group reveal">
+        <h3>Tree work</h3>
+        <div class="services">
+          <article class="card">
+            <svg class="icon" viewBox="0 0 64 64" aria-hidden="true"><path d="M32 6 16 30h7L12 46h40L41 30h7Z" fill="#4d7a58"/><rect x="28" y="46" width="8" height="12" rx="2" fill="#5b4636"/></svg>
+            <h4>Tree works</h4>
+            <p>Felling, reductions, pruning and general tree care — done tidily and safely, with the mess gone when we leave.</p>
+            <span class="quote-pill">Free quote</span>
+          </article>
+          <article class="card">
+            <svg class="icon" viewBox="0 0 64 64" aria-hidden="true"><ellipse cx="32" cy="40" rx="18" ry="8" fill="#8a715a"/><path d="M20 40V24q0-4 4-4h16q4 0 4 4v16" fill="#5b4636"/><ellipse cx="32" cy="24" rx="12" ry="5" fill="#c9b8a4"/><path d="M50 14l6 6M56 14l-6 6" stroke="#4f3f2f" stroke-width="3" stroke-linecap="round"/></svg>
+            <h4>Stump removal</h4>
+            <p>Old stumps ground out properly so you can plant, pave or turf right over where they stood.</p>
+            <span class="quote-pill">Free quote</span>
+          </article>
+          <article class="card">
+            <svg class="icon" viewBox="0 0 64 64" aria-hidden="true"><path d="M10 44h32l-4 10H16Z" fill="#4d7a58"/><path d="M14 44l6-18h20l6 18" fill="none" stroke="#4f3f2f" stroke-width="3.5" stroke-linejoin="round"/><path d="M46 22q8-6 10 4t-8 8" fill="none" stroke="#8a715a" stroke-width="3.5" stroke-linecap="round"/></svg>
+            <h4>Clearance &amp; waste removal</h4>
+            <p>Overgrown plots, green waste and site clearance — cleared, loaded and taken away.</p>
+            <span class="quote-pill">Free quote</span>
+          </article>
+        </div>
+      </div>
+
+      <div class="svc-group reveal">
+        <h3>Landscaping &amp; groundworks</h3>
+        <div class="services">
+          <article class="card">
+            <svg class="icon" viewBox="0 0 64 64" aria-hidden="true"><g fill="#8a715a"><rect x="8" y="34" width="14" height="10" rx="2"/><rect x="26" y="34" width="14" height="10" rx="2"/><rect x="44" y="34" width="12" height="10" rx="2"/><rect x="16" y="46" width="14" height="10" rx="2"/><rect x="34" y="46" width="14" height="10" rx="2"/></g><path d="M12 28q10-12 40-8" fill="none" stroke="#4d7a58" stroke-width="4" stroke-linecap="round"/></svg>
+            <h4>Patios &amp; pathways</h4>
+            <p>Properly laid paving with drainage thought through — a patio that still sits flat in ten years.</p>
+            <span class="quote-pill">Free quote</span>
+          </article>
+          <article class="card">
+            <svg class="icon" viewBox="0 0 64 64" aria-hidden="true"><path d="M8 52 24 12h16l16 40Z" fill="#6b7a70"/><path d="M32 16v6M32 28v6M32 40v6" stroke="#f3eee3" stroke-width="3.5" stroke-linecap="round"/></svg>
+            <h4>Driveways &amp; parking</h4>
+            <p>Parking areas and driveways built from the ground up — sub-base, edging and finish.</p>
+            <span class="quote-pill">Free quote</span>
+          </article>
+          <article class="card">
+            <svg class="icon" viewBox="0 0 64 64" aria-hidden="true"><g fill="#8a715a"><path d="M12 22h8v34h-8zM28 22h8v34h-8zM44 22h8v34h-8z"/><path d="M12 14h8l-4-6ZM28 14h8l-4-6ZM44 14h8l-4-6Z"/></g><rect x="8" y="30" width="48" height="5" rx="2" fill="#5b4636"/><rect x="8" y="44" width="48" height="5" rx="2" fill="#5b4636"/></svg>
+            <h4>Boundary fencing</h4>
+            <p>New fence lines, replacements and repairs — straight, solid and built to last the weather.</p>
+            <span class="quote-pill">Free quote</span>
+          </article>
+          <article class="card">
+            <svg class="icon" viewBox="0 0 64 64" aria-hidden="true"><path d="M8 50h48v6H8Z" fill="#5b4636"/><path d="M12 50q2-16 8-18t8 18M30 50q2-22 10-24t10 24" fill="#4d7a58"/></svg>
+            <h4>Lawns — real &amp; artificial</h4>
+            <p>Lawn installation done right, turf or artificial — level ground, clean edges, no bumps.</p>
+            <span class="quote-pill">Free quote</span>
+          </article>
+          <article class="card">
+            <svg class="icon" viewBox="0 0 64 64" aria-hidden="true"><path d="M14 10v28a18 18 0 0 0 36 0V10" fill="none" stroke="#6b7a70" stroke-width="4" stroke-linecap="round"/><path d="M14 22h36M14 34h36" stroke="#6b7a70" stroke-width="3"/><path d="M26 52q6 6 12 0" stroke="#4d7a58" stroke-width="4" fill="none" stroke-linecap="round"/></svg>
+            <h4>Drainage, footings &amp; bases</h4>
+            <p>The groundworks under every good garden — drainage runs, footings and concrete bases for sheds, rooms and extensions.</p>
+            <span class="quote-pill">Free quote</span>
+          </article>
+          <article class="card">
+            <svg class="icon" viewBox="0 0 64 64" aria-hidden="true"><path d="M32 54V30" stroke="#4d7a58" stroke-width="4" stroke-linecap="round"/><path d="M32 34q-14 0-16-16 16-2 16 16Z" fill="#4d7a58"/><path d="M32 26q14 0 16-16-16-2-16 16Z" fill="#7fa387"/><ellipse cx="32" cy="56" rx="14" ry="4" fill="#8a715a"/></svg>
+            <h4>Planting &amp; garden design</h4>
+            <p>Planting consultation and full garden transformation — a plan for the space, not just a tidy-up.</p>
+            <span class="quote-pill">Free quote</span>
+          </article>
+        </div>
+      </div>
+
+      <p class="demo-note reveal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16.5v.5"/></svg>
+        <span><strong>Demo note:</strong> this service list comes straight from TM's own Facebook page and We Are St Albans / We Are Harpenden directory listings. Every job is quoted individually — no prices are published anywhere, so none are invented here.</span>
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ FREE QUOTES ============ -->
+  <section id="quote" aria-labelledby="quote-heading">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="tag">How it works</span>
+        <h2 id="quote-heading">Three steps to a <em>sorted</em> garden</h2>
+      </div>
+      <div class="steps">
+        <div class="step reveal">
+          <h4>Get in touch</h4>
+          <p>Call <a href="tel:+447702756132">07702&nbsp;756132</a> or email <a href="mailto:info@tmtreeandlandscaping.co.uk">info@tmtreeandlandscaping.co.uk</a> with what you're after — photos help.</p>
+        </div>
+        <div class="step reveal">
+          <h4>Site visit &amp; quote</h4>
+          <p>The team comes out, looks at the job properly and gives you a clear quote — trees, groundworks and landscaping priced as one job, not three trades.</p>
+        </div>
+        <div class="step reveal">
+          <h4>The work gets done</h4>
+          <p>Turned up on time, done to the standard the reviews describe, waste cleared and taken away at the end.</p>
+        </div>
+      </div>
+      <p class="demo-note reveal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16.5v.5"/></svg>
+        <span><strong>Demo note:</strong> the exact quoting process is a placeholder for the owners to confirm — the contact details are real.</span>
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ PROJECTS ============ -->
+  <section id="projects" aria-labelledby="projects-heading">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="tag">Recent projects</span>
+        <h2 id="projects-heading">Before and after, <em>done properly</em></h2>
+        <p>The team's Instagram (<a href="https://www.instagram.com/tmtreeandlandscapingltd/" rel="noopener">@tmtreeandlandscapingltd</a>) has photos of recent projects — this is where they'd live on the site. Stand-in graphics for now.</p>
+      </div>
+      <div class="projects">
+        <figure class="frame sh-1 reveal">
+          <div class="shot"><svg viewBox="0 0 120 120" aria-hidden="true"><path d="M60 14 34 54h12L28 88h64L74 54h12Z" fill="#4d7a58"/><rect x="54" y="88" width="12" height="18" rx="3" fill="#5b4636"/></svg></div>
+          <figcaption>Your photo here — “tree reduction, St Albans”</figcaption>
+        </figure>
+        <figure class="frame sh-2 reveal">
+          <div class="shot"><svg viewBox="0 0 120 120" aria-hidden="true"><g fill="#8a715a"><rect x="14" y="52" width="26" height="18" rx="3"/><rect x="46" y="52" width="26" height="18" rx="3"/><rect x="78" y="52" width="26" height="18" rx="3"/><rect x="30" y="74" width="26" height="18" rx="3"/><rect x="62" y="74" width="26" height="18" rx="3"/></g><path d="M20 40q30-18 80-8" fill="none" stroke="#4d7a58" stroke-width="6" stroke-linecap="round"/></svg></div>
+          <figcaption>Your photo here — “new patio, Harpenden”</figcaption>
+        </figure>
+        <figure class="frame sh-3 reveal">
+          <div class="shot"><svg viewBox="0 0 120 120" aria-hidden="true"><g fill="#6f5b44"><path d="M22 34h12v62H22zM54 34h12v62H54zM86 34h12v62H86z"/><path d="M22 24h12l-6-10ZM54 24h12l-6-10ZM86 24h12l-6-10Z"/></g><rect x="14" y="48" width="92" height="8" rx="3" fill="#4f3f2f"/><rect x="14" y="74" width="92" height="8" rx="3" fill="#4f3f2f"/></svg></div>
+          <figcaption>Your photo here — “boundary fencing, Radlett”</figcaption>
+        </figure>
+        <figure class="frame sh-4 reveal">
+          <div class="shot"><svg viewBox="0 0 120 120" aria-hidden="true"><path d="M14 96h92v10H14Z" fill="#5b4636"/><path d="M20 96q4-30 16-34t16 34M52 96q4-40 20-44t20 44" fill="#4d7a58"/></svg></div>
+          <figcaption>Your photo here — “lawn installation”</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ REVIEWS ============ -->
+  <section id="reviews" aria-labelledby="reviews-heading">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="tag">Reviews</span>
+        <h2 id="reviews-heading">Recommended by <em>every</em> reviewer</h2>
+      </div>
+
+      <div class="review-stats reveal">
+        <p class="stat">
+          <svg viewBox="0 0 24 24" fill="#d99a2b" aria-hidden="true"><path d="m12 2 2.9 6.2 6.6.8-4.9 4.6 1.3 6.5L12 16.9 6.1 20l1.3-6.5L2.5 9l6.6-.8Z"/></svg>
+          <span>100% recommend<small>10 reviews on Facebook</small></span>
+        </p>
+        <p class="stat">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#d99a2b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2 3 6v6c0 5 4 9 9 10 5-1 9-5 9-10V6Z"/><path d="m8.5 12 2.5 2.5 4.5-4.5"/></svg>
+          <span>Registered limited company<small>TM Tree and Landscaping Ltd, no. 14298096</small></span>
+        </p>
+      </div>
+
+      <div class="quotes">
+        <blockquote class="quote reveal">
+          <p class="placeholder">[Placeholder — a real review from the Facebook page will go here word-for-word once the owners approve it.]</p>
+          <footer><span class="stars" aria-hidden="true">★★★★★</span> Facebook reviewer</footer>
+        </blockquote>
+        <blockquote class="quote reveal">
+          <p class="placeholder">[Placeholder — a second approved Facebook review goes here. Nothing on this demo is invented: quotes are only published with the owners' sign-off.]</p>
+          <footer><span class="stars" aria-hidden="true">★★★★★</span> Facebook reviewer</footer>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ BIG CTA ============ -->
+  <div class="cta-band">
+    <div class="wrap">
+      <div class="cta-inner reveal">
+        <h2>Got a garden that needs <em>taking in hand?</em></h2>
+        <p>Tree down, stump out, patio in — one call covers the whole job. Free, no-obligation quotes across Hertfordshire.</p>
+        <div class="cta-buttons">
+          <a class="btn btn-amber" href="tel:+447702756132">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg>
+            Call for a free quote
+          </a>
+          <a class="btn btn-line" href="mailto:info@tmtreeandlandscaping.co.uk">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+            Email the team
+          </a>
+        </div>
+        <p class="cta-phone">Or save the number: <a href="tel:+447702756132">07702 756132</a></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ AREAS & CONTACT ============ -->
+  <section id="contact" aria-labelledby="contact-heading">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="tag">Areas &amp; contact</span>
+        <h2 id="contact-heading">Covering St Albans and <em>beyond</em></h2>
+      </div>
+      <div class="info-grid">
+        <div class="info-card reveal">
+          <h3>
+            <svg viewBox="0 0 24 24" fill="none" stroke="#4d7a58" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6.1 7-11a7 7 0 1 0-14 0c0 4.9 7 11 7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg>
+            Where we work
+          </h3>
+          <div class="chips" aria-label="Areas served">
+            <span class="chip">St Albans</span>
+            <span class="chip">Harpenden</span>
+            <span class="chip">Radlett</span>
+            <span class="chip">Wider Hertfordshire</span>
+          </div>
+          <p class="demo-note" style="margin-top:1.2rem">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16.5v.5"/></svg>
+            <span><strong>Demo note:</strong> areas taken from the We Are St Albans and We Are Harpenden listings. Working hours aren't published anywhere public, so none are shown — a line for the owners to fill in.</span>
+          </p>
+        </div>
+        <div class="info-card reveal">
+          <h3>
+            <svg viewBox="0 0 24 24" fill="none" stroke="#4d7a58" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg>
+            Get in touch
+          </h3>
+          <ul class="contact-list">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="#4d7a58" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg><a href="tel:+447702756132">07702 756132</a></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="#4d7a58" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><a href="mailto:info@tmtreeandlandscaping.co.uk">info@tmtreeandlandscaping.co.uk</a></li>
+            <li><svg viewBox="0 0 24 24" fill="#4d7a58" aria-hidden="true"><path d="M13.5 21v-7h2.4l.4-3h-2.8V9.1c0-.9.3-1.5 1.6-1.5h1.3V4.9c-.2 0-1-.1-1.9-.1-1.9 0-3.2 1.2-3.2 3.3V11H8.5v3h2.8v7Z"/></svg><a href="https://www.facebook.com/p/TM-Tree-Landscaping-Ltd-100063728252869/" rel="noopener">TM Tree &amp; Landscaping Ltd on Facebook</a></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="#4d7a58" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.2" fill="#4d7a58" stroke="none"/></svg><a href="https://www.instagram.com/tmtreeandlandscapingltd/" rel="noopener">@tmtreeandlandscapingltd</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ENQUIRY (demo only — sends nothing, see the script at the end of this file) -->
+  <section class="fx" id="enquire" aria-labelledby="fx-heading">
+    <div class="fx-wrap">
+      <div class="fx-head rv">
+        <p class="fx-kicker">Free quote</p>
+        <h2 id="fx-heading">What needs doing?</h2>
+        <p>Most jobs can be priced from a description and a photo or two. Tell us what you&rsquo;re looking at.</p>
+      </div>
+
+      <p class="fx-summary" id="fx-summary" role="alert" hidden></p>
+
+      <form class="fx-form rv" novalidate>
+        <div class="fx-row">
+          <div class="fx-field">
+            <label for="fx-name">Your name</label>
+            <input id="fx-name" name="name" type="text" autocomplete="name"
+                   data-check="name" data-required="We need a name to put to the job."
+                   aria-describedby="fx-name-err">
+            <p class="fx-err" id="fx-name-err"></p>
+          </div>
+          <div class="fx-field">
+            <label for="fx-contact">Email or phone</label>
+            <input id="fx-contact" name="contact" type="text" autocomplete="email"
+                   data-check="contact" data-required="Without this they cannot reply."
+                   aria-describedby="fx-contact-hint fx-contact-err">
+            <p class="fx-hint" id="fx-contact-hint">Whichever you would rather be reached on.</p>
+            <p class="fx-err" id="fx-contact-err"></p>
+          </div>
+        </div>
+        <div class="fx-field">
+          <label for="fx-service">What do you need?</label>
+          <select id="fx-service" name="service" data-check="service"
+                  data-required="Pick the closest match." aria-describedby="fx-service-err">
+            <option value="">Choose one&hellip;</option>
+            <option>Tree surgery / felling</option>
+            <option>Stump removal</option>
+            <option>Driveway or patio</option>
+            <option>Fencing</option>
+            <option>Landscaping</option>
+            <option>Something else</option>
+          </select>
+          <p class="fx-err" id="fx-service-err"></p>
+        </div>
+        <div class="fx-field">
+          <label for="fx-message">A few details</label>
+          <textarea id="fx-message" name="message" data-check="message"
+                    data-required="Tell them what you are after."
+                    aria-describedby="fx-message-hint fx-message-err"></textarea>
+          <p class="fx-hint" id="fx-message-hint">Size of the job, access, and when you need it done by.</p>
+          <p class="fx-err" id="fx-message-err"></p>
+        </div>
+        <div class="fx-actions">
+          <button class="fx-submit" type="submit">Get a quote</button>
+          <p class="fx-note"><strong>Demo form.</strong> Nothing is sent &mdash; it shows you the enquiry instead.</p>
+        </div>
+      </form>
+
+      <div class="fx-sent" id="fx-sent" tabindex="-1" role="status" hidden>
+        <p class="fx-sent-bar">Nothing was sent &mdash; this is what would have landed</p>
+        <div class="fx-mail">
+          <dl>
+            <dt>To</dt><dd>the yard&rsquo;s inbox</dd>
+            <dt>From</dt><dd id="fx-from"></dd>
+            <dt>Subject</dt><dd id="fx-subject"></dd>
+          </dl>
+          <div class="fx-body" id="fx-message-out"></div>
+        </div>
+        <div class="fx-sent-foot">
+          <button class="fx-again" id="fx-again" type="button">Try it again</button>
+          <p>This page is a demo concept, so the form is deliberately wired to nothing &mdash;
+             no message reaches TM Tree &amp; Landscaping. On the real site this arrives in the inbox
+             within seconds of someone pressing the button.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <p><strong>TM Tree &amp; Landscaping Ltd</strong> · Tree surgery, landscaping &amp; groundworks · St Albans, Hertfordshire</p>
+    <p><a href="tel:+447702756132">07702 756132</a> · <a href="mailto:info@tmtreeandlandscaping.co.uk">info@tmtreeandlandscaping.co.uk</a> · Registered in England, company no. 14298096</p>
+    <p class="demo-banner">This is a demonstration website concept prepared by Ashton James for TM Tree &amp; Landscaping Ltd — it is <strong>not</strong> the business's official site. Services, contact details and review counts come from the company's own public listings; anything marked as a placeholder is awaiting the owners' input.</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+  var prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)");
+  var targets = document.querySelectorAll(".reveal");
+
+  function showAll(){
+    targets.forEach(function(el){ el.classList.add("in"); });
+  }
+
+  if (prefersReduced.matches || !("IntersectionObserver" in window)) {
+    showAll();
+    return;
+  }
+
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) {
+        entry.target.classList.add("in");
+        io.unobserve(entry.target);
+      }
+    });
+  }, { rootMargin: "10000px 0px -8% 0px", threshold: 0.05 });
+
+  targets.forEach(function(el){ io.observe(el); });
+
+  var onChange = function(e){ if (e.matches) { showAll(); io.disconnect(); } };
+  if (prefersReduced.addEventListener) prefersReduced.addEventListener("change", onChange);
+})();
+</script>
+<script>
+/* Demo enquiry form.
+   Two hard rules, both structural rather than promised:
+     1. It cannot mail the business. There is no action, no endpoint and no
+        network call anywhere in this file — submit is always prevented.
+     2. It never pretends to have sent. Instead of a thank-you, it renders the
+        enquiry as the email that WOULD have arrived, over a banner that says
+        nothing was sent. That is honest and it also shows the owner exactly
+        what they would be getting, which a fake confirmation never does. */
+(function () {
+  var form = document.querySelector('.fx-form');
+  if (!form) return;
+  var sent = document.getElementById('fx-sent');
+  var summary = document.getElementById('fx-summary');
+  var fields = Array.prototype.slice.call(form.querySelectorAll('[data-check]'));
+  var EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+  var PHONE = /^\+?[\d\s()-]{10,}$/;
+
+  function problem(el) {
+    var value = (el.value || '').trim();
+    if (!value) return el.dataset.required || 'This one is needed.';
+    if (el.dataset.check === 'contact' && !EMAIL.test(value) && !PHONE.test(value)) {
+      return 'Use an email address or a phone number so they can reply.';
+    }
+    if (el.dataset.check === 'message' && value.length < 10) {
+      return 'A little more detail helps them quote accurately.';
+    }
+    return null;
+  }
+
+  function mark(el, message) {
+    var wrap = el.closest('.fx-field');
+    var err = wrap.querySelector('.fx-err');
+    wrap.setAttribute('data-invalid', message ? 'true' : 'false');
+    el.setAttribute('aria-invalid', message ? 'true' : 'false');
+    err.textContent = message || '';
+    return !message;
+  }
+
+  fields.forEach(function (el) {
+    // Validate on the way out of a field, then live once it has been marked —
+    // so nobody is corrected mid-keystroke, but a fix clears immediately.
+    el.addEventListener('blur', function () { mark(el, problem(el)); });
+    el.addEventListener('input', function () {
+      if (el.closest('.fx-field').getAttribute('data-invalid') !== 'true') return;
+      mark(el, problem(el));
+      // Keep the summary honest: it used to keep saying "2 fields need a
+      // moment" after both had been fixed, because it was only recomputed on
+      // submit. A count that is wrong is worse than no count.
+      if (!form.querySelector('.fx-field[data-invalid="true"]')) summary.hidden = true;
+    });
+  });
+
+  form.addEventListener('submit', function (event) {
+    event.preventDefault();
+    var bad = [];
+    fields.forEach(function (el) { if (!mark(el, problem(el))) bad.push(el); });
+
+    if (bad.length) {
+      summary.textContent = bad.length === 1
+        ? 'One field needs a moment before this can go anywhere.'
+        : bad.length + ' fields need a moment before this can go anywhere.';
+      summary.hidden = false;
+      bad[0].focus();
+      return;
+    }
+    summary.hidden = true;
+
+    var get = function (name) { return (form.elements[name].value || '').trim(); };
+    // textContent throughout — never innerHTML with anything typed in.
+    document.getElementById('fx-from').textContent = get('name') + ' <' + get('contact') + '>';
+    document.getElementById('fx-subject').textContent = 'Website enquiry \u2014 ' + get('service');
+    document.getElementById('fx-message-out').textContent = get('message');
+    form.hidden = true;
+    sent.hidden = false;
+    sent.focus();
+  });
+
+  document.getElementById('fx-again').addEventListener('click', function () {
+    form.reset();
+    fields.forEach(function (el) { mark(el, null); });
+    summary.hidden = true;
+    sent.hidden = true;
+    form.hidden = false;
+    form.querySelector('input, select, textarea').focus();
+  });
+})();
+</script>
+</body>
+</html>
