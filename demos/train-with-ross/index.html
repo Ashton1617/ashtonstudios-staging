@@ -26,7 +26,7 @@ img,video{max-width:100%;display:block}a{color:inherit}
 /* scroll-scrubbed hero: the dive plays as you scroll through a tall stage */
 .stage{position:relative;height:300svh}
 .stage-inner{position:sticky;top:0;height:100svh;overflow:hidden;isolation:isolate}
-.stage-inner video,.stage-inner img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
+.stage-inner video,.stage-inner img,.stage-inner canvas{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}.stage-inner canvas{z-index:-1}
 .stage-shade{position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(5,12,20,.55),rgba(5,12,20,.05) 40%,rgba(5,12,20,.85))}
 .stage-copy{position:absolute;left:0;right:0;bottom:clamp(3rem,8vh,6rem);transition:opacity .4s}
 .stage-copy h1{font-size:clamp(3rem,2rem + 8vw,10rem);margin:.6rem 0 1.2rem;max-width:12ch}.stage-copy h1 .it{font-size:.78em;display:block;margin-top:.15em}
@@ -74,7 +74,8 @@ blockquote.big{margin:0;font-family:var(--serif);font-style:italic;font-size:cla
 <main id="top">
   <section class="stage" id="stage" aria-label="Dive">
     <div class="stage-inner">
-      <video id="dive" muted playsinline preload="auto" poster="assets/hf/block.jpg"><source src="assets/video/dive.mp4" type="video/mp4"></video>
+      <img id="dive-poster" src="assets/hf/block.jpg" alt="">
+      <canvas id="dive" aria-hidden="true"></canvas>
       <div class="stage-shade"></div>
       <div class="wrap stage-copy" id="copy1">
         <p class="eyebrow">swim &amp; triathlon coaching · hatfield · hertfordshire</p>
@@ -219,19 +220,26 @@ blockquote.big{margin:0;font-family:var(--serif);font-style:italic;font-size:cla
   var els=document.querySelectorAll('.rv');
   if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')})}else{var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.12,rootMargin:'0px 0px -6% 0px'});els.forEach(function(e){io.observe(e)})}
   var reels=document.querySelectorAll('video[data-reel]');var vio=new IntersectionObserver(function(en){en.forEach(function(x){var v=x.target;if(x.isIntersecting){if(v.preload==='none'){v.preload='auto';v.load()}v.play().catch(function(){})}else{v.pause()}})},{threshold:.25});reels.forEach(function(v){vio.observe(v)});
-  /* scroll-scrubbed dive: progress through the 300svh stage drives video.currentTime */
-  var stage=document.getElementById('stage'),vid=document.getElementById('dive'),c1=document.getElementById('copy1'),c2=document.getElementById('copy2');
-  var reduced=matchMedia('(prefers-reduced-motion:reduce)').matches,ready=false,target=0,current=0;
-  function progress(){var r=stage.getBoundingClientRect();var total=stage.offsetHeight-window.innerHeight;return Math.min(1,Math.max(0,-r.top/total))}
-  function tick(){if(ready&&vid.duration){current+=(target-current)*0.18;var t=current*(vid.duration-0.05);if(Math.abs(vid.currentTime-t)>0.02){vid.currentTime=t}}requestAnimationFrame(tick)}
-  if(vid&&!reduced){
-    vid.addEventListener('loadedmetadata',function(){ready=true;vid.pause()});
-    vid.addEventListener('error',function(){ready=false},true);
+  /* scroll-scrubbed dive: an image sequence drawn on a canvas — seeking a video per frame stutters on sparse keyframes */
+  var stage=document.getElementById('stage'),cv=document.getElementById('dive'),poster=document.getElementById('dive-poster'),c1=document.getElementById('copy1'),c2=document.getElementById('copy2');
+  var FRAMES=120,PAD=3,DIR='assets/frames/dive-',EXT='.webp';
+  var reduced=matchMedia('(prefers-reduced-motion:reduce)').matches;
+  var imgs=new Array(FRAMES),loaded=0,target=0,current=0,drawn=-1,ctx=cv.getContext('2d');
+  function src(i){return DIR+String(i+1).padStart(PAD,'0')+EXT}
+  function load(i){if(imgs[i])return;var im=new Image();im.decoding='async';im.src=src(i);im.onload=function(){loaded++;if(i===0)draw(0,true)};imgs[i]=im}
+  function fit(){var r=window.devicePixelRatio>1.5?1.5:1;cv.width=Math.round(innerWidth*r);cv.height=Math.round(innerHeight*r);drawn=-1}
+  function draw(i,force){var im=imgs[i];if(!im||!im.complete||!im.naturalWidth){return}if(i===drawn&&!force)return;var cw=cv.width,ch=cv.height,iw=im.naturalWidth,ih=im.naturalHeight,s=Math.max(cw/iw,ch/ih),w=iw*s,h=ih*s;ctx.drawImage(im,(cw-w)/2,(ch-h)/2,w,h);drawn=i;poster.style.opacity='0'}
+  function progress(){var r=stage.getBoundingClientRect();var total=stage.offsetHeight-innerHeight;return Math.min(1,Math.max(0,-r.top/total))}
+  function nearest(i){for(var d=0;d<FRAMES;d++){if(imgs[i-d]&&imgs[i-d].complete&&imgs[i-d].naturalWidth)return i-d;if(imgs[i+d]&&imgs[i+d].complete&&imgs[i+d].naturalWidth)return i+d}return -1}
+  function tick(){current+=(target-current)*0.2;var i=Math.round(current*(FRAMES-1));var n=nearest(i);if(n>=0)draw(n);requestAnimationFrame(tick)}
+  if(cv&&ctx&&!reduced){
+    fit();addEventListener('resize',fit);
+    // first 24 frames now, the rest in order behind them
+    for(var i=0;i<24;i++)load(i);
+    var rest=24;(function more(){if(rest<FRAMES){load(rest++);setTimeout(more,12)}})();
     addEventListener('scroll',function(){var p=progress();target=p;c1.style.opacity=String(Math.max(0,1-p*2.2));c2.style.opacity=String(Math.max(0,Math.min(1,(p-0.55)*3)))},{passive:true});
     requestAnimationFrame(tick);
-    /* if the video never becomes seekable (e.g. missing), let it simply play once as a fallback */
-    setTimeout(function(){if(!ready){vid.removeAttribute('preload')}},4000);
-  }else if(vid){vid.setAttribute('autoplay','');vid.setAttribute('loop','');vid.play().catch(function(){})}
+  }else if(cv){cv.remove()}
   /* smart app link: iOS → App Store, Android → Play, else App Store */
   var ua=navigator.userAgent||'';var smart=document.getElementById('smart');if(smart&&/android/i.test(ua)){smart.href='https://play.google.com/store/apps/details?id=app.activitypro.twr'}
   /* demo form: never sends, shows the enquiry that would have landed */
