@@ -96,6 +96,116 @@ blockquote.review{margin:0;padding:1.6rem;border:1px solid var(--line);border-ra
 .foot-demo{margin-top:1.2rem;font-size:.75rem;max-width:60rem}
 .call-bar{display:none}@media(max-width:700px){.call-bar{display:flex;position:fixed;left:.8rem;right:.8rem;bottom:2.6rem;z-index:55;justify-content:center;gap:.6rem;padding:1rem;border-radius:999px;background:var(--bone);color:var(--bg);font-weight:600;text-decoration:none}}
 @media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}.hero-media video,.hero-media img{animation:none}.marquee-track{animation:none}}
+:root{--fx-bg:var(--bg2);--fx-ink:var(--bone);--fx-dim:var(--bone-dim);--fx-accent:var(--gold);--fx-on-accent:var(--bg);--fx-line:var(--line);--fx-field-bg:rgba(241,234,223,.04);--fx-error:#e07a7a;--fx-radius:6px;--fx-display:var(--display);--fx-gutter:4vw;--space-section:clamp(5rem,12vh,9rem);--text-h2:clamp(2rem,1.4rem + 3vw,4rem);--font-display:var(--display)}
+/* Palette is aliased onto --fx-* per demo just above, so this block is
+   identical in all five and each form still looks native to its own site. */
+.fx { background: var(--fx-bg); color: var(--fx-ink); padding: var(--space-section) 0; }
+.fx .fx-wrap { width: min(100% - 2 * var(--fx-gutter), 60rem); margin-inline: auto; }
+.fx-head { max-width: 46ch; }
+.fx-kicker {
+  font-family: var(--fx-display); text-transform: uppercase; letter-spacing: 0.18em;
+  font-size: 0.78rem; color: var(--fx-accent); margin: 0 0 0.6rem;
+}
+.fx-head h2 { font-size: var(--text-h2); line-height: 1.02; margin: 0 0 0.9rem; }
+.fx-head p { color: var(--fx-dim); margin: 0; max-width: 52ch; }
+.fx-form { margin-top: clamp(2rem, 4vw, 3rem); display: grid; gap: 1.1rem; }
+/* A class rule setting `display` beats the UA's [hidden]{display:none}, so the
+   form stayed on screen after a successful submit even though form.hidden was
+   true. Caught by looking at the rendered page — every DOM assertion read the
+   .hidden PROPERTY, which was correctly true the whole time. */
+.fx-form[hidden] { display: none; }
+.fx-row { display: grid; gap: 1.1rem; }
+@media (min-width: 40rem) { .fx-row { grid-template-columns: 1fr 1fr; } }
+.fx-field { display: grid; gap: 0.4rem; }
+.fx-field label { font-weight: 700; font-size: 0.95rem; }
+.fx-field .fx-hint { font-size: 0.85rem; color: var(--fx-dim); }
+.fx-field input, .fx-field select, .fx-field textarea {
+  font: inherit; font-size: 1rem; color: var(--fx-ink);
+  background: var(--fx-field-bg); border: 1px solid var(--fx-line);
+  border-radius: var(--fx-radius); padding: 0.85rem 0.95rem; width: 100%;
+  transition: border-color var(--duration, 300ms) var(--ease, ease),
+              box-shadow var(--duration, 300ms) var(--ease, ease);
+}
+.fx-field textarea { min-height: 8.5rem; resize: vertical; }
+.fx-field select { appearance: none; cursor: pointer; }
+.fx-field input:hover, .fx-field select:hover, .fx-field textarea:hover { border-color: var(--fx-accent); }
+.fx-field input:focus-visible, .fx-field select:focus-visible, .fx-field textarea:focus-visible {
+  outline: none; border-color: var(--fx-accent);
+  box-shadow: 0 0 0 3px color-mix(in oklab, var(--fx-accent) 35%, transparent);
+}
+.fx-field[data-invalid="true"] input,
+.fx-field[data-invalid="true"] select,
+.fx-field[data-invalid="true"] textarea { border-color: var(--fx-error); }
+.fx-err { font-size: 0.85rem; color: var(--fx-error); min-height: 1.1rem; font-weight: 700; }
+.fx-field[data-invalid="true"] .fx-err::before { content: "\2717\00a0"; }
+.fx-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 1.4rem; margin-top: 0.4rem; }
+.fx-submit {
+  font-family: var(--fx-display); font-size: 1rem; letter-spacing: 0.06em;
+  text-transform: uppercase; cursor: pointer;
+  background: var(--fx-accent); color: var(--fx-on-accent);
+  border: 1px solid var(--fx-accent); border-radius: var(--fx-radius);
+  padding: 0.95rem 2.1rem;
+  transition: transform var(--duration, 300ms) var(--ease, ease),
+              filter var(--duration, 300ms) var(--ease, ease);
+}
+.fx-submit:hover { filter: brightness(1.12); transform: translateY(-2px); }
+.fx-submit:active { transform: translateY(0); }
+.fx-submit:focus-visible { outline: 3px solid var(--fx-accent); outline-offset: 3px; }
+.fx-note { font-size: 0.85rem; color: var(--fx-dim); margin: 0; }
+.fx-summary {
+  border: 1px solid var(--fx-error); border-radius: var(--fx-radius);
+  padding: 0.85rem 1rem; color: var(--fx-error); font-size: 0.92rem;
+}
+.fx-summary[hidden] { display: none; }
+/* Success: not a thank-you. A preview of the enquiry that WOULD have arrived. */
+.fx-sent { border: 1px solid var(--fx-line); border-radius: var(--fx-radius); overflow: hidden; }
+.fx-sent[hidden] { display: none; }
+.fx-sent:focus-visible { outline: 3px solid var(--fx-accent); outline-offset: 3px; }
+.fx-sent-bar {
+  background: var(--fx-accent); color: var(--fx-on-accent);
+  padding: 0.7rem 1.1rem; font-family: var(--fx-display);
+  text-transform: uppercase; letter-spacing: 0.12em; font-size: 0.8rem;
+}
+.fx-mail { background: var(--fx-field-bg); padding: clamp(1.1rem, 3vw, 1.8rem); }
+.fx-mail dl { display: grid; grid-template-columns: auto 1fr; gap: 0.45rem 1rem; margin: 0 0 1.1rem; font-size: 0.95rem; }
+.fx-mail dt { color: var(--fx-dim); font-weight: 700; }
+.fx-mail dd { margin: 0; overflow-wrap: anywhere; }
+.fx-mail .fx-body { border-top: 1px solid var(--fx-line); padding-top: 1.1rem; white-space: pre-wrap; overflow-wrap: anywhere; }
+.fx-sent-foot { padding: 1.1rem; border-top: 1px solid var(--fx-line); display: flex; flex-wrap: wrap; gap: 0.8rem 1.2rem; align-items: center; }
+.fx-sent-foot p { margin: 0; font-size: 0.88rem; color: var(--fx-dim); max-width: 54ch; }
+.fx-again {
+  font: inherit; font-size: 0.9rem; font-weight: 700; cursor: pointer;
+  background: none; color: var(--fx-ink); border: 1px solid var(--fx-line);
+  border-radius: var(--fx-radius); padding: 0.6rem 1.2rem;
+}
+.fx-again:hover { border-color: var(--fx-accent); color: var(--fx-accent); }
+.fx-again:focus-visible { outline: 3px solid var(--fx-accent); outline-offset: 3px; }
+
+@media (prefers-reduced-motion: reduce) {
+  /* The form's own motion, guarded separately from each demo's .rv reveals —
+     hover lift and focus/border transitions are still motion to someone who
+     asked for none. Colour and focus rings stay, because they carry meaning. */
+  .fx-field input, .fx-field select, .fx-field textarea, .fx-submit { transition: none; }
+  .fx-submit:hover { transform: none; }
+}
+
+
+@media (pointer: coarse) {
+  /* Touch targets, added 1 Sept 2026. Measured at 375px: this demo carried
+     tel:/mailto: links as small as 18px — and on a trade site the phone number
+     IS the conversion action. The studio site's fix (an absolutely-positioned
+     44px overlay) is deliberately NOT reused here: these links sit stacked in
+     lists, so a 44px overlay on each would overlap its neighbour and let the
+     later one in DOM order steal the tap, making tapping worse rather than
+     better. min-height grows the element itself, so nothing can overlap.
+     Scoped to (pointer: coarse) so the desktop composition is untouched. */
+  a[href^="tel:"], a[href^="mailto:"] {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -263,6 +373,80 @@ blockquote.review{margin:0;padding:1.6rem;border:1px solid var(--line);border-ra
       <p style="display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap"><a class="btn btn-solid" href="https://www.hatchstalbans.com/book-online" rel="noopener">book online</a><a class="btn" href="tel:+441727614708">call 01727 614708</a><a class="btn" href="https://www.hatchstalbans.com/smallford" rel="noopener">hatch smallford →</a></p>
     </div>
   </section>
+  <!-- ENQUIRY (demo only — sends nothing, see the script at the end of this file) -->
+  <section class="fx" id="enquire" aria-labelledby="fx-heading">
+    <div class="fx-wrap">
+      <div class="fx-head rv">
+        <p class="fx-kicker">Parties &amp; groups</p>
+        <h2 id="fx-heading">Booking a table for more than six?</h2>
+        <p>Send the date, the numbers and anything you already know, and Holly will come back to you with the set menu and a deposit if one is needed. Up to six? Book online in seconds instead.</p>
+      </div>
+
+      <p class="fx-summary" id="fx-summary" role="alert" hidden></p>
+
+      <form class="fx-form rv" novalidate>
+        <div class="fx-row">
+          <div class="fx-field">
+            <label for="fx-name">Your name</label>
+            <input id="fx-name" name="name" type="text" autocomplete="name"
+                   data-check="name" data-required="We need a name to put to the enquiry."
+                   aria-describedby="fx-name-err">
+            <p class="fx-err" id="fx-name-err"></p>
+          </div>
+          <div class="fx-field">
+            <label for="fx-contact">Email or phone</label>
+            <input id="fx-contact" name="contact" type="text" autocomplete="email"
+                   data-check="contact" data-required="Without this they cannot reply."
+                   aria-describedby="fx-contact-hint fx-contact-err">
+            <p class="fx-hint" id="fx-contact-hint">Whichever you would rather be reached on.</p>
+            <p class="fx-err" id="fx-contact-err"></p>
+          </div>
+        </div>
+        <div class="fx-field">
+          <label for="fx-service">What do you need?</label>
+          <select id="fx-service" name="service" data-check="service"
+                  data-required="Pick the closest match." aria-describedby="fx-service-err">
+            <option value="">Choose one&hellip;</option>
+            <option>Group booking (7 or more)</option>
+            <option>Private hire / event</option>
+            <option>Set party menu question</option>
+            <option>Something else</option>
+          </select>
+          <p class="fx-err" id="fx-service-err"></p>
+        </div>
+        <div class="fx-field">
+          <label for="fx-message">A few details</label>
+          <textarea id="fx-message" name="message" data-check="message"
+                    data-required="Tell them what you are after."
+                    aria-describedby="fx-message-hint fx-message-err"></textarea>
+          <p class="fx-hint" id="fx-message-hint">Date, time, how many, any dietary needs, whether you want fizz on arrival.</p>
+          <p class="fx-err" id="fx-message-err"></p>
+        </div>
+        <div class="fx-actions">
+          <button class="fx-submit" type="submit">Send enquiry</button>
+          <p class="fx-note"><strong>Demo form.</strong> Nothing is sent &mdash; it shows you the enquiry instead.</p>
+        </div>
+      </form>
+
+      <div class="fx-sent" id="fx-sent" tabindex="-1" role="status" hidden>
+        <p class="fx-sent-bar">Nothing was sent &mdash; this is what would have landed</p>
+        <div class="fx-mail">
+          <dl>
+            <dt>To</dt><dd>Hatch&rsquo;s bookings inbox</dd>
+            <dt>From</dt><dd id="fx-from"></dd>
+            <dt>Subject</dt><dd id="fx-subject"></dd>
+          </dl>
+          <div class="fx-body" id="fx-message-out"></div>
+        </div>
+        <div class="fx-sent-foot">
+          <button class="fx-again" id="fx-again" type="button">Try it again</button>
+          <p>This page is a demo concept, so the form is deliberately wired to nothing &mdash;
+             no message reaches Hatch St Albans. On the real site this arrives in the inbox
+             within seconds of someone pressing the button.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 </main>
 
 <footer class="foot">
@@ -297,6 +481,94 @@ blockquote.review{margin:0;padding:1.6rem;border:1px solid var(--line);border-ra
   var g=document.getElementById('glow'),b=document.getElementById('book');if(g&&b&&matchMedia('(pointer:fine)').matches){b.addEventListener('pointermove',function(e){var r=b.getBoundingClientRect();g.style.transform='translate('+(e.clientX-r.left-g.offsetWidth/2)+'px,'+(e.clientY-r.top-g.offsetHeight/2)+'px)';g.style.left='0';g.style.top='0'})}
   // hero parallax
   var hm=document.querySelector('.hero-media');if(hm&&!matchMedia('(prefers-reduced-motion:reduce)').matches){addEventListener('scroll',function(){var y=window.scrollY;if(y<window.innerHeight)hm.style.transform='translateY('+(y*.25)+'px)'},{passive:true})}
+})();
+</script>
+<script>
+/* Demo enquiry form.
+   Two hard rules, both structural rather than promised:
+     1. It cannot mail the business. There is no action, no endpoint and no
+        network call anywhere in this file — submit is always prevented.
+     2. It never pretends to have sent. Instead of a thank-you, it renders the
+        enquiry as the email that WOULD have arrived, over a banner that says
+        nothing was sent. That is honest and it also shows the owner exactly
+        what they would be getting, which a fake confirmation never does. */
+(function () {
+  var form = document.querySelector('.fx-form');
+  if (!form) return;
+  var sent = document.getElementById('fx-sent');
+  var summary = document.getElementById('fx-summary');
+  var fields = Array.prototype.slice.call(form.querySelectorAll('[data-check]'));
+  var EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+  var PHONE = /^\+?[\d\s()-]{10,}$/;
+
+  function problem(el) {
+    var value = (el.value || '').trim();
+    if (!value) return el.dataset.required || 'This one is needed.';
+    if (el.dataset.check === 'contact' && !EMAIL.test(value) && !PHONE.test(value)) {
+      return 'Use an email address or a phone number so they can reply.';
+    }
+    if (el.dataset.check === 'message' && value.length < 10) {
+      return 'A little more detail helps them quote accurately.';
+    }
+    return null;
+  }
+
+  function mark(el, message) {
+    var wrap = el.closest('.fx-field');
+    var err = wrap.querySelector('.fx-err');
+    wrap.setAttribute('data-invalid', message ? 'true' : 'false');
+    el.setAttribute('aria-invalid', message ? 'true' : 'false');
+    err.textContent = message || '';
+    return !message;
+  }
+
+  fields.forEach(function (el) {
+    // Validate on the way out of a field, then live once it has been marked —
+    // so nobody is corrected mid-keystroke, but a fix clears immediately.
+    el.addEventListener('blur', function () { mark(el, problem(el)); });
+    el.addEventListener('input', function () {
+      if (el.closest('.fx-field').getAttribute('data-invalid') !== 'true') return;
+      mark(el, problem(el));
+      // Keep the summary honest: it used to keep saying "2 fields need a
+      // moment" after both had been fixed, because it was only recomputed on
+      // submit. A count that is wrong is worse than no count.
+      if (!form.querySelector('.fx-field[data-invalid="true"]')) summary.hidden = true;
+    });
+  });
+
+  form.addEventListener('submit', function (event) {
+    event.preventDefault();
+    var bad = [];
+    fields.forEach(function (el) { if (!mark(el, problem(el))) bad.push(el); });
+
+    if (bad.length) {
+      summary.textContent = bad.length === 1
+        ? 'One field needs a moment before this can go anywhere.'
+        : bad.length + ' fields need a moment before this can go anywhere.';
+      summary.hidden = false;
+      bad[0].focus();
+      return;
+    }
+    summary.hidden = true;
+
+    var get = function (name) { return (form.elements[name].value || '').trim(); };
+    // textContent throughout — never innerHTML with anything typed in.
+    document.getElementById('fx-from').textContent = get('name') + ' <' + get('contact') + '>';
+    document.getElementById('fx-subject').textContent = 'Website enquiry \u2014 ' + get('service');
+    document.getElementById('fx-message-out').textContent = get('message');
+    form.hidden = true;
+    sent.hidden = false;
+    sent.focus();
+  });
+
+  document.getElementById('fx-again').addEventListener('click', function () {
+    form.reset();
+    fields.forEach(function (el) { mark(el, null); });
+    summary.hidden = true;
+    sent.hidden = true;
+    form.hidden = false;
+    form.querySelector('input, select, textarea').focus();
+  });
 })();
 </script>
 </body>
