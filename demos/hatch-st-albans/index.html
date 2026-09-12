@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta name="robots" content="noindex,nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Hatch St Albans — brunch by day, burgers by night · concept by Ashton Studios</title>
+<meta name="description" content="Concept redesign of hatchstalbans.com by Ashton Studios. Independent café and diner in Christopher Place, St Albans, since 2013.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Fraunces:ital,opsz,wght@1,9..144,300;1,9..144,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0d0b09;--bg2:#15120e;--bone:#f1eadf;--bone-dim:rgba(241,234,223,.62);--gold:#c9a962;--gold-dim:rgba(201,169,98,.35);--line:rgba(241,234,223,.12);--font:"Inter",system-ui,sans-serif;--display:"Archivo Black",Impact,sans-serif;--serif:"Fraunces",Georgia,serif;--ease:cubic-bezier(.16,1,.3,1)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--bone);font-family:var(--font);font-size:clamp(1rem,.95rem + .3vw,1.125rem);line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img,video{max-width:100%;display:block}a{color:inherit}
+.wrap{width:min(1240px,92vw);margin-inline:auto}
+.display{font-family:var(--display);text-transform:uppercase;line-height:.9;letter-spacing:-.01em}
+.it{font-family:var(--serif);font-style:italic;font-weight:300;text-transform:none;letter-spacing:0;color:var(--gold)}
+.eyebrow{font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:.8rem}.eyebrow::before{content:"";width:2rem;height:1px;background:var(--gold)}
+.btn{display:inline-flex;align-items:center;gap:.6rem;padding:1rem 1.6rem;border-radius:999px;font-weight:600;font-size:.95rem;text-decoration:none;border:1px solid var(--gold-dim);color:var(--bone);transition:transform .5s var(--ease),background .4s,border-color .4s;will-change:transform}.btn:hover{border-color:var(--gold);transform:translateY(-2px)}.btn-solid{background:var(--bone);color:var(--bg);border-color:var(--bone)}.btn-solid:hover{background:#fff}
+.rv{opacity:0;transform:translateY(28px);transition:opacity 1s var(--ease),transform 1.1s var(--ease)}.rv.in{opacity:1;transform:none}
+.demo-note{position:fixed;left:0;right:0;bottom:0;z-index:60;font-size:.75rem;padding:.55rem 1rem;text-align:center;background:rgba(13,11,9,.9);border-top:1px solid var(--line);color:var(--bone-dim);backdrop-filter:blur(8px)}.demo-note a{color:var(--gold)}
+/* header */
+.head{position:fixed;inset:0 0 auto 0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:1.1rem clamp(1rem,4vw,3rem);transition:background .5s,backdrop-filter .5s}.head.solid{background:rgba(13,11,9,.82);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.mark{font-family:var(--display);letter-spacing:.42em;font-size:1.15rem;text-decoration:none;color:var(--bone)}
+.nav{display:flex;gap:2rem;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase}.nav a{text-decoration:none;color:var(--bone-dim);transition:color .3s}.nav a:hover{color:var(--bone)}
+@media(max-width:860px){.nav{display:none}}
+/* hero */
+.hero{position:relative;min-height:100svh;display:grid;align-items:end;overflow:hidden;isolation:isolate}
+.hero-media{position:absolute;inset:0;z-index:-2}.hero-media video,.hero-media img{width:100%;height:100%;object-fit:cover;transform:scale(1.06);animation:drift 24s ease-in-out infinite alternate}
+@keyframes drift{from{transform:scale(1.06) translate(0,0)}to{transform:scale(1.12) translate(-1.5%,-1%)}}
+.hero-shade{position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(13,11,9,.35) 0%,rgba(13,11,9,.12) 35%,rgba(13,11,9,.94) 100%),linear-gradient(90deg,rgba(13,11,9,.55) 0%,rgba(13,11,9,0) 55%)}
+.hero-in{padding:clamp(7rem,14vh,10rem) 0 clamp(3rem,7vh,5rem)}
+.hero h1{font-size:clamp(3.2rem,2rem + 8.5vw,10.5rem);margin:.6rem 0 1.2rem;max-width:12ch}
+.hero h1 .it{font-size:.78em;display:block;margin-top:.15em}
+.hero p.lede{max-width:34rem;color:var(--bone-dim);font-size:clamp(1.05rem,1rem + .4vw,1.35rem);margin:0 0 1.8rem}
+.hero-cta{display:flex;gap:.8rem;flex-wrap:wrap}
+.hero-facts{display:flex;gap:2.2rem;flex-wrap:wrap;margin-top:2.6rem;font-size:.82rem;color:var(--bone-dim);letter-spacing:.06em}.hero-facts b{color:var(--bone);font-weight:600}
+.hero-scroll{position:absolute;right:clamp(1rem,4vw,3rem);bottom:2.4rem;font-size:.7rem;letter-spacing:.3em;text-transform:uppercase;color:var(--bone-dim);writing-mode:vertical-rl;display:flex;gap:.8rem;align-items:center}.hero-scroll::after{content:"";width:1px;height:3.5rem;background:linear-gradient(var(--gold),transparent);animation:pulse 2.2s infinite}
+@keyframes pulse{0%,100%{opacity:.3}50%{opacity:1}}
+/* marquee */
+.marquee{border-block:1px solid var(--line);overflow:hidden;padding:1.1rem 0;font-family:var(--display);font-size:.95rem;letter-spacing:.28em;text-transform:uppercase;color:var(--bone-dim)}.marquee-track{display:flex;gap:3rem;width:max-content;animation:mq 40s linear infinite}.marquee span::after{content:"✦";color:var(--gold);margin-left:3rem}
+@keyframes mq{to{transform:translateX(-50%)}}
+/* story */
+.story{padding:clamp(5rem,12vh,9rem) 0;display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(2rem,6vw,6rem);align-items:center}
+@media(max-width:900px){.story{grid-template-columns:1fr}}
+.story h2{font-size:clamp(2.4rem,1.6rem + 4.4vw,5.6rem);margin:.6rem 0 1.4rem}
+.story p{color:var(--bone-dim);max-width:36rem}
+.story-img{position:relative;aspect-ratio:4/5;overflow:hidden;border-radius:4px}.story-img img{width:100%;height:100%;object-fit:cover;transform:scale(1.15);transition:transform 1.6s var(--ease)}.rv.in .story-img img{transform:scale(1)}
+.story-img::after{content:"est. 2013 · christopher place";position:absolute;left:1rem;bottom:1rem;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+/* video interlude */
+.reel{position:relative;height:min(78vh,760px);overflow:hidden;display:grid;place-items:center;isolation:isolate}
+.reel video,.reel img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-1}
+.reel::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(13,11,9,.8),rgba(13,11,9,.15) 35%,rgba(13,11,9,.15) 65%,rgba(13,11,9,.85))}
+.reel h2{font-size:clamp(2.6rem,1.8rem + 6vw,7.5rem);text-align:center;margin:0;padding:0 1rem;text-shadow:0 10px 40px rgba(0,0,0,.5)}
+/* menus */
+.menus{padding:clamp(5rem,12vh,9rem) 0}
+.menus-head{display:flex;justify-content:space-between;align-items:end;gap:2rem;flex-wrap:wrap;margin-bottom:2.4rem}
+.menus h2{font-size:clamp(2.4rem,1.6rem + 4.4vw,5.6rem);margin:.6rem 0 0}
+.tabs{display:flex;gap:.4rem;border:1px solid var(--line);border-radius:999px;padding:.3rem}.tab{border:0;background:transparent;color:var(--bone-dim);font:inherit;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;padding:.7rem 1.2rem;border-radius:999px;cursor:pointer;transition:background .4s,color .4s}.tab[aria-selected=true]{background:var(--bone);color:var(--bg)}
+.panel{display:none}.panel.on{display:block}
+.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:1rem}
+.dish{position:relative;overflow:hidden;border-radius:4px;background:var(--bg2);grid-column:span 4;min-height:20rem;display:flex;flex-direction:column;justify-content:end}.dish.wide{grid-column:span 8}.dish.tall{grid-row:span 2;min-height:30rem}
+@media(max-width:900px){.dish,.dish.wide{grid-column:span 6}}@media(max-width:600px){.dish,.dish.wide{grid-column:span 12}}
+.dish img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 1.4s var(--ease)}.dish:hover img{transform:scale(1.06)}
+.dish::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(13,11,9,0) 30%,rgba(13,11,9,.92))}
+.dish-t{position:relative;z-index:1;padding:1.4rem;display:flex;justify-content:space-between;align-items:end;gap:1rem}
+.dish-t h3{font-family:var(--display);font-size:1.15rem;margin:0 0 .25rem;letter-spacing:.02em;text-transform:uppercase}.dish-t p{margin:0;font-size:.85rem;color:var(--bone-dim);max-width:24rem}.price{font-family:var(--serif);font-style:italic;font-size:1.5rem;color:var(--gold);white-space:nowrap}
+.dish.plain{padding:1.4rem;justify-content:space-between;border:1px solid var(--line)}.dish.plain::after{display:none}.dish.plain .dish-t{padding:0}
+.menu-list{list-style:none;margin:0;padding:0;display:grid;gap:.6rem}.menu-list li{display:flex;justify-content:space-between;gap:1rem;border-bottom:1px dashed var(--line);padding:.55rem 0;font-size:.95rem}.menu-list li span:last-child{color:var(--gold);font-family:var(--serif);font-style:italic}
+.pdfs{display:flex;gap:.8rem;flex-wrap:wrap;margin-top:1.8rem}
+/* parties */
+.party{padding:clamp(5rem,12vh,9rem) 0;border-top:1px solid var(--line)}
+.party-in{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,6vw,6rem);align-items:center}@media(max-width:900px){.party-in{grid-template-columns:1fr}}
+.party h2{font-size:clamp(2.4rem,1.6rem + 4.4vw,5.6rem);margin:.6rem 0 1.2rem}.party p{color:var(--bone-dim);max-width:34rem}
+.party-img{aspect-ratio:3/4;overflow:hidden;border-radius:4px}.party-img img{width:100%;height:100%;object-fit:cover}
+.big-price{font-family:var(--serif);font-style:italic;font-size:clamp(3rem,2rem + 5vw,6rem);color:var(--gold);line-height:1;margin:.5rem 0 1rem}
+/* reviews */
+.reviews{padding:clamp(5rem,12vh,9rem) 0;border-top:1px solid var(--line)}
+.reviews h2{font-size:clamp(2.2rem,1.4rem + 3.8vw,4.6rem);margin:.6rem 0 2rem}
+.rgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}@media(max-width:900px){.rgrid{grid-template-columns:1fr}}
+blockquote.review{margin:0;padding:1.6rem;border:1px solid var(--line);border-radius:4px;background:var(--bg2)}blockquote.review p{margin:0 0 1rem;font-family:var(--serif);font-style:italic;font-size:1.15rem;line-height:1.45}blockquote.review footer{font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+/* find */
+.find{padding:clamp(5rem,12vh,9rem) 0;border-top:1px solid var(--line);display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,6vw,6rem)}@media(max-width:900px){.find{grid-template-columns:1fr}}
+.find h2{font-size:clamp(2.2rem,1.4rem + 3.8vw,4.6rem);margin:.6rem 0 1.2rem}
+.hours{list-style:none;margin:1.2rem 0 0;padding:0}.hours li{display:grid;grid-template-columns:7rem 1fr;gap:1rem;padding:.6rem 0;border-bottom:1px dashed var(--line);font-size:.95rem}.hours li b{font-weight:600}.hours li span{color:var(--bone-dim)}
+.addr{font-family:var(--serif);font-style:italic;font-size:1.4rem;color:var(--gold);margin:.4rem 0 1rem}
+.find p{color:var(--bone-dim)}
+.map{aspect-ratio:1;border-radius:4px;overflow:hidden;position:relative}.map img{width:100%;height:100%;object-fit:cover}
+/* book */
+.book{padding:clamp(6rem,14vh,10rem) 0;text-align:center;border-top:1px solid var(--line);position:relative;overflow:hidden}
+.book h2{font-size:clamp(3rem,2rem + 7vw,9rem);margin:.6rem 0 1.4rem}.book p{color:var(--bone-dim);max-width:36rem;margin:0 auto 2rem}
+.glow{position:absolute;width:60vmax;height:60vmax;border-radius:50%;background:radial-gradient(circle,rgba(201,169,98,.16),transparent 60%);pointer-events:none;transform:translate(-50%,-50%);left:50%;top:50%;transition:transform .8s var(--ease)}
+.foot{padding:3rem 0 5rem;border-top:1px solid var(--line);font-size:.85rem;color:var(--bone-dim)}
+.foot-row{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}.foot a{color:var(--bone-dim)}
+.foot-demo{margin-top:1.2rem;font-size:.75rem;max-width:60rem}
+.call-bar{display:none}@media(max-width:700px){.call-bar{display:flex;position:fixed;left:.8rem;right:.8rem;bottom:2.6rem;z-index:55;justify-content:center;gap:.6rem;padding:1rem;border-radius:999px;background:var(--bone);color:var(--bg);font-weight:600;text-decoration:none}}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}.hero-media video,.hero-media img{animation:none}.marquee-track{animation:none}}
+</style>
+</head>
+<body>
+
+<header class="head" id="head">
+  <a class="mark" href="#top">HATCH</a>
+  <nav class="nav" aria-label="Main">
+    <a href="#menus">menus</a><a href="#parties">parties</a><a href="#find">find us</a><a href="https://www.hatchstalbans.com/smallford" rel="noopener">smallford</a>
+  </nav>
+  <a class="btn btn-solid" href="https://www.hatchstalbans.com/book-online" rel="noopener">book a table</a>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="hero-media">
+      <video autoplay muted loop playsinline poster="assets/higgsfield/burger.jpg" id="hero-video"><source src="assets/video/hero-burger.mp4" type="video/mp4"></video>
+    </div>
+    <div class="hero-shade"></div>
+    <div class="wrap hero-in">
+      <p class="eyebrow">café &amp; diner · st albans · independently owned since 2013</p>
+      <h1 class="display">Brunch<br>by day. <span class="it">burgers by night.</span></h1>
+      <p class="lede">Great food and genuine hospitality without the formality or the price tag. Solo diners, families, parties — any occasion, or none at all.</p>
+      <div class="hero-cta">
+        <a class="btn btn-solid" href="https://www.hatchstalbans.com/book-online" rel="noopener">book a table</a>
+        <a class="btn" href="#menus">see the menus</a>
+      </div>
+      <div class="hero-facts"><span><b>9am</b> every day</span><span><b>evenings</b> wed – sat from 5pm</span><span><b>walk-ins</b> welcome</span><span><b>dogs</b> welcome too</span></div>
+    </div>
+    <div class="hero-scroll">scroll</div>
+  </section>
+
+  <div class="marquee" aria-hidden="true"><div class="marquee-track">
+    <span>brunch</span><span>burgers</span><span>coffee</span><span>cocktails</span><span>small plates</span><span>parties</span><span>christopher place</span>
+    <span>brunch</span><span>burgers</span><span>coffee</span><span>cocktails</span><span>small plates</span><span>parties</span><span>christopher place</span>
+  </div></div>
+
+  <section class="wrap story rv">
+    <div>
+      <p class="eyebrow">the short version</p>
+      <h2 class="display">An infamous brunch, <span class="it">refined since 2013.</span></h2>
+      <p>By day it's the brunch menu that's been continually refined for over a decade. By night, Wednesday to Saturday, a blend of small plates and the best burgers in town — worth making an evening of.</p>
+      <p>Independently owned and run, in Christopher Place, with a second Hatch out at Smallford.</p>
+      <p style="margin-top:1.6rem"><a class="btn" href="#menus">what's on the menu</a></p>
+    </div>
+    <div class="story-img"><img src="assets/web/Junecalendar-63.jpg" alt="Corn ribs with cajun butter and hot honey at Hatch" loading="lazy"></div>
+  </section>
+
+  <section class="reel" aria-label="Chicken and waffle">
+    <video muted loop playsinline preload="none" poster="assets/higgsfield/chicken-waffle.jpg" data-reel><source src="assets/video/waffle.mp4" type="video/mp4"></video>
+    <h2 class="display rv">Chicken <span class="it">&amp; waffle.</span></h2>
+  </section>
+
+  <section class="menus wrap" id="menus">
+    <div class="menus-head rv">
+      <div><p class="eyebrow">menus</p><h2 class="display">Something for everyone, <span class="it">every day.</span></h2></div>
+      <div class="tabs" role="tablist" aria-label="Menus">
+        <button class="tab" role="tab" aria-selected="true" aria-controls="p-day" id="t-day">by day</button>
+        <button class="tab" role="tab" aria-selected="false" aria-controls="p-night" id="t-night">by night</button>
+        <button class="tab" role="tab" aria-selected="false" aria-controls="p-party" id="t-party">parties</button>
+      </div>
+    </div>
+
+    <div class="panel on" id="p-day" role="tabpanel" aria-labelledby="t-day">
+      <div class="grid">
+        <article class="dish wide rv"><img src="assets/higgsfield/benedict.jpg" alt="" loading="lazy"><div class="dish-t"><div><h3>Buffalo benedict</h3><p>chicken schnitzel, avocado, poached eggs, rocket, hollandaise, brown-butter buffalo sauce on a toasted English muffin</p></div><span class="price">14.5</span></div></article>
+        <article class="dish rv"><img src="assets/higgsfield/chicken-waffle.jpg" alt="" loading="lazy"><div class="dish-t"><div><h3>Chicken waffle</h3><p>schnitzel, fried egg, chilli flakes, butter, maple</p></div><span class="price">13.5</span></div></article>
+        <article class="dish rv"><img src="assets/higgsfield/salmon.jpg" alt="" loading="lazy"><div class="dish-t"><div><h3>Salmon &amp; schmear</h3><p>smoked salmon, avocado, jalapeño cream cheese, poached eggs, everything seasoning</p></div><span class="price">13.8</span></div></article>
+        <article class="dish rv"><img src="assets/web/hatch-52.jpg" alt="" loading="lazy"><div class="dish-t"><div><h3>Full English</h3><p>the whole thing, on sourdough, with Netherend Farm butter</p></div><span class="price">15</span></div></article>
+        <article class="dish rv"><img src="assets/higgsfield/berry-waffle.jpg" alt="" loading="lazy"><div class="dish-t"><div><h3>Berry waffle</h3><p>fresh blueberries, raspberries, maple</p></div><span class="price">10</span></div></article>
+        <article class="dish plain rv"><div class="dish-t"><div><h3>Also by day</h3></div></div>
+          <ul class="menu-list">
+            <li><span>Greek avo toast</span><span>11.5</span></li><li><span>Dirty Reuben</span><span>12.5</span></li><li><span>Sweetcorn fritters</span><span>14.5</span></li><li><span>Scrambled Cacklebean eggs</span><span>9.2</span></li><li><span>Double cheeseburger</span><span>12.5</span></li><li><span>Celeriac shawarma (vg)</span><span>12.5</span></li>
+          </ul></article>
+        <article class="dish wide rv"><img src="assets/higgsfield/avo-toast.jpg" alt="" loading="lazy"><div class="dish-t"><div><h3>Greek avo toast</h3><p>avocado toast, tomato, cucumber, red onion, olives, yellow pepper, feta, poached egg (vgo)</p></div><span class="price">11.5</span></div></article>
+      </div>
+      <div class="pdfs"><a class="btn" href="https://www.hatchstalbans.com/s/BY-DAY-MENU.pdf" rel="noopener">full day menu (pdf)</a><a class="btn" href="https://www.hatchstalbans.com/s/KIDS-MENU.pdf" rel="noopener">kids</a><a class="btn" href="https://www.hatchstalbans.com/s/GF-MENU-8p7j.pdf" rel="noopener">gluten free</a></div>
+    </div>
+
+    <div class="panel" id="p-night" role="tabpanel" aria-labelledby="t-night">
+      <div class="grid">
+        <article class="dish wide rv"><img src="assets/higgsfield/burger.jpg" alt="" loading="lazy"><div class="dish-t"><div><h3>Double cheese</h3><p>2 × 3oz aged beef patties smashed Oklahoma style, red onion, American cheese, Hatch burger sauce, gherkins</p></div><span class="price">12.5</span></div></article>
+        <article class="dish rv"><img src="assets/web/Junecalendar-63.jpg" alt="" loading="lazy"><div class="dish-t"><div><h3>Corn ribs</h3><p>cajun butter, hot honey (vgo)</p></div><span class="price">7</span></div></article>
+        <article class="dish rv"><img src="assets/higgsfield/night-spread.jpg" alt="" loading="lazy"><div class="dish-t"><div><h3>General Tso ribs</h3><p>half rack of pork ribs, General Tso glaze</p></div><span class="price">8</span></div></article>
+        <article class="dish rv"><img src="assets/web/Junecalendar-75.jpg" alt="" loading="lazy"><div class="dish-t"><div><h3>Katz burger</h3><p>6oz aged beef, salt beef, Emmental, Russian dressing, sauerkraut, crispy onion</p></div><span class="price">13.5</span></div></article>
+        <article class="dish plain rv"><div class="dish-t"><div><h3>Small plates</h3></div></div>
+          <ul class="menu-list">
+            <li><span>Pork belly chicharrones</span><span>8.5</span></li><li><span>Gochujang wings</span><span>8</span></li><li><span>Salt &amp; pepper calamari</span><span>8.5</span></li><li><span>Vodka pasta</span><span>7.5</span></li><li><span>Loaded hash browns</span><span>6</span></li><li><span>Mumbai chopped salad (vg)</span><span>7</span></li>
+          </ul></article>
+        <article class="dish rv"><img src="assets/web/PROSECCO.jpg" alt="" loading="lazy"><div class="dish-t"><div><h3>Cocktails, wine &amp; fizz</h3><p>from 5pm, wednesday to saturday</p></div><span class="price">—</span></div></article>
+      </div>
+      <div class="pdfs"><a class="btn" href="https://www.hatchstalbans.com/s/BY-NIGHT-MENU.pdf" rel="noopener">full evening menu (pdf)</a></div>
+    </div>
+
+    <div class="panel" id="p-party" role="tabpanel" aria-labelledby="t-party">
+      <div class="grid">
+        <article class="dish tall rv"><img src="assets/web/Junecalendar-45.jpg" alt="" loading="lazy"><div class="dish-t"><div><h3>Set party menu</h3><p>small plates to share, a main each, fries for the table, a sweet to finish. groups of 6+, pre-order required.</p></div><span class="price">£30pp</span></div></article>
+        <article class="dish plain rv"><div class="dish-t"><div><h3>To share</h3></div></div><ul class="menu-list"><li><span>Pork belly chicharrones</span><span></span></li><li><span>Corn ribs</span><span></span></li><li><span>Gochujang wings</span><span></span></li><li><span>Spicy olives &amp; fried-egg crisps on arrival</span><span></span></li></ul></article>
+        <article class="dish plain rv"><div class="dish-t"><div><h3>Mains</h3></div></div><ul class="menu-list"><li><span>Katz burger</span><span></span></li><li><span>General Tso chicken burger</span><span></span></li><li><span>Smoky chicken burger</span><span></span></li><li><span>Celeriac shawarma (vg)</span><span></span></li><li><span>Caesar salad</span><span></span></li><li><span>Schnitzel alla vodka</span><span></span></li></ul></article>
+        <article class="dish plain rv"><div class="dish-t"><div><h3>Sweet</h3></div></div><ul class="menu-list"><li><span>Flourless chocolate torte</span><span></span></li><li><span>Yuzu basque cheesecake</span><span></span></li><li><span>Warm vegan banana loaf</span><span></span></li><li><span>Pre-order a glass of fizz for arrival</span><span>£5pp</span></li></ul></article>
+      </div>
+      <div class="pdfs"><a class="btn btn-solid" href="mailto:holly@hatchstalbans.com?subject=Group%20booking%20at%20Hatch">book a party — email holly</a><a class="btn" href="https://www.hatchstalbans.com/s/BY-NIGHT-PARTY-SET-MENU.pdf" rel="noopener">set menu (pdf)</a></div>
+    </div>
+  </section>
+
+  <section class="reel" aria-label="Buffalo benedict">
+    <video muted loop playsinline preload="none" poster="assets/higgsfield/benedict.jpg" data-reel><source src="assets/video/benedict.mp4" type="video/mp4"></video>
+    <h2 class="display rv">Buffalo <span class="it">benedict.</span></h2>
+  </section>
+
+  <section class="reel" aria-label="Coffee">
+    <video muted loop playsinline preload="none" poster="assets/higgsfield/coffee.jpg" data-reel><source src="assets/video/coffee.mp4" type="video/mp4"></video>
+    <h2 class="display rv">Great coffee, <span class="it">all day.</span></h2>
+  </section>
+
+  <section class="party" id="parties">
+    <div class="wrap party-in">
+      <div class="party-img rv"><img src="assets/web/Junecalendar-118.jpg" alt="" loading="lazy"></div>
+      <div class="rv">
+        <p class="eyebrow">parties &amp; groups</p>
+        <h2 class="display">The stress and the expense, <span class="it">taken out.</span></h2>
+        <p class="big-price">£30 <span style="font-size:.4em">a head</span></p>
+        <p>Small plates to share, a main each, fries for the table, dessert, and a glass of fizz waiting on arrival if you want it. For groups of more than six, with a pre-order.</p>
+        <p style="margin-top:1.6rem"><a class="btn btn-solid" href="mailto:holly@hatchstalbans.com?subject=Group%20booking%20at%20Hatch">email holly to book</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="reel" aria-label="By night">
+    <video muted loop playsinline preload="none" poster="assets/higgsfield/night-spread.jpg" data-reel><source src="assets/video/night.mp4" type="video/mp4"></video>
+    <h2 class="display rv">Wed – Sat, <span class="it">from 5pm.</span></h2>
+  </section>
+
+  <section class="reviews wrap">
+    <div class="rv"><p class="eyebrow">what people say</p><h2 class="display">Best brunch in St Albans, <span class="it">apparently.</span></h2></div>
+    <div class="rgrid">
+      <blockquote class="review rv"><p><b>Review quotes slot in here.</b> On the live site this space carries real reviews, word for word from Google and the booking platform, with the reviewer's first name — published once Hatch has signed them off.</p><footer>Placeholder · pending sign-off</footer></blockquote>
+      <blockquote class="review rv" style="transition-delay:.1s"><p>Three of the best recent reviews, chosen by the team, rotate here — brunch, burgers, and the staff, which is what people keep mentioning.</p><footer>Placeholder · pending sign-off</footer></blockquote>
+      <blockquote class="review rv" style="transition-delay:.2s"><p>Google rating and review count pulled in live, so the number on the page is always the real one.</p><footer>Placeholder · pending sign-off</footer></blockquote>
+    </div>
+  </section>
+
+  <section class="find wrap" id="find">
+    <div class="rv">
+      <p class="eyebrow">find us</p>
+      <h2 class="display">Christopher Place, <span class="it">St Albans.</span></h2>
+      <p class="addr">7–8 Christopher Place, AL3 5DQ</p>
+      <p>In the Christopher Place shopping centre, with its own parking off Upper Dagnall Street. Small, well-behaved dogs welcome — mention them when you book.</p>
+      <ul class="hours">
+        <li><b>Mon – Tue</b><span>9am – 3pm · no evening service</span></li>
+        <li><b>Wed – Sat</b><span>9am – 5pm · then 5pm – 9pm</span></li>
+        <li><b>Sunday</b><span>9am – 4pm · no evening service</span></li>
+      </ul>
+      <p style="font-size:.85rem;margin-top:1rem">Kitchen times. Guests get a comfortable amount of time to enjoy their meal after.</p>
+      <p style="margin-top:1.4rem;display:flex;gap:.8rem;flex-wrap:wrap"><a class="btn btn-solid" href="https://www.hatchstalbans.com/book-online" rel="noopener">book a table</a><a class="btn" href="tel:+441727614708">01727 614708</a></p>
+    </div>
+    <div class="map rv"><img src="assets/web/HotH.jpg" alt="Hatch at night, lit up on the street" loading="lazy"></div>
+  </section>
+
+  <section class="book" id="book">
+    <div class="glow" id="glow"></div>
+    <div class="wrap rv">
+      <p class="eyebrow" style="justify-content:center">bookings</p>
+      <h2 class="display">Table for <span class="it">tonight?</span></h2>
+      <p>Up to six, book online or ring us during opening hours. More than six, email Holly with a number. Visiting in the next 48 hours? Call.</p>
+      <p style="display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap"><a class="btn btn-solid" href="https://www.hatchstalbans.com/book-online" rel="noopener">book online</a><a class="btn" href="tel:+441727614708">call 01727 614708</a><a class="btn" href="https://www.hatchstalbans.com/smallford" rel="noopener">hatch smallford →</a></p>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-row">
+      <p>© 2026 Hatch St Albans · 7–8 Christopher Place, St Albans AL3 5DQ · 01727 614708</p>
+      <p>Work for us: front of house <a href="mailto:holly@hatchstalbans.com">holly@</a> · kitchen <a href="mailto:george@hatchstalbans.com">george@</a> · press <a href="mailto:chris@hatchstalbans.com">chris@</a></p>
+    </div>
+    <p class="foot-demo">This page is an unpublished design demo built by Ashton James (Ashton Studios) as a pitch concept for Hatch St Albans. It is not Hatch's live website. Menu items, prices, hours and contact details are taken from hatchstalbans.com as of 12 September 2026; photography is a mix of Hatch's own images from that site and studio-generated food imagery, all shown for the concept only. Booking, menu and email links go to Hatch's real pages.</p>
+  </div>
+</footer>
+
+<a class="call-bar" href="https://www.hatchstalbans.com/book-online" rel="noopener">book a table</a>
+<p class="demo-note"><b>Demo concept</b> — built by Ashton Studios. Not Hatch's live website. · <a href="../../">ashtonstudios.uk</a></p>
+
+<script>
+(function(){
+  var head=document.getElementById('head');
+  var onS=function(){head.classList.toggle('solid',window.scrollY>40)};onS();addEventListener('scroll',onS,{passive:true});
+  var els=document.querySelectorAll('.rv');
+  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')})}else{
+    var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.12,rootMargin:'0px 0px -6% 0px'});els.forEach(function(e){io.observe(e)})}
+  // video reels: load + play only when on screen, pause when off
+  var reels=document.querySelectorAll('video[data-reel]');
+  var vio=new IntersectionObserver(function(en){en.forEach(function(x){var v=x.target;if(x.isIntersecting){if(v.preload==='none'){v.preload='auto';v.load()}v.play().catch(function(){})}else{v.pause()}})},{threshold:.25});
+  reels.forEach(function(v){vio.observe(v)});
+  // hero video: fall back to the poster silently if the clip is missing
+  var hv=document.getElementById('hero-video');if(hv){hv.addEventListener('error',function(){hv.removeAttribute('autoplay');hv.load()},true)}
+  // tabs
+  var tabs=document.querySelectorAll('.tab');tabs.forEach(function(t){t.addEventListener('click',function(){tabs.forEach(function(o){o.setAttribute('aria-selected',o===t)});document.querySelectorAll('.panel').forEach(function(p){p.classList.toggle('on',p.id===t.getAttribute('aria-controls'))});document.querySelectorAll('.panel.on .rv').forEach(function(e){e.classList.add('in')})})});
+  // gold glow follows the pointer in the booking block
+  var g=document.getElementById('glow'),b=document.getElementById('book');if(g&&b&&matchMedia('(pointer:fine)').matches){b.addEventListener('pointermove',function(e){var r=b.getBoundingClientRect();g.style.transform='translate('+(e.clientX-r.left-g.offsetWidth/2)+'px,'+(e.clientY-r.top-g.offsetHeight/2)+'px)';g.style.left='0';g.style.top='0'})}
+  // hero parallax
+  var hm=document.querySelector('.hero-media');if(hm&&!matchMedia('(prefers-reduced-motion:reduce)').matches){addEventListener('scroll',function(){var y=window.scrollY;if(y<window.innerHeight)hm.style.transform='translateY('+(y*.25)+'px)'},{passive:true})}
+})();
+</script>
+</body>
+</html>
