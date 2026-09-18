@@ -198,7 +198,9 @@
         return;
       }
 
-      const subject = `free mockup — ${data.business}`;
+      // Inner pages (towns, services, work) set data-subject on the form so the
+      // enquiry arrives labelled with where it came from — "preview request — hatfield".
+      const subject = `${form.dataset.subject || "free mockup"} — ${data.business}`;
       setStatus("sending…");
       submit.disabled = true;
 

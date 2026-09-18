@@ -30,7 +30,16 @@
     "telephone": "+447507216422",
     "founder": { "@type": "Person", "name": "Ashton James" },
     "priceRange": "££",
-    "areaServed": "GB",
+    "address": { "@type": "PostalAddress", "addressLocality": "Hatfield", "addressRegion": "Hertfordshire", "addressCountry": "GB" },
+    "areaServed": [
+      { "@type": "AdministrativeArea", "name": "Hertfordshire" },
+      { "@type": "City", "name": "Hatfield" },
+      { "@type": "City", "name": "Welwyn Garden City" },
+      { "@type": "City", "name": "St Albans" },
+      { "@type": "City", "name": "Watford" },
+      { "@type": "City", "name": "Stevenage" },
+      { "@type": "City", "name": "Hertford" }
+    ],
     "makesOffer": [
       { "@type": "Offer", "name": "Website design & build", "price": "700", "priceCurrency": "GBP", "description": "From £700 — design, build, honest SEO, live on your own domain within 5 working days of receiving your content." },
       { "@type": "Offer", "name": "Hosting & care plan", "price": "45", "priceCurrency": "GBP", "description": "From £45 to £75 per month — hosting, SSL, backups, monitoring, security updates." }
@@ -54,6 +63,7 @@
   </a>
   <nav aria-label="Main navigation">
     <a href="#work">work</a>
+    <a href="#areas">areas</a>
     <a href="#services">services</a>
     <a href="#pricing">pricing</a>
     <a href="#contact">contact</a>
@@ -102,110 +112,43 @@
     <div class="work-sticky">
       <div class="work-head">
         <h2 id="work-heading" class="section-title">REAL SITES,<br><span class="accent">REAL TRADES.</span></h2>
-        <p class="work-note">concept rebuilds for real local businesses — and one live client build.
+        <p class="work-note">two real clients, no concept mockups dressed up as work.
         every site here was designed, written and built by one person: me.</p>
       </div>
       <div class="work-track" id="workTrack">
         <article class="work-card">
-          <a class="demo-link" href="demos/goodfellas-barbershop/" target="_blank" rel="noopener">
+          <a class="demo-link" href="work/goodfellas-barbershop/">
           <figure class="shot">
             <div class="chrome" aria-hidden="true"><i></i><i></i><i></i><span>goodfellasbarbershop.org</span></div>
             <picture>
               <source srcset="assets/work-goodfellas-barbershop.webp" type="image/webp">
-              <img src="assets/work-goodfellas-barbershop.jpg" alt="Goodfellas Barbershop homepage concept — dark heritage design with red and gold detailing" width="1440" height="900" loading="lazy" decoding="async">
+              <img src="assets/work-goodfellas-barbershop.jpg" alt="Goodfellas Barbershop homepage — dark heritage design with red and gold detailing, booking button first" width="1440" height="900" loading="lazy" decoding="async">
             </picture>
           </figure>
           <div class="card-meta">
-            <p class="badge badge-live">client build · in progress</p>
+            <p class="badge badge-live">client build · going live</p>
             <h3>Goodfellas Barbershop</h3>
-            <p>barbershop · st albans — 5.0★ on booksy, now with a site that looks like it</p>
+            <p>barbershop · st albans — 5.0★ on booksy, now with a site that leads straight to the chair</p>
           </div>
-            <span class="demo-cue" aria-hidden="true">explore the live site &rarr;</span>
+            <span class="demo-cue" aria-hidden="true">read the case study &rarr;</span>
           </a>
         </article>
         <article class="work-card">
-          <div class="demo-link demo-link-static">
+          <a class="demo-link" href="work/watford-handyman/">
           <figure class="shot">
-            <div class="chrome" aria-hidden="true"><i></i><i></i><i></i><span>cafe-diner</span></div>
+            <div class="chrome" aria-hidden="true"><i></i><i></i><i></i><span>watfordhandyman.uk</span></div>
             <picture>
-              <img src="assets/work-hatch-st-albans.jpg" alt="Café &amp; diner homepage concept" width="1440" height="900" loading="lazy" decoding="async">
+              <source srcset="assets/work-watford-handyman.webp" type="image/webp">
+              <img src="assets/work-watford-handyman.jpg" alt="Watford Handyman homepage — 'No job too small' in bold cream type over a dark workbench of tools" width="1440" height="840" loading="lazy" decoding="async">
             </picture>
           </figure>
           <div class="card-meta">
-            <p class="badge">concept redesign</p>
-            <h3>A café &amp; diner, St Albans</h3>
-            <p>café &amp; diner · st albans — brunch by day, burgers by night, with video that makes you hungry</p>
+            <p class="badge badge-live">client build · launching october 2026</p>
+            <h3>Watford Handyman</h3>
+            <p>handyman · central watford since 2005 — light, fast, priced up front, with the form treated as the front door</p>
           </div>
-            <span class="demo-cue" aria-hidden="true">concept preview — not a live site</span>
-          </div>
-        </article>
-        <article class="work-card">
-          <div class="demo-link demo-link-static">
-          <figure class="shot">
-            <div class="chrome" aria-hidden="true"><i></i><i></i><i></i><span>plumbing-heating</span></div>
-            <picture>
-              <source srcset="assets/work-nd-plumbing-heating-wgc.webp" type="image/webp">
-              <img src="assets/work-nd-plumbing-heating-wgc.jpg" alt="Plumbing &amp; heating trade homepage concept — bold type-led hero on deep navy" width="1440" height="900" loading="lazy" decoding="async">
-            </picture>
-          </figure>
-          <div class="card-meta">
-            <p class="badge">concept redesign</p>
-            <h3>A plumbing &amp; heating trade, Welwyn Garden City</h3>
-            <p>plumbing &amp; heating · welwyn garden city</p>
-          </div>
-            <span class="demo-cue" aria-hidden="true">concept preview — not a live site</span>
-          </div>
-        </article>
-        <article class="work-card">
-          <div class="demo-link demo-link-static">
-          <figure class="shot">
-            <div class="chrome" aria-hidden="true"><i></i><i></i><i></i><span>nail-beauty-salon</span></div>
-            <picture>
-              <source srcset="assets/work-fingertips-nail-bar-hertford.webp" type="image/webp">
-              <img src="assets/work-fingertips-nail-bar-hertford.jpg" alt="Nail &amp; beauty salon homepage concept" width="1440" height="900" loading="lazy" decoding="async">
-            </picture>
-          </figure>
-          <div class="card-meta">
-            <p class="badge">concept redesign</p>
-            <h3>A nail &amp; beauty salon, Hertford</h3>
-            <p>nails &amp; beauty · hertford — a booking-first site for a busy salon</p>
-          </div>
-            <span class="demo-cue" aria-hidden="true">concept preview — not a live site</span>
-          </div>
-        </article>
-        <article class="work-card">
-          <div class="demo-link demo-link-static">
-          <figure class="shot">
-            <div class="chrome" aria-hidden="true"><i></i><i></i><i></i><span>sports-therapy</span></div>
-            <picture>
-              <source srcset="assets/work-nf-sports-massage.webp" type="image/webp">
-              <img src="assets/work-nf-sports-massage.jpg" alt="Sports therapy practice homepage concept" width="1440" height="900" loading="lazy" decoding="async">
-            </picture>
-          </figure>
-          <div class="card-meta">
-            <p class="badge">concept redesign</p>
-            <h3>A sports therapy practice, Welwyn Garden City</h3>
-            <p>sports therapy · welwyn garden city — treatment-led, built to convert enquiries</p>
-          </div>
-            <span class="demo-cue" aria-hidden="true">concept preview — not a live site</span>
-          </div>
-        </article>
-        <article class="work-card">
-          <div class="demo-link demo-link-static">
-          <figure class="shot">
-            <div class="chrome" aria-hidden="true"><i></i><i></i><i></i><span>tree-landscaping</span></div>
-            <picture>
-              <source srcset="assets/work-tm-tree-and-landscaping.webp" type="image/webp">
-              <img src="assets/work-tm-tree-and-landscaping.jpg" alt="Tree surgery &amp; landscaping homepage concept" width="1440" height="900" loading="lazy" decoding="async">
-            </picture>
-          </figure>
-          <div class="card-meta">
-            <p class="badge">concept redesign</p>
-            <h3>A tree surgery &amp; landscaping business, St Albans</h3>
-            <p>tree surgery &amp; landscaping · st albans — before/after work, front and centre</p>
-          </div>
-            <span class="demo-cue" aria-hidden="true">concept preview — not a live site</span>
-          </div>
+            <span class="demo-cue" aria-hidden="true">read the case study &rarr;</span>
+          </a>
         </article>
         <article class="work-card work-card-cta">
           <div class="cta-card">
@@ -250,6 +193,19 @@
     </ul>
   </section>
 
+  <!-- ============ WHAT WE BUILD — service pages ============ -->
+  <section class="strip" id="build" aria-labelledby="build-heading">
+    <div class="strip-head">
+      <h2 id="build-heading" class="section-title reveal">WHAT WE<br><span class="accent">build.</span></h2>
+      <p>three kinds of business, three kinds of site — each with the things that trade actually needs put first.</p>
+    </div>
+    <ul class="link-ledger">
+      <li><a href="websites-for-trades/"><span>websites for <em>trades</em></span><span class="tag">one-tap call · before/after · a page per job</span><span class="arr" aria-hidden="true">&rarr;</span></a></li>
+      <li><a href="websites-for-barbers-and-salons/"><span>websites for <em>barbers &amp; salons</em></span><span class="tag">booking first · prices · gallery</span><span class="arr" aria-hidden="true">&rarr;</span></a></li>
+      <li><a href="websites-for-clinics/"><span>websites for <em>clinics</em></span><span class="tag">online booking · treatments · trust</span><span class="arr" aria-hidden="true">&rarr;</span></a></li>
+    </ul>
+  </section>
+
   <!-- ============ PROCESS ============ -->
   <section class="process" aria-labelledby="process-heading">
     <h2 id="process-heading" class="visually-hidden">How it works</h2>
@@ -285,6 +241,22 @@
       <p>i keep the client list small and the turnaround fast: trades, salons and independent businesses
       whose reputation is better than their website. if that's you, i'd like to prove it.</p>
     </div>
+  </section>
+
+  <!-- ============ AREAS — town pages ============ -->
+  <section class="strip strip-areas" id="areas" aria-labelledby="areas-heading">
+    <div class="strip-head">
+      <h2 id="areas-heading" class="section-title reveal">WHERE I<br><span class="accent">work.</span></h2>
+      <p>based in hatfield, working across hertfordshire. same offer, same care, in every town.</p>
+    </div>
+    <ul class="link-ledger">
+      <li><a href="web-design-hatfield/"><span>web design in <em>hatfield</em></span><span class="tag">al10</span><span class="arr" aria-hidden="true">&rarr;</span></a></li>
+      <li><a href="web-design-welwyn-garden-city/"><span>web design in <em>welwyn garden city</em></span><span class="tag">al7 · al8</span><span class="arr" aria-hidden="true">&rarr;</span></a></li>
+      <li><a href="web-design-st-albans/"><span>web design in <em>st albans</em></span><span class="tag">al1 – al4</span><span class="arr" aria-hidden="true">&rarr;</span></a></li>
+      <li><a href="web-design-watford/"><span>web design in <em>watford</em></span><span class="tag">wd17 – wd25</span><span class="arr" aria-hidden="true">&rarr;</span></a></li>
+      <li><a href="web-design-stevenage/"><span>web design in <em>stevenage</em></span><span class="tag">sg1 · sg2</span><span class="arr" aria-hidden="true">&rarr;</span></a></li>
+      <li><a href="web-design-hertford/"><span>web design in <em>hertford</em></span><span class="tag">sg13 · sg14</span><span class="arr" aria-hidden="true">&rarr;</span></a></li>
+    </ul>
   </section>
 
   <!-- ============ BAND — scroll-linked wordmark ============ -->
@@ -360,10 +332,36 @@
 </main>
 
 <footer class="site-foot">
-  <p class="foot-mark">ASHTON<span>STUDIOS</span></p>
-  <p>independent web design &amp; hosting studio</p>
-  <p><a href="mailto:james@ashtonstudios.uk">james@ashtonstudios.uk</a> · <a href="tel:+447507216422">07507 216422</a></p>
-  <p class="foot-fine">© 2026 ashton studios · ashtonstudios.uk · <a href="privacy.html">privacy</a> · concept sites shown are demonstration rebuilds for real businesses, clearly labelled as concepts.</p>
+  <div class="foot-grid">
+    <div class="foot-brand">
+      <p class="foot-mark">ASHTON<span>STUDIOS</span></p>
+      <p>ashton studios · web design &amp; hosting · hatfield, hertfordshire</p>
+      <p><a href="mailto:james@ashtonstudios.uk">james@ashtonstudios.uk</a> · <a href="tel:+447507216422">07507 216422</a></p>
+    </div>
+    <nav class="foot-col" aria-label="Areas">
+      <p class="foot-label">areas</p>
+      <a href="web-design-hatfield/">web design in hatfield</a>
+      <a href="web-design-welwyn-garden-city/">web design in welwyn garden city</a>
+      <a href="web-design-st-albans/">web design in st albans</a>
+      <a href="web-design-watford/">web design in watford</a>
+      <a href="web-design-stevenage/">web design in stevenage</a>
+      <a href="web-design-hertford/">web design in hertford</a>
+    </nav>
+    <nav class="foot-col" aria-label="What we build">
+      <p class="foot-label">what we build</p>
+      <a href="websites-for-trades/">websites for trades</a>
+      <a href="websites-for-barbers-and-salons/">websites for barbers &amp; salons</a>
+      <a href="websites-for-clinics/">websites for clinics</a>
+    </nav>
+    <nav class="foot-col" aria-label="Work">
+      <p class="foot-label">work</p>
+      <a href="work/goodfellas-barbershop/">goodfellas barbershop</a>
+      <a href="work/watford-handyman/">watford handyman</a>
+      <a href="#pricing">pricing</a>
+      <a href="privacy.html">privacy</a>
+    </nav>
+  </div>
+  <p class="foot-fine">© 2026 ashton studios · ashtonstudios.uk · sole trader, not vat registered · <a href="privacy.html">privacy</a></p>
 </footer>
 
 <script src="app.js" defer></script>
