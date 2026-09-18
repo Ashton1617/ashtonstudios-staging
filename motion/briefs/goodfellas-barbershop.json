@@ -1,9 +1,0 @@
-{ "slug": "goodfellas-barbershop", "name": "Goodfellas Barbershop", "accent": "#c9a962", "dark": "#0b0a09",
-  "clips": ["https://d8j0ntlcm91z4.cloudfront.net/user_3GOrlw83Nlv54yksZaTX2cXErro/hf_20260918_000008_1fa64569-cbfa-45cd-a8eb-a898b58d2b92.mp4", "https://d8j0ntlcm91z4.cloudfront.net/user_3GOrlw83Nlv54yksZaTX2cXErro/hf_20260918_000008_4dee14e1-f3d5-4627-a88c-6ba6ccd03eac.mp4", "https://d8j0ntlcm91z4.cloudfront.net/user_3GOrlw83Nlv54yksZaTX2cXErro/hf_20260918_000008_c646363e-45af-4be2-a5d8-668190d9195d.mp4"],
-  "voiceover": "/Users/ashtonjames/Claude code/data/motion-work/vo_goodfellas.wav",
-  "overlays": [
-    {"title": "Goodfellas Barbershop", "sub": "St Albans · traditional barbershop, modern attitude"},
-    {"title": "Twenty-one years of proper cuts", "sub": "Skin fades, scissor cuts, beard line-ups, hot-towel shaves"},
-    {"title": "Free beer while you wait", "sub": "5.0 ★ from 817 reviews · book in seconds on Booksy"}
-  ],
-  "endcard": {"name": "Goodfellas Barbershop", "line1": "Hatfield Road, St Albans AL1 4LH", "line2": "Book on Booksy · walk-ins welcome", "phone": "01727 895600", "url": "goodfellasbarbershop.org", "badge": "5.0 ★ · 817 reviews"} }
