@@ -1,0 +1,9 @@
+{ "slug": "osteopathy-first", "name": "Osteopathy First", "accent": "#5cc8c2", "dark": "#0a1416",
+  "clips": ["https://d8j0ntlcm91z4.cloudfront.net/user_3GOrlw83Nlv54yksZaTX2cXErro/hf_20260918_001100_0af385f6-14a0-42ba-b271-3004075116d7.mp4", "https://d8j0ntlcm91z4.cloudfront.net/user_3GOrlw83Nlv54yksZaTX2cXErro/hf_20260918_001100_d0acef70-52ce-40d3-b3e0-665826e33309.mp4", "https://d8j0ntlcm91z4.cloudfront.net/user_3GOrlw83Nlv54yksZaTX2cXErro/hf_20260918_001100_da0a2e5c-4346-4ca0-bf6e-94b1ae8cffe5.mp4"],
+  "voiceover": "/Users/ashtonjames/Claude code/data/motion-work/vo_osteo.wav",
+  "overlays": [
+    {"title": "Osteopathy First", "sub": "Established in the area 24 years · Little Wymondley, Stevenage"},
+    {"title": "Osteopathy. Sports massage. Shockwave.", "sub": "Rehabilitation · medical acupuncture · orthotics · children's clinic"},
+    {"title": "Registered with the GOsC", "sub": "Works with AXA, WPA, Simply Health, Cigna and more · book online in seconds"}
+  ],
+  "endcard": {"name": "Osteopathy First", "line1": "Titmore Court, Little Wymondley, Hitchin SG4 7JT", "line2": "Osteopathy · sports massage · shockwave · rehab", "phone": "01438 364652", "url": "osteopathyfirst.co.uk", "badge": "Book online · GOsC registered"} }

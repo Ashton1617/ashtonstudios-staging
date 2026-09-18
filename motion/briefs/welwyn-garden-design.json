@@ -1,0 +1,34 @@
+{
+  "slug": "welwyn-garden-design",
+  "name": "Welwyn Garden Design",
+  "accent": "#9fcf6a",
+  "dark": "#0b120c",
+  "clips": [
+    "https://d8j0ntlcm91z4.cloudfront.net/user_3GOrlw83Nlv54yksZaTX2cXErro/hf_20260918_002200_b5d072e1-188f-45ec-bd9d-4629a34f49cb.mp4",
+    "https://d8j0ntlcm91z4.cloudfront.net/user_3GOrlw83Nlv54yksZaTX2cXErro/hf_20260918_001100_aee75dc3-78b7-45c9-b714-1841eeb76285.mp4",
+    "https://d8j0ntlcm91z4.cloudfront.net/user_3GOrlw83Nlv54yksZaTX2cXErro/hf_20260918_001100_fc016398-b9a3-4bb2-82fc-fbfeebaa23c2.mp4"
+  ],
+  "voiceover": "/Users/ashtonjames/Claude code/data/motion-work/vo_garden2.wav",
+  "overlays": [
+    {
+      "title": "Welwyn Garden Design",
+      "sub": "Creative landscape design & installation · Welwyn Garden City"
+    },
+    {
+      "title": "Over 25 years of experience",
+      "sub": "Planting schemes · outdoor living spaces · design to build"
+    },
+    {
+      "title": "Designed around how you live outdoors",
+      "sub": "From first sketch to finished planting · Welwyn Garden City & Hertfordshire"
+    }
+  ],
+  "endcard": {
+    "name": "Welwyn Garden Design",
+    "line1": "Landscape design · installation · planting · outdoor living",
+    "line2": "Welwyn Garden City & Hertfordshire",
+    "phone": "07717 501 215",
+    "url": "welwyngardendesign.co.uk",
+    "badge": "25+ years"
+  }
+}
