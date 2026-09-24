@@ -60,8 +60,8 @@ p.lede{font-size:clamp(1.05rem,1rem + .45vw,1.35rem);line-height:1.45;max-width:
 .head.solid{background:rgba(22,20,16,.86);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-color:var(--line-dark)}
 .mark{display:flex;align-items:center;gap:.75rem;text-decoration:none;line-height:1}
 .mark img{height:3.3rem;width:auto;display:block}.foot-logo{width:11rem;height:auto;display:block;margin-bottom:.9rem}
-.hero-award{position:absolute;right:clamp(1rem,5vw,4.5rem);bottom:clamp(7.5rem,15vh,10rem);z-index:2;width:clamp(15rem,21vw,20rem);opacity:0;animation:fade 1s var(--ease) 1.1s forwards}.hero-award img{width:100%;height:auto;display:block;border-radius:14px;box-shadow:0 30px 60px -28px rgba(0,0,0,.8)}.hero-award span{display:block;margin-top:.8rem;font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--bone-dim);text-align:center}.hero-award b{color:var(--orange);display:block;font-size:.86rem;letter-spacing:.14em;margin-bottom:.25rem}
-@media(max-width:1180px){.hero-award{position:static;transform:none;margin:2.2rem 0 0;width:min(100%,19rem)}}
+.hero-row{display:flex;align-items:flex-end;justify-content:space-between;gap:2rem 3rem;flex-wrap:wrap}.hero-copy{max-width:40rem}.hero-award{flex:0 0 auto;width:clamp(13rem,18vw,17rem);margin-top:1.2rem;opacity:0;animation:fade 1s var(--ease) 1.1s forwards}.hero-award img{width:100%;height:auto;display:block;border-radius:14px;box-shadow:0 30px 60px -28px rgba(0,0,0,.8)}.hero-award span{display:block;margin-top:.8rem;font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--bone-dim);text-align:center}.hero-award b{color:var(--orange);display:block;font-size:.86rem;letter-spacing:.14em;margin-bottom:.25rem}
+@media(max-width:1180px){.hero-row{flex-direction:column;align-items:flex-start}.hero-award{margin:1.6rem 0 0;width:min(100%,17rem)}}
 .award{margin:1.6rem 0 0;max-width:24rem}.award img{width:100%;height:auto;display:block;border-radius:12px;box-shadow:0 22px 44px -24px rgba(0,0,0,.45)}.award figcaption{margin-top:.7rem;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--navy);font-weight:600}
 .mark .mk{width:2rem;height:2rem;border-radius:7px;background:var(--orange);display:grid;place-items:center;color:var(--ink)}.mark .mk svg{width:1.2rem;height:1.2rem}.mark .mk path{stroke-width:3}
 .mark b{font-variation-settings:"wdth" 112;font-weight:800;font-size:1rem;letter-spacing:-.01em;text-transform:uppercase;display:block}
@@ -260,8 +260,6 @@ p.lede{font-size:clamp(1.05rem,1rem + .45vw,1.35rem);line-height:1.45;max-width:
 .foot-row{display:flex;justify-content:space-between;gap:1.5rem;flex-wrap:wrap;align-items:start}
 .foot a{color:var(--bone);text-decoration-color:var(--orange);text-underline-offset:.2em}
 .foot-mark{font-variation-settings:"wdth" 118;font-weight:800;text-transform:uppercase;font-size:1.4rem;letter-spacing:-.02em;color:var(--bone);margin:0 0 .6rem}
-.foot-demo{margin-top:2rem;font-size:.78rem;max-width:62rem;color:var(--bone-dim2);line-height:1.6}
-.demo-note{position:fixed;left:0;right:0;bottom:0;z-index:60;font-size:.72rem;line-height:1.35;padding:.55rem 1rem;text-align:center;background:rgba(244,239,230,.92);border-top:1px solid var(--line);color:var(--dim);backdrop-filter:blur(8px)}.demo-note a{color:var(--navy)}
 .book-bar{display:none}
 @media(max-width:760px){.book-bar{display:flex;position:fixed;left:.8rem;right:.8rem;bottom:4rem;z-index:55;justify-content:center;align-items:center;gap:.6rem;min-height:3.4rem;padding:.9rem 1rem;border-radius:999px;background:var(--orange);color:var(--ink);font-weight:700;text-decoration:none;box-shadow:0 18px 40px -18px rgba(0,0,0,.6);transition:transform .5s var(--ease),opacity .4s}.book-bar.off{transform:translateY(140%);opacity:0}.book-bar svg{width:1.1rem;height:1.1rem}.book-bar path{stroke-width:3}}
 
@@ -277,6 +275,8 @@ html.still .hero h1 .w span,html.still .hero h1 .it,html.still .hero .cta,html.s
   .svc-stage{height:auto!important}.svc-pin{position:static;height:auto}.svc-track{flex-wrap:wrap;transform:none!important;padding:0 4vw}
   .btn,.card img,.review,.step,.field input,.field select,.field textarea{transition:none}
 }
+.foot-demo{margin-top:2rem;font-size:.78rem;max-width:62rem;color:var(--bone-dim2);line-height:1.6}
+.demo-note{position:fixed;left:0;right:0;bottom:0;z-index:60;font-size:.72rem;line-height:1.35;padding:.55rem 1rem;text-align:center;background:rgba(244,239,230,.92);border-top:1px solid var(--line);color:var(--dim);backdrop-filter:blur(8px)}.demo-note a{color:var(--navy)}
 </style>
 </head>
 <body>
@@ -297,11 +297,13 @@ html.still .hero h1 .w span,html.still .hero h1 .it,html.still .hero .cta,html.s
     <div class="wrap hero-in">
       <p class="rule">Family-run · Central Watford · since 2005</p>
       <h1 class="display" id="hero-h"><span class="w"><span>No</span></span> <span class="w"><span>job</span></span> <span class="w"><span>too</span></span> <span class="w"><span>small.</span></span><span class="it">&ldquo;The professional alternative to DIY.&rdquo;</span></h1>
+      <div class="hero-row"><div class="hero-copy">
       <p class="lede">Fixing to walls, painting and decorating, flat-pack assembly, minor electrical and the odd jobs in between. Send us your list; we come back with a time and a price.</p>
       <p class="cta"><a class="btn btn-bone" href="#book"><svg class="tick" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg>Book a handyman</a><a class="btn btn-ghost" href="#services">See what we charge</a></p>
+      </div>
+      <aside class="hero-award"><img src="assets/prestige-award-2026-27.jpg" alt="London &amp; South East England Prestige Awards: Watford Handyman, 2026/27 winner, Handyman Service of the Year" width="1400" height="700" decoding="async"><span><b>Award winning</b>Best Handyman of the Year Hertfordshire · 2025/26 &amp; 2026/27</span></aside></div>
       <p class="hero-facts"><span><svg class="tick" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><b>Est. 2005</b></span><span><svg class="tick" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><b>Family run</b></span><span><svg class="tick" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><b>Best Handyman of the Year</b> Hertfordshire 2025/26 &amp; 2026/27</span><span><svg class="tick" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><b>First hour £50</b></span></p>
     </div>
-    <aside class="hero-award"><img src="assets/prestige-award-2026-27.jpg" alt="London &amp; South East England Prestige Awards: Watford Handyman, 2026/27 winner, Handyman Service of the Year" width="1400" height="700" decoding="async"><span><b>Award winning</b>Best Handyman of the Year Hertfordshire · 2025/26 &amp; 2026/27</span></aside>
     <p class="scroll-hint" aria-hidden="true">scroll <i></i></p>
   </section>
 
@@ -490,14 +492,13 @@ html.still .hero h1 .w span,html.still .hero h1 .it,html.still .hero .cta,html.s
   <div class="wrap">
     <div class="foot-row">
       <div><img class="foot-logo" src="assets/logo-sm.png" alt="Watford Handyman" width="520" height="323" loading="lazy" decoding="async"><p style="margin:0">Watford, WD17 2PZ<br><a href="mailto:enquiries@watfordhandyman.uk">enquiries@watfordhandyman.uk</a></p></div>
-      <p style="margin:0;text-align:right">&copy; 2026 Watford Handyman · est. 2005<br><a href="#privacy">Privacy policy</a> · <a href="https://watfordhandyman.uk/" rel="noopener">Current site</a></p>
+      <p style="margin:0;text-align:right">&copy; 2026 Watford Handyman · est. 2005<br><a href="#privacy">Privacy policy</a></p>
     </div>
-    <p class="foot-demo">This page is an unpublished design concept built by Ashton James (Ashton Studios) for Watford Handyman, at the owner's request, in September 2026. It is not the business&rsquo;s live site. Services, prices, the award, the tagline, the address, email and every customer quote are taken word for word from watfordhandyman.uk; the photographs are royalty-free stand-ins and would be replaced with the owner's own; the area chips are drawn from the postcodes and places in his published reviews; the privacy policy is a draft for him to confirm. The booking form is live and delivers to enquiries@watfordhandyman.uk via FormSubmit &mdash; the first submission triggers a one-time activation email to that inbox.</p>
   </div>
-</footer>
+    <p class="foot-demo">This page is an unpublished design concept built by Ashton James (Ashton Studios) for Watford Handyman, at the owner's request, in September 2026. It is not the business&rsquo;s live site. Services, prices, the award, the tagline, the address, email and every customer quote are taken word for word from watfordhandyman.uk; the photographs are royalty-free stand-ins and would be replaced with the owner's own; the area chips are drawn from the postcodes and places in his published reviews; the privacy policy is a draft for him to confirm. The booking form is live and delivers to enquiries@watfordhandyman.uk via FormSubmit &mdash; the first submission triggers a one-time activation email to that inbox.</p>
+  </footer>
 
 <a class="book-bar" id="bookbar" href="#book"><svg class="tick" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg>Book a handyman</a>
-<p class="demo-note"><b>Concept</b> &mdash; built by Ashton Studios for Watford Handyman. · <a href="https://ashtonstudios.uk/" rel="noopener">ashtonstudios.uk</a></p>
 
 <script>
 (function(){
@@ -578,5 +579,6 @@ html.still .hero h1 .w span,html.still .hero h1 .it,html.still .hero .cta,html.s
   });
 })();
 </script>
+<p class="demo-note"><b>Concept</b> &mdash; built by Ashton Studios for Watford Handyman. · <a href="https://ashtonstudios.uk/" rel="noopener">ashtonstudios.uk</a></p>
 </body>
 </html>
