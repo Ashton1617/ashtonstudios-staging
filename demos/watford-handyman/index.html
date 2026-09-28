@@ -275,6 +275,25 @@ html.still .hero h1 .w span,html.still .hero h1 .it,html.still .hero .cta,html.s
   .svc-stage{height:auto!important}.svc-pin{position:static;height:auto}.svc-track{flex-wrap:wrap;transform:none!important;padding:0 4vw}
   .btn,.card img,.review,.step,.field input,.field select,.field textarea{transition:none}
 }
+.frame.wide{aspect-ratio:4/3}
+.area-grid>.rv{container-type:inline-size}
+#area-h{font-size:min(3.8rem,9.4cqw)}
+.ba{border-top:1px solid var(--line)}.ba-head{max-width:46rem}
+.ba-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1.2rem,2.5vw,2rem);margin-top:clamp(2.2rem,5vh,3.5rem)}
+@media(max-width:900px){.ba-grid{grid-template-columns:1fr}}
+.cmp{margin:0}
+.cmp-box{--p:96%;position:relative;aspect-ratio:var(--ar,1/1);overflow:hidden;border-radius:16px;isolation:isolate;background:var(--ink2);touch-action:pan-y}
+.cmp-box img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.cmp-box .cmp-b{clip-path:inset(0 calc(100% - var(--p)) 0 0)}
+.cmp-line{position:absolute;top:0;bottom:0;left:var(--p);width:2px;background:var(--bone);transform:translateX(-50%);pointer-events:none;box-shadow:0 0 0 1px rgba(0,0,0,.25)}
+.cmp-handle{position:absolute;top:50%;left:var(--p);width:3rem;height:3rem;border-radius:50%;background:var(--orange);color:var(--ink);transform:translate(-50%,-50%);display:grid;place-items:center;pointer-events:none;box-shadow:0 10px 30px -10px rgba(0,0,0,.7);font-size:1.15rem;font-weight:700;line-height:1;transition:transform .35s var(--ease)}
+.cmp-box:hover .cmp-handle{transform:translate(-50%,-50%) scale(1.08)}
+.cmp-tag{position:absolute;top:.9rem;font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;color:var(--bone);background:rgba(22,20,16,.62);backdrop-filter:blur(6px);padding:.4rem .7rem;border-radius:999px;pointer-events:none}
+.cmp-tag-b{left:.9rem}.cmp-tag-a{right:.9rem}
+.cmp-range{position:absolute;inset:0;width:100%;height:100%;margin:0;opacity:0;cursor:ew-resize;-webkit-appearance:none;appearance:none;background:transparent;z-index:3}
+.cmp-range::-webkit-slider-thumb{-webkit-appearance:none;width:3.5rem;height:100%}.cmp-range::-moz-range-thumb{width:3.5rem;height:100%;border:0;background:transparent}
+.cmp-range:focus-visible~.cmp-handle{outline:3px solid var(--navy);outline-offset:4px}
+.cmp figcaption{margin-top:.9rem;font-size:.95rem;color:var(--dim);line-height:1.45}.cmp figcaption b{display:block;color:var(--ink);font-weight:700;margin-bottom:.15rem}
 .foot-demo{margin-top:2rem;font-size:.78rem;max-width:62rem;color:var(--bone-dim2);line-height:1.6}
 .demo-note{position:fixed;left:0;right:0;bottom:0;z-index:60;font-size:.72rem;line-height:1.35;padding:.55rem 1rem;text-align:center;background:rgba(244,239,230,.92);border-top:1px solid var(--line);color:var(--dim);backdrop-filter:blur(8px)}.demo-note a{color:var(--navy)}
 </style>
@@ -283,7 +302,7 @@ html.still .hero h1 .w span,html.still .hero h1 .it,html.still .hero .cta,html.s
 
 <header class="head" id="head">
   <a class="mark" href="#top" aria-label="Watford Handyman — top of page"><img src="assets/logo-sm.png" alt="Watford Handyman — the professional alternative to DIY, established 2005" width="520" height="323" decoding="async"></a>
-  <nav class="nav" aria-label="Main"><a href="#list">the list</a><a href="#services">services &amp; prices</a><a href="#why">why us</a><a href="#how">how it works</a><a href="#area">area</a></nav>
+  <nav class="nav" aria-label="Main"><a href="#list">the list</a><a href="#services">services &amp; prices</a><a href="#work">before &amp; after</a><a href="#why">why us</a><a href="#how">how it works</a><a href="#area">area</a></nav>
   <a class="btn" href="#book">Book a handyman</a>
 </header>
 
@@ -347,12 +366,12 @@ html.still .hero h1 .w span,html.still .hero h1 .it,html.still .hero .cta,html.s
         <p>Every rate on this page is published up front. Bigger painting, fencing and patio jobs get a free fixed quote.</p>
       </div>
       <div class="svc-track" id="track">
-        <article class="card"><img src="https://images.unsplash.com/photo-1504148455328-c376907d081c?auto=format&fit=crop&w=900&q=70" alt="Stand-in photo: a cordless drill resting against a bare plaster wall" width="900" height="1200" loading="lazy" decoding="async"><div class="card-t"><p class="price">from £50<small>first hour</small></p><h3>Fixing to walls</h3><p>Shelves, mirrors, pictures, curtain poles, blinds and bathroom fittings &mdash; solid or hollow wall, with the right fixing for each.</p><ul><li>Pictures &amp; mirrors</li><li>Curtain poles</li><li>Blinds</li><li>Shelving</li><li>Bathroom fittings</li></ul></div></article>
-        <article class="card"><img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=900&q=70" alt="Stand-in photo: a living room with a yellow armchair, a framed print and a screen on the wall" width="900" height="1200" loading="lazy" decoding="async"><div class="card-t"><p class="price">£60&ndash;£185<small>by TV size &amp; wall</small></p><h3>TV wall mounting</h3><p>Solid or hollow wall, we can do it all. From £60 for a TV under 31&Prime; on a solid wall to £185 for 77&ndash;86&Prime; on dry wall with special fixings. Bracket supplied for £25, cable trunking £30.</p><ul><li>Under 31&Prime; from £60</li><li>32&ndash;41&Prime; from £80</li><li>50&ndash;63&Prime; from £120</li><li>Cable management</li></ul></div></article>
+        <article class="card"><img src="assets/jobs/card-fixing-walls.jpg" srcset="assets/jobs/card-fixing-walls-450.jpg 450w, assets/jobs/card-fixing-walls.jpg 900w" sizes="(max-width:900px) 80vw, 30vw" alt="Three timber shelves fitted to a plasterboard wall and loaded with books" width="900" height="1200" loading="lazy" decoding="async"><div class="card-t"><p class="price">from £50<small>first hour</small></p><h3>Fixing to walls</h3><p>Shelves, mirrors, pictures, curtain poles, blinds and bathroom fittings &mdash; solid or hollow wall, with the right fixing for each.</p><ul><li>Pictures &amp; mirrors</li><li>Curtain poles</li><li>Blinds</li><li>Shelving</li><li>Bathroom fittings</li></ul></div></article>
+        <article class="card"><img src="assets/jobs/card-tv.jpg" srcset="assets/jobs/card-tv-450.jpg 450w, assets/jobs/card-tv.jpg 900w" sizes="(max-width:900px) 80vw, 30vw" alt="A television mounted flat to a living-room wall beside newly fitted shelves" width="900" height="1200" loading="lazy" decoding="async"><div class="card-t"><p class="price">£60&ndash;£185<small>by TV size &amp; wall</small></p><h3>TV wall mounting</h3><p>Solid or hollow wall, we can do it all. From £60 for a TV under 31&Prime; on a solid wall to £185 for 77&ndash;86&Prime; on dry wall with special fixings. Bracket supplied for £25, cable trunking £30.</p><ul><li>Under 31&Prime; from £60</li><li>32&ndash;41&Prime; from £80</li><li>50&ndash;63&Prime; from £120</li><li>Cable management</li></ul></div></article>
         <article class="card"><img src="https://images.unsplash.com/photo-1562259949-e8e7689d7828?auto=format&fit=crop&w=900&q=70" alt="Stand-in photo: a roller laying fresh blue paint onto a white wall" width="900" height="1200" loading="lazy" decoding="async"><div class="card-t"><p class="price">Free quote<small>for larger jobs</small></p><h3>Painting &amp; decorating</h3><p>Interior painting, fence treatment, staining and varnishing outdoor furniture, painting and re-felting shed roofs. Free fixed quotes for whole rooms and gardens.</p><ul><li>Interior painting</li><li>Fence treatment</li><li>Shed roofs</li><li>Stain &amp; varnish</li></ul></div></article>
         <article class="card"><img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=900&q=70" alt="Stand-in photo: a finished living room with a sofa, a chest of drawers and a floor lamp" width="900" height="1200" loading="lazy" decoding="async"><div class="card-t"><p class="price">from £50<small>first hour</small></p><h3>Flat-pack assembly</h3><p>Wardrobes, cupboards, shelving and beds built square, fixed to the wall where they should be, packaging cleared.</p><ul><li>Wardrobes</li><li>Cupboards</li><li>Shelving</li><li>Fixed to the wall</li></ul></div></article>
-        <article class="card"><img src="https://images.unsplash.com/photo-1517646287270-a5a9ca602e5c?auto=format&fit=crop&w=900&q=70" alt="Stand-in photo: a chrome tap with a single drip of water, in black and white" width="900" height="1200" loading="lazy" decoding="async"><div class="card-t"><p class="price">from £50<small>first hour</small></p><h3>Repairs &amp; odd jobs</h3><p>Sealant around baths, showers and kitchens, doors eased and handles fixed, leaking taps, extractor fans, powerwashing and patio re-grouting.</p><ul><li>Sealant</li><li>Doors &amp; handles</li><li>Taps</li><li>Powerwashing</li><li>Patio re-grouting</li></ul></div></article>
-        <article class="card"><img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=900&q=70" alt="Stand-in photo: an electrician in a hard hat working on a wall-mounted socket box" width="900" height="1200" loading="lazy" decoding="async"><div class="card-t"><p class="price">£75<small>first item · then £45 each</small></p><h3>Minor electrical</h3><p>Replacing a socket, a switch or a light fitting. £75 for the first item, then £45 for each item after that on the same visit &mdash; a plug socket, a light fitting, a light switch, an extractor fan and the like. Larger electrical work is quoted free.</p><ul><li>Sockets</li><li>Light fittings</li><li>Switches</li><li>Extractor fans</li></ul></div></article>
+        <article class="card"><img src="assets/jobs/card-repairs.jpg" srcset="assets/jobs/card-repairs-450.jpg 450w, assets/jobs/card-repairs.jpg 900w" sizes="(max-width:900px) 80vw, 30vw" alt="A recessed manhole cover set into a re-grouted sandstone patio" width="900" height="1200" loading="lazy" decoding="async"><div class="card-t"><p class="price">from £50<small>first hour</small></p><h3>Repairs &amp; odd jobs</h3><p>Sealant around baths, showers and kitchens, doors eased and handles fixed, leaking taps, extractor fans, powerwashing and patio re-grouting.</p><ul><li>Sealant</li><li>Doors &amp; handles</li><li>Taps</li><li>Powerwashing</li><li>Patio re-grouting</li></ul></div></article>
+        <article class="card"><img src="assets/jobs/card-electrical.jpg" srcset="assets/jobs/card-electrical-450.jpg 450w, assets/jobs/card-electrical.jpg 900w" sizes="(max-width:900px) 80vw, 30vw" alt="A new PIR security floodlight fitted to a brick wall under the eaves" width="900" height="1200" loading="lazy" decoding="async"><div class="card-t"><p class="price">£75<small>first item · then £45 each</small></p><h3>Minor electrical</h3><p>Replacing a socket, a switch or a light fitting. £75 for the first item, then £45 for each item after that on the same visit &mdash; a plug socket, a light fitting, a light switch, an extractor fan and the like. Larger electrical work is quoted free.</p><ul><li>Sockets</li><li>Light fittings</li><li>Switches</li><li>Extractor fans</li></ul></div></article>
         <article class="card tag"><div><p class="rule">Rate card</p><h3>What we charge<span class="it">&amp; how to pay</span></h3></div><ul class="rates"><li><span>First hour</span><b>£50</b></li><li><span>Second hour</span><b>£40</b></li><li><span>Next 5 hours</span><b>£30 <span style="font-size:.7em;font-weight:500">/hr</span></b></li><li class="hi"><span>Full day (7 hrs)</span><b>£240</b></li><li><span>Minor electrical</span><b>£75 <span style="font-size:.7em;font-weight:500">first item · £45 each after</span></b></li></ul><small>A minimum non-refundable deposit of £50 is required to secure any booking. We accept cash, debit or credit card payments. Working hours 8am&ndash;5pm; weekend slots by prior arrangement, subject to availability.</small></article>
       </div>
     </div>
@@ -392,6 +411,63 @@ html.still .hero h1 .w span,html.still .hero h1 .it,html.still .hero .cta,html.s
   </section>
 
   <!-- HOW BOOKING WORKS -->
+  <!-- BEFORE & AFTER -->
+  <section class="sec ba" id="work" aria-labelledby="work-h">
+    <div class="wrap">
+      <div class="rv ba-head">
+        <p class="rule">Before &amp; after</p>
+        <h2 class="display" id="work-h">Real jobs. <span class="it">Real houses.</span></h2>
+        <p class="lede">Our own photos, taken on the day. Drag the handle across each one.</p>
+      </div>
+      <div class="ba-grid">
+      <figure class="cmp rv" style="--ar:1/1">
+        <div class="cmp-box" data-cmp>
+          <img src="assets/jobs/ba-tv-after.jpg" srcset="assets/jobs/ba-tv-after-600.jpg 600w, assets/jobs/ba-tv-after.jpg 1200w" sizes="(max-width:900px) 100vw, 45vw" alt="After: the television mounted on the wall with three loaded bookshelves beside it" width="1200" height="1200" loading="lazy" decoding="async">
+          <img class="cmp-b" src="assets/jobs/ba-tv-before.jpg" srcset="assets/jobs/ba-tv-before-600.jpg 600w, assets/jobs/ba-tv-before.jpg 1200w" sizes="(max-width:900px) 100vw, 45vw" alt="Before: a television on a low unit below an empty wall, laser level set up" width="1200" height="1200" loading="lazy" decoding="async">
+          <div class="cmp-line" aria-hidden="true"></div>
+          <span class="cmp-tag cmp-tag-b" aria-hidden="true">Before</span><span class="cmp-tag cmp-tag-a" aria-hidden="true">After</span>
+          <input type="range" class="cmp-range" min="0" max="100" value="96" aria-label="TV wall mounting: slide to compare before and after">
+          <div class="cmp-handle" aria-hidden="true"><span>&lsaquo;&nbsp;&rsaquo;</span></div>
+        </div>
+        <figcaption><b>TV wall mounting</b>TV up on the wall, three shelves fitted in the same visit.</figcaption>
+      </figure>
+      <figure class="cmp rv" style="--ar:1/1">
+        <div class="cmp-box" data-cmp>
+          <img src="assets/jobs/ba-shelves-after.jpg" srcset="assets/jobs/ba-shelves-after-600.jpg 600w, assets/jobs/ba-shelves-after.jpg 1200w" sizes="(max-width:900px) 100vw, 45vw" alt="After: three timber shelves fitted and loaded with books" width="1200" height="1200" loading="lazy" decoding="async">
+          <img class="cmp-b" src="assets/jobs/ba-shelves-before.jpg" srcset="assets/jobs/ba-shelves-before-600.jpg 600w, assets/jobs/ba-shelves-before.jpg 1200w" sizes="(max-width:900px) 100vw, 45vw" alt="Before: brackets fixed to the wall against a laser line" width="1200" height="1200" loading="lazy" decoding="async">
+          <div class="cmp-line" aria-hidden="true"></div>
+          <span class="cmp-tag cmp-tag-b" aria-hidden="true">Before</span><span class="cmp-tag cmp-tag-a" aria-hidden="true">After</span>
+          <input type="range" class="cmp-range" min="0" max="100" value="96" aria-label="Shelving: slide to compare before and after">
+          <div class="cmp-handle" aria-hidden="true"><span>&lsaquo;&nbsp;&rsaquo;</span></div>
+        </div>
+        <figcaption><b>Shelving</b>Brackets levelled with a laser, three solid shelves, loaded the same day.</figcaption>
+      </figure>
+      <figure class="cmp rv" style="--ar:4/5">
+        <div class="cmp-box" data-cmp>
+          <img src="assets/jobs/ba-patio-after.jpg" srcset="assets/jobs/ba-patio-after-600.jpg 600w, assets/jobs/ba-patio-after.jpg 1200w" sizes="(max-width:900px) 100vw, 45vw" alt="After: the same path with the recessed cover set in and every joint re-grouted" width="1200" height="1500" loading="lazy" decoding="async">
+          <img class="cmp-b" src="assets/jobs/ba-patio-before.jpg" srcset="assets/jobs/ba-patio-before-600.jpg 600w, assets/jobs/ba-patio-before.jpg 1200w" sizes="(max-width:900px) 100vw, 45vw" alt="Before: a garden path with slabs lifted and a manhole frame being fitted" width="1200" height="1500" loading="lazy" decoding="async">
+          <div class="cmp-line" aria-hidden="true"></div>
+          <span class="cmp-tag cmp-tag-b" aria-hidden="true">Before</span><span class="cmp-tag cmp-tag-a" aria-hidden="true">After</span>
+          <input type="range" class="cmp-range" min="0" max="100" value="96" aria-label="Patio re-grouting: slide to compare before and after">
+          <div class="cmp-handle" aria-hidden="true"><span>&lsaquo;&nbsp;&rsaquo;</span></div>
+        </div>
+        <figcaption><b>Patio re-grouting</b>Recessed cover set into the slabs, the whole path re-grouted.</figcaption>
+      </figure>
+      <figure class="cmp rv" style="--ar:4/5">
+        <div class="cmp-box" data-cmp>
+          <img src="assets/jobs/ba-light-after.jpg" srcset="assets/jobs/ba-light-after-600.jpg 600w, assets/jobs/ba-light-after.jpg 1200w" sizes="(max-width:900px) 100vw, 45vw" alt="After: a new PIR security floodlight fitted neatly under the eaves" width="1200" height="1500" loading="lazy" decoding="async">
+          <img class="cmp-b" src="assets/jobs/ba-light-before.jpg" srcset="assets/jobs/ba-light-before-600.jpg 600w, assets/jobs/ba-light-before.jpg 1200w" sizes="(max-width:900px) 100vw, 45vw" alt="Before: an old floodlight hanging loose from a brick wall" width="1200" height="1500" loading="lazy" decoding="async">
+          <div class="cmp-line" aria-hidden="true"></div>
+          <span class="cmp-tag cmp-tag-b" aria-hidden="true">Before</span><span class="cmp-tag cmp-tag-a" aria-hidden="true">After</span>
+          <input type="range" class="cmp-range" min="0" max="100" value="96" aria-label="Security light: slide to compare before and after">
+          <div class="cmp-handle" aria-hidden="true"><span>&lsaquo;&nbsp;&rsaquo;</span></div>
+        </div>
+        <figcaption><b>Security light</b>Old floodlight out, new PIR floodlight in. Minor electrical, priced per item.</figcaption>
+      </figure>
+      </div>
+    </div>
+  </section>
+
   <section class="sec dark navy" id="how" aria-labelledby="how-h">
     <div class="wrap">
       <div class="rv">
@@ -419,7 +495,7 @@ html.still .hero h1 .w span,html.still .hero h1 .it,html.still .hero .cta,html.s
         <p class="chips-src">Not sure if you&rsquo;re covered? Ask in the form.</p>
         <div class="addr-card"><div><b>Based in</b>Watford, WD17 2PZ</div><div><b>Email</b><a href="mailto:enquiries@watfordhandyman.uk">enquiries@watfordhandyman.uk</a></div></div>
       </div>
-      <figure class="frame rv" style="transition-delay:.1s"><img src="https://images.unsplash.com/photo-1618220179428-22790b461013?auto=format&fit=crop&w=1000&q=70" alt="Stand-in photo: a finished living room with a mirror, shelves and pictures hung on the wall" width="1000" height="1250" loading="lazy" decoding="async"><figcaption>stand-in photo · a finished job goes here</figcaption></figure>
+      <figure class="frame wide rv" style="transition-delay:.1s"><img src="assets/jobs/area-room.jpg" srcset="assets/jobs/area-room-500.jpg 500w, assets/jobs/area-room.jpg 1000w" sizes="(max-width:900px) 100vw, 45vw" alt="A living room after a visit: television on the wall, three shelves on one wall and three loaded bookshelves on another" width="1000" height="750" loading="lazy" decoding="async"><figcaption>our own work · one visit</figcaption></figure>
     </div>
   </section>
 
@@ -578,6 +654,16 @@ html.still .hero h1 .w span,html.still .hero h1 .it,html.still .hero .cta,html.s
     var btn=form.querySelector('.submit');btn.disabled=true;btn.textContent='Sending…';
   });
 })();
+</script>
+<script>
+(function(){var boxes=Array.prototype.slice.call(document.querySelectorAll('[data-cmp]'));if(!boxes.length)return;
+function set(b,v){b.style.setProperty('--p',v+'%')}
+boxes.forEach(function(b){var r=b.querySelector('.cmp-range');set(b,r.value);r.addEventListener('input',function(){b.dataset.touched='1';set(b,r.value)})});
+var reduced=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+if(reduced||!('IntersectionObserver' in window)||document.documentElement.classList.contains('still')){boxes.forEach(function(b){b.querySelector('.cmp-range').value=50;set(b,50)});return}
+var io=new IntersectionObserver(function(en){en.forEach(function(x){if(!x.isIntersecting)return;io.unobserve(x.target);var b=x.target,r=b.querySelector('.cmp-range'),t0=null;
+function step(t){if(b.dataset.touched)return;if(!t0)t0=t;var k=Math.min(1,(t-t0)/1500),e=1-Math.pow(1-k,3),v=Math.round(96-46*e);r.value=v;set(b,v);if(k<1)requestAnimationFrame(step)}requestAnimationFrame(step)})},{threshold:.45});
+boxes.forEach(function(b){io.observe(b)})})();
 </script>
 <p class="demo-note"><b>Concept</b> &mdash; built by Ashton Studios for Watford Handyman. · <a href="https://ashtonstudios.uk/" rel="noopener">ashtonstudios.uk</a></p>
 </body>
