@@ -281,7 +281,7 @@ html.still .hero h1 .w span,html.still .hero h1 .it,html.still .hero .cta,html.s
 .ba{border-top:1px solid var(--line)}.ba-head{max-width:46rem}
 .ba-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1.2rem,2.5vw,2rem);margin-top:clamp(2.2rem,5vh,3.5rem)}
 @media(max-width:900px){.ba-grid{grid-template-columns:1fr}}
-.cmp{margin:0}
+.cmp{margin:0}.cmp.wide{grid-column:1/-1}
 .cmp-box{--p:96%;position:relative;aspect-ratio:var(--ar,1/1);overflow:hidden;border-radius:16px;isolation:isolate;background:var(--ink2);touch-action:pan-y}
 .cmp-box img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
 .cmp-box .cmp-b{clip-path:inset(0 calc(100% - var(--p)) 0 0)}
@@ -421,6 +421,17 @@ html.still .hero h1 .w span,html.still .hero h1 .it,html.still .hero .cta,html.s
         <p class="lede">Our own photos, taken on the day. Drag the handle across each one.</p>
       </div>
       <div class="ba-grid">
+      <figure class="cmp wide rv" style="--ar:16/9">
+        <div class="cmp-box" data-cmp>
+          <img src="assets/jobs/ba-living-after.jpg" srcset="assets/jobs/ba-living-after-900.jpg 900w, assets/jobs/ba-living-after.jpg 1800w" sizes="(max-width:900px) 100vw, 90vw" alt="After: the living room painted through, walls and ceiling fresh, furniture back in place" width="1800" height="1013" loading="lazy" decoding="async">
+          <img class="cmp-b" src="assets/jobs/ba-living-before.jpg" srcset="assets/jobs/ba-living-before-900.jpg 900w, assets/jobs/ba-living-before.jpg 1800w" sizes="(max-width:900px) 100vw, 90vw" alt="Before: the same living room with walls filled and sanded, floor sheeted, tools out" width="1800" height="1013" loading="lazy" decoding="async">
+          <div class="cmp-line" aria-hidden="true"></div>
+          <span class="cmp-tag cmp-tag-b" aria-hidden="true">Before</span><span class="cmp-tag cmp-tag-a" aria-hidden="true">After</span>
+          <input type="range" class="cmp-range" min="0" max="100" value="96" aria-label="Living room painting: slide to compare before and after">
+          <div class="cmp-handle" aria-hidden="true"><span>&lsaquo;&nbsp;&rsaquo;</span></div>
+        </div>
+        <figcaption><b>Living room, painted through</b>Walls filled and made good, floor sheeted, then walls, ceiling and woodwork painted.</figcaption>
+      </figure>
       <figure class="cmp rv" style="--ar:1/1">
         <div class="cmp-box" data-cmp>
           <img src="assets/jobs/ba-tv-after.jpg" srcset="assets/jobs/ba-tv-after-600.jpg 600w, assets/jobs/ba-tv-after.jpg 1200w" sizes="(max-width:900px) 100vw, 45vw" alt="After: the television mounted on the wall with three loaded bookshelves beside it" width="1200" height="1200" loading="lazy" decoding="async">
