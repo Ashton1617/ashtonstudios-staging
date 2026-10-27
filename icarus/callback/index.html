@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex,nofollow">
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Connecting your bank</title>
+<style>body{font-family:-apple-system,system-ui,sans-serif;background:#0b0b0c;color:#f2f2f2;display:grid;place-items:center;min-height:100svh;margin:0;padding:16px;text-align:center}a{color:#f5b84a}</style>
+</head>
+<body>
+<p id="msg">Handing you back to your Mac…</p>
+<script>
+  // Bank consent lands here (banks refuse http://localhost redirects); the
+  // code only ever goes on to the local script waiting on this machine.
+  var target = 'http://localhost:3457/callback' + location.search;
+  location.replace(target);
+  setTimeout(function () {
+    document.getElementById('msg').innerHTML = 'Nothing listening on this Mac. Run the login command in Terminal, then <a href="' + target + '">tap here</a>.';
+  }, 2500);
+</script>
+</body>
+</html>
