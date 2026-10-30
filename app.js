@@ -127,15 +127,15 @@
 
   /* ---------- enquiry form ----------
      Two delivery paths, chosen at runtime so the form is never a dead end:
-     - ENDPOINT set  -> POST as JSON, no page reload, inline success state.
+     - ENDPOINT set  -> POST form-encoded, no page reload, inline success state.
      - ENDPOINT null -> open the visitor's mail client with every answer
        pre-written into the body, so a submission still reaches Ashton on a
        static host with no account, no third party and no server.
      Set ENDPOINT to a form-backend URL (Formspree/Web3Forms/etc.) to upgrade
      the first path on; nothing else here needs to change. */
-  // FormSubmit's AJAX endpoint (12 Sep 2026): free, keyless, no account — the first
-  // submission sends a one-time activation email to the inbox, which Ashton clicks once.
-  const ENDPOINT = "https://formsubmit.co/ajax/james@ashtonstudios.uk";
+  // Google Apps Script under james@ashtonstudios.uk (30 Oct 2026, after FormSubmit went down 521);
+  // source: data/clients/watford-handyman/form-backend.gs. Form-encoded body: JSON would need a CORS preflight it can't answer.
+  const ENDPOINT = "https://script.google.com/macros/s/AKfycbxalN3UkC2Hc582lR_qZliovHtFlZZ8KgM0jXDAkGKi4QFsYll7dKeQqTfvwVFb7-ur/exec";
   const INBOX = "james@ashtonstudios.uk";
 
   const form = document.getElementById("enquiryForm");
@@ -206,12 +206,9 @@
 
       if (ENDPOINT) {
         try {
-          const res = await fetch(ENDPOINT, {
-            method: "POST",
-            headers: { "Content-Type": "application/json", Accept: "application/json" },
-            body: JSON.stringify({ ...data, subject, _subject: subject, _template: "table", _captcha: "false", _honey: data.company ?? "" }),
-          });
-          if (!res.ok) throw new Error(String(res.status));
+          const res = await fetch(ENDPOINT, { method: "POST", body: new URLSearchParams({ ...data, site: "studios", subject }) });
+          const out = await res.json();
+          if (!out.ok) throw new Error(out.error);
           form.reset();
           setStatus("got it — i'll come back to you with your mockup this week.", "ok");
         } catch {
